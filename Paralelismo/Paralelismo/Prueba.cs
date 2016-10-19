@@ -19,6 +19,9 @@ namespace Paralelismo
             new System.IO.StreamReader(@"C:\Users\Steven\Desktop\TEC\Progras\Progra-paralelismo-Arqui\Paralelismo\Paralelismo\Archivos\compras.txt");
         static System.IO.StreamReader file2 =
             new System.IO.StreamReader(@"C:\Users\Steven\Desktop\TEC\Progras\Progra-paralelismo-Arqui\Paralelismo\Paralelismo\Archivos\clientes.txt");
+        static System.IO.StreamReader file3 =
+            new System.IO.StreamReader(@"C:\Users\Steven\Desktop\TEC\Progras\Progra-paralelismo-Arqui\Paralelismo\Paralelismo\Archivos\perfiles.txt");
+
         public static void Buscar1() {
             while((line = file.ReadLine()) != null)
             {
@@ -51,6 +54,11 @@ namespace Paralelismo
             System.Console.WriteLine(mayorC);
             System.Console.WriteLine("De el/la cliente:");
             System.Console.WriteLine(cliente);
+        }
+
+        public static void BuscarCompras()
+        {
+
         }
     }
 }
