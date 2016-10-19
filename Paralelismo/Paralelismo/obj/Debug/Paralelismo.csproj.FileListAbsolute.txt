@@ -1,2 +1,9 @@
-C:\Users\USUARIO\Documents\Proyecto de Arqui paralelismo\Paralelismo\Paralelismo\bin\Debug\Paralelismo.exe.config
 C:\Users\Steven\Desktop\TEC\Progras\Progra-paralelismo-Arqui\Paralelismo\Paralelismo\bin\Debug\Paralelismo.exe.config
+C:\Users\Steven\Desktop\TEC\Progras\Progra-paralelismo-Arqui\Paralelismo\Paralelismo\bin\Debug\Paralelismo.exe
+C:\Users\Steven\Desktop\TEC\Progras\Progra-paralelismo-Arqui\Paralelismo\Paralelismo\bin\Debug\Paralelismo.pdb
+C:\Users\Steven\Desktop\TEC\Progras\Progra-paralelismo-Arqui\Paralelismo\Paralelismo\obj\Debug\Paralelismo.Form1.resources
+C:\Users\Steven\Desktop\TEC\Progras\Progra-paralelismo-Arqui\Paralelismo\Paralelismo\obj\Debug\Paralelismo.Properties.Resources.resources
+C:\Users\Steven\Desktop\TEC\Progras\Progra-paralelismo-Arqui\Paralelismo\Paralelismo\obj\Debug\Paralelismo.csproj.GenerateResource.Cache
+C:\Users\Steven\Desktop\TEC\Progras\Progra-paralelismo-Arqui\Paralelismo\Paralelismo\obj\Debug\Paralelismo.exe
+C:\Users\Steven\Desktop\TEC\Progras\Progra-paralelismo-Arqui\Paralelismo\Paralelismo\obj\Debug\Paralelismo.pdb
+C:\Users\Steven\Desktop\TEC\Progras\Progra-paralelismo-Arqui\Paralelismo\Paralelismo\obj\Debug\Paralelismo.csprojResolveAssemblyReference.cache
