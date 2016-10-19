@@ -1,0 +1,11 @@
+1, Comercial el pueblo, 200000, Aranceles
+2, Resturante Marvillo, 100000, Comida
+3, Muebles Zarchi, 1000000, Muebles
+4, Mabe, 2000000, Linea Blanca
+5, Musicolor, 300000, Instrumentos Musicales
+6, Reparaciones Circuit, 400000, Componentes De Computador
+7, Serious Bussiness, 100000, Articulos de oficina
+8, Agricoin, 600000, Productos de Agricultura
+9, Deporticlub, 230000, Equipo de Deporte
+10, Moda Guay, 250000, Calzado
+11, Compusistemas, 1500000,  Computacion
