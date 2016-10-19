@@ -1,1 +1,2 @@
 C:\Users\USUARIO\Documents\Proyecto de Arqui paralelismo\Paralelismo\Paralelismo\bin\Debug\Paralelismo.exe.config
+C:\Users\Steven\Desktop\TEC\Progras\Progra-paralelismo-Arqui\Paralelismo\Paralelismo\bin\Debug\Paralelismo.exe.config
