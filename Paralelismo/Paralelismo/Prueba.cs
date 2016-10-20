@@ -3,12 +3,20 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Management;
 
 namespace Paralelismo
 {
     class Prueba
     {
         static string line;
+        //***********************
+        //esto se tiene que recibir de la ventana...
+        static string fechaInicio = "2006/1/25";
+        static DateTime inicio = Convert.ToDateTime(fechaInicio);
+        static string fechaFinal = "2016/6/2";
+        static DateTime final = Convert.ToDateTime(fechaFinal);
+        //************************
         static string ced;
         static string cliente;
         static string[] cedulas = new string[10];
@@ -29,13 +37,16 @@ namespace Paralelismo
             while ((line = file.ReadLine()) != null)
             {
                 arr = line.Split(',');
-                if (mayorC < Int32.Parse(arr[5]))
+                if ((Convert.ToDateTime(arr[6]) >= inicio) && (Convert.ToDateTime(arr[6]) <= final))
                 {
-                    mayorC = Int32.Parse(arr[5]);
-                    ced = arr[1];
+                    if (mayorC < Int32.Parse(arr[5]))
+                    {
+                        mayorC = Int32.Parse(arr[5]);
+                        ced = arr[1];
+                    }
+                    else
+                        continue;
                 }
-                else
-                    continue;
             }
 
                 file.Close();
@@ -80,17 +91,20 @@ namespace Paralelismo
             while ((line = file.ReadLine()) != null)
             {
                 arr = line.Split(',');
-                System.Console.WriteLine("Hi!");
-                for (int i = 0; i < cedulas.Length; i++)
+                if ((Convert.ToDateTime(arr[6]) >= inicio) && (Convert.ToDateTime(arr[6]) <= final))
                 {
-                    if (" " + cedulas[i] == arr[1])
+                    for (int i = 0; i < cedulas.Length; i++)
                     {
-                        comprasTot[i]++;
-                        break;
+                        if (" " + cedulas[i] == arr[1])
+                        {
+                            comprasTot[i]++;
+                            break;
+                        }
+                        else
+                            continue;
                     }
-                    else
-                        continue;
                 }
+                
             }
 
             file.Close();
@@ -172,6 +186,16 @@ namespace Paralelismo
             System.Console.WriteLine(limitBreak);
             System.Console.WriteLine("Compra:");
             System.Console.WriteLine(arr[5]);
+        }
+
+        public void CantCores()
+        {
+            int coreCount = 0;
+            foreach (var item in new System.Management.ManagementObjectSearcher("Select * from Win32_Processor").Get())
+            {
+                coreCount += int.Parse(item["NumberOfCores"].ToString());
+            }
+            Console.WriteLine("Number Of Cores: {0}", coreCount);
         }
     }
 }

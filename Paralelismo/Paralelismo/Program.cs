@@ -15,8 +15,8 @@ namespace Paralelismo
         static void Main()
         {
             //Prueba.Buscar1();
-            //Prueba.BuscarCompras();
-            Prueba.BuscarSospechosos();
+            Prueba.BuscarCompras();
+            //Prueba.BuscarSospechosos();
             /*Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Form1());*/
