@@ -15,10 +15,10 @@ namespace Paralelismo
         static void Main()
         {
             //Prueba.Buscar1();
-            Prueba.BuscarCompras();
-            /*Application.EnableVisualStyles();
+            //Prueba.BuscarCompras();
+            Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());*/
+            Application.Run(new Form1());
         }
     }
 }
