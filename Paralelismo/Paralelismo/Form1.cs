@@ -31,8 +31,12 @@ namespace Paralelismo
             if (cmbOps.SelectedIndex == 0)
             {
                 panel0.Visible = true;
+                panel1.Visible = false;
+                panel2.Visible = false;
+
                 //
-                while ((line = compras.ReadLine()) != null)
+                System.IO.StreamReader ArchivoCompra = compras;
+                while ((line = ArchivoCompra.ReadLine()) != null)
                 {
                     arr = line.Split(',');
                     if (mayorC < Int32.Parse(arr[5]))
@@ -44,10 +48,10 @@ namespace Paralelismo
                         continue;
                 }
 
-                compras.Close();
+                ArchivoCompra.Close();
                 System.Console.WriteLine(ced);
-
-                while ((line = clientes.ReadLine()) != null)
+                System.IO.StreamReader ArchivoCliente = clientes;
+                while ((line = ArchivoCliente.ReadLine()) != null)
                 {
                     arr = line.Split(',');
                     if (ced == " " + arr[0])
@@ -58,7 +62,7 @@ namespace Paralelismo
                     else
                         continue;
                 }
-                clientes.Close();
+                ArchivoCliente.Close();
                 System.Console.WriteLine("La mayor compra fue de:");
                 System.Console.WriteLine(mayorC);
                 System.Console.WriteLine("De el/la cliente:");
@@ -70,11 +74,18 @@ namespace Paralelismo
             else if (cmbOps.SelectedIndex == 1)
             {
                 panel1.Visible = true;
+                panel0.Visible = false;
+               
+                panel2.Visible = false;
                 //panel1.Enabled = true;
             }
             else if (cmbOps.SelectedIndex == 2)
             {
+                panel0.Visible = false;
+                panel1.Visible = false;
+               
                 panel2.Visible = true;
+
                 //panel2.Enabled = true;
             }
         }
@@ -163,6 +174,16 @@ namespace Paralelismo
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label17_Click(object sender, EventArgs e)
         {
 
         }
