@@ -19,14 +19,6 @@ namespace Paralelismo
         static int[] comprasTot = new int[10];
         static int mayorC = 0;
 
-        // Read the file and display it line by line.
-        /*static System.IO.StreamReader file =
-            new System.IO.StreamReader(@"C:\Users\Steven\Desktop\TEC\Progras\Progra-paralelismo-Arqui\Paralelismo\Paralelismo\Archivos\compras.txt");
-        static System.IO.StreamReader file2 =
-            new System.IO.StreamReader(@"C:\Users\Steven\Desktop\TEC\Progras\Progra-paralelismo-Arqui\Paralelismo\Paralelismo\Archivos\clientes.txt");
-        static System.IO.StreamReader file3 =
-            new System.IO.StreamReader(@"C:\Users\Steven\Desktop\TEC\Progras\Progra-paralelismo-Arqui\Paralelismo\Paralelismo\Archivos\perfiles.txt");
-            */
         public static void Buscar1() {
             /*Form1.comprasTemp = Form1.compras;
             Form1.clientesTemp = Form1.clientes;*/

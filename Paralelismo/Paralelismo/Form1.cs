@@ -32,11 +32,18 @@ namespace Paralelismo
             else if (cmbOps.SelectedIndex == 1)
             {
                 panel1.Visible = true;
+                panel0.Visible = false;
+               
+                panel2.Visible = false;
                 //panel1.Enabled = true;
             }
             else if (cmbOps.SelectedIndex == 2)
             {
+                panel0.Visible = false;
+                panel1.Visible = false;
+               
                 panel2.Visible = true;
+
                 //panel2.Enabled = true;
             }
         }
@@ -105,6 +112,8 @@ namespace Paralelismo
 
         private void button1_Click(object sender, EventArgs e)
         {
+            panelMostrar.Visible = false;
+            panel4.Visible = true;
 
         }
 
@@ -147,8 +156,16 @@ namespace Paralelismo
         {
 
         }
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
 
         private void fechFinal_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+        private void label17_Click(object sender, EventArgs e)
         {
 
         }
