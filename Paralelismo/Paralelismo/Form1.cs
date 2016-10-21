@@ -12,14 +12,10 @@ namespace Paralelismo
 {
     public partial class Form1 : Form
     {
-        static System.IO.StreamReader perfiles = null, compras = null, clientes = null;
+        public static System.IO.StreamReader perfiles = null, compras = null, clientes = null;
+        string direccionPer, direccionComp, direccionClie;
 
         string UnionCompras;
-        static string line;
-        static string ced;
-        static string cliente;
-        static string[] arr;
-        static int mayorC = 0;
 
         public Form1()
         {
@@ -31,41 +27,7 @@ namespace Paralelismo
             if (cmbOps.SelectedIndex == 0)
             {
                 panel0.Visible = true;
-                //
-                while ((line = compras.ReadLine()) != null)
-                {
-                    arr = line.Split(',');
-                    if (mayorC < Int32.Parse(arr[5]))
-                    {
-                        mayorC = Int32.Parse(arr[5]);
-                        ced = arr[1];
-                    }
-                    else
-                        continue;
-                }
-
-                compras.Close();
-                System.Console.WriteLine(ced);
-
-                while ((line = clientes.ReadLine()) != null)
-                {
-                    arr = line.Split(',');
-                    if (ced == " " + arr[0])
-                    {
-                        cliente = arr[1] + arr[2] + arr[3];
-                        break;
-                    }
-                    else
-                        continue;
-                }
-                clientes.Close();
-                System.Console.WriteLine("La mayor compra fue de:");
-                System.Console.WriteLine(mayorC);
-                System.Console.WriteLine("De el/la cliente:");
-                System.Console.WriteLine(cliente);
-
-                //
-                //panel0.Enabled = true;
+                panel0.Enabled = true;
             }
             else if (cmbOps.SelectedIndex == 1)
             {
@@ -105,7 +67,9 @@ namespace Paralelismo
                 System.IO.StreamReader ArchivoCompras = new System.IO.StreamReader(ventana.FileName);
                 //MessageBox.Show(sr.ReadToEnd());
                 lblCompras.Text = ventana.FileName;
+                direccionComp = ventana.FileName;
                 compras = ArchivoCompras;
+                //comprasTemp = ArchivoCompras;
                 //System.Console.WriteLine(ventana.FileName);
                 //ArchivoCompras.Close();
             }
@@ -119,7 +83,9 @@ namespace Paralelismo
             {
                 System.IO.StreamReader archivoPerfiles = new System.IO.StreamReader(ventana.FileName);
                 lblPerfiles.Text = ventana.FileName;
+                direccionPer = ventana.FileName;
                 perfiles = archivoPerfiles;
+                //perfilesTemp = archivoPerfiles;
                 //archivoPerfiles.Close();
             }
 
@@ -167,6 +133,26 @@ namespace Paralelismo
 
         }
 
+        private void txtBuscar_Click(object sender, EventArgs e)
+        {
+            Prueba.inicio = dateTimePicker1.Value.Date;
+            Prueba.final = fechFinal.Value.Date;
+            compras = new System.IO.StreamReader(direccionComp);
+            clientes = new System.IO.StreamReader(direccionClie);
+            perfiles = new System.IO.StreamReader(direccionPer);
+            Prueba.Buscar1();
+        }
+
+        private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void fechFinal_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
         private void panel3_Paint(object sender, PaintEventArgs e)
         {
             cmbOps.Visible = true;
@@ -181,8 +167,9 @@ namespace Paralelismo
                 System.IO.StreamReader ArchivoClientes = new System.IO.StreamReader(ventana.FileName);
                 //MessageBox.Show(sr.ReadToEnd());
                 lblClientes.Text = ventana.FileName;
+                direccionClie = ventana.FileName;
                 clientes = ArchivoClientes;
-
+                //clientesTemp = ArchivoClientes;
                 //System.Console.WriteLine(ventana.FileName);
                 //ArchivoClientes.Close();
             }
