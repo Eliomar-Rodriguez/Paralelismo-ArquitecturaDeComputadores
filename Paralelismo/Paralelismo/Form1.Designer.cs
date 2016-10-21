@@ -62,6 +62,7 @@
             this.label4 = new System.Windows.Forms.Label();
             this.panelMostrar = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.label17 = new System.Windows.Forms.Label();
             this.lblClientes = new System.Windows.Forms.Label();
             this.lblCompras = new System.Windows.Forms.Label();
             this.lblPerfiles = new System.Windows.Forms.Label();
@@ -75,7 +76,6 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.btnAtras = new System.Windows.Forms.Button();
-            this.label17 = new System.Windows.Forms.Label();
             this.panel0.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -99,7 +99,7 @@
             this.panel0.Controls.Add(this.dateTimePicker1);
             this.panel0.Controls.Add(this.txtBuscar);
             this.panel0.Enabled = false;
-            this.panel0.Location = new System.Drawing.Point(139, 69);
+            this.panel0.Location = new System.Drawing.Point(105, 69);
             this.panel0.Name = "panel0";
             this.panel0.Size = new System.Drawing.Size(1209, 484);
             this.panel0.TabIndex = 0;
@@ -234,9 +234,9 @@
             // 
             this.panel1.Controls.Add(this.dataGridView1);
             this.panel1.Controls.Add(this.label3);
-            this.panel1.Location = new System.Drawing.Point(77, 105);
+            this.panel1.Location = new System.Drawing.Point(73, 82);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1212, 668);
+            this.panel1.Size = new System.Drawing.Size(1212, 527);
             this.panel1.TabIndex = 2;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
@@ -249,7 +249,7 @@
             this.Cedula,
             this.Nombre,
             this.Cantidad});
-            this.dataGridView1.Location = new System.Drawing.Point(48, 59);
+            this.dataGridView1.Location = new System.Drawing.Point(74, 55);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowTemplate.Height = 28;
             this.dataGridView1.Size = new System.Drawing.Size(967, 323);
@@ -297,7 +297,7 @@
             this.panel2.Controls.Add(this.label13);
             this.panel2.Controls.Add(this.txtID);
             this.panel2.Controls.Add(this.label4);
-            this.panel2.Location = new System.Drawing.Point(3, 105);
+            this.panel2.Location = new System.Drawing.Point(39, 138);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1316, 474);
             this.panel2.TabIndex = 3;
@@ -411,12 +411,13 @@
             // panelMostrar
             // 
             this.panelMostrar.Controls.Add(this.panel2);
+            this.panelMostrar.Controls.Add(this.btnAtras);
             this.panelMostrar.Controls.Add(this.panel0);
             this.panelMostrar.Controls.Add(this.panel1);
             this.panelMostrar.Controls.Add(this.cmbOps);
-            this.panelMostrar.Location = new System.Drawing.Point(32, 40);
+            this.panelMostrar.Location = new System.Drawing.Point(59, 30);
             this.panelMostrar.Name = "panelMostrar";
-            this.panelMostrar.Size = new System.Drawing.Size(1509, 780);
+            this.panelMostrar.Size = new System.Drawing.Size(1424, 780);
             this.panelMostrar.TabIndex = 4;
             this.panelMostrar.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
             // 
@@ -440,6 +441,18 @@
             this.panel4.Size = new System.Drawing.Size(1338, 498);
             this.panel4.TabIndex = 5;
             this.panel4.Paint += new System.Windows.Forms.PaintEventHandler(this.panel4_Paint);
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Font = new System.Drawing.Font("Imprint MT Shadow", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label17.ForeColor = System.Drawing.Color.Red;
+            this.label17.Location = new System.Drawing.Point(179, 13);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(898, 42);
+            this.label17.TabIndex = 12;
+            this.label17.Text = "Asegurarse de subir los archivos respectivos a cada opcion\r\n";
+            this.label17.Click += new System.EventHandler(this.label17_Click);
             // 
             // lblClientes
             // 
@@ -569,25 +582,13 @@
             // btnAtras
             // 
             this.btnAtras.Font = new System.Drawing.Font("Constantia", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAtras.Location = new System.Drawing.Point(1159, 540);
+            this.btnAtras.Location = new System.Drawing.Point(1268, 21);
             this.btnAtras.Name = "btnAtras";
             this.btnAtras.Size = new System.Drawing.Size(112, 42);
             this.btnAtras.TabIndex = 7;
             this.btnAtras.Text = "Atras";
             this.btnAtras.UseVisualStyleBackColor = true;
             this.btnAtras.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // label17
-            // 
-            this.label17.AutoSize = true;
-            this.label17.Font = new System.Drawing.Font("Imprint MT Shadow", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label17.ForeColor = System.Drawing.Color.Red;
-            this.label17.Location = new System.Drawing.Point(179, 0);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(898, 42);
-            this.label17.TabIndex = 12;
-            this.label17.Text = "Asegurarse de subir los archivos respectivos a cada opcion\r\n";
-            this.label17.Click += new System.EventHandler(this.label17_Click);
             // 
             // Form1
             // 
@@ -596,7 +597,6 @@
             this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.ClientSize = new System.Drawing.Size(1706, 832);
             this.Controls.Add(this.panelMostrar);
-            this.Controls.Add(this.btnAtras);
             this.Controls.Add(this.panel4);
             this.Name = "Form1";
             this.Text = "Pagina principal";

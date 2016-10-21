@@ -150,6 +150,8 @@ namespace Paralelismo
 
         private void button1_Click(object sender, EventArgs e)
         {
+            panelMostrar.Visible = false;
+            panel4.Visible = true;
 
         }
 
