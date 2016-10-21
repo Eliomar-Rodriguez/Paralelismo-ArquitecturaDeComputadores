@@ -14,7 +14,7 @@ namespace Paralelismo
     {
         static System.IO.StreamReader perfiles = null, compras = null, clientes = null;
 
-        string UnionCompras;
+        //string UnionCompras;
         static string line;
         static string ced;
         static string cliente;
@@ -186,6 +186,22 @@ namespace Paralelismo
         }
 
         private void label17_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnCPU_Click(object sender, EventArgs e)
+        {
+            Rendimiento rend = new Rendimiento();
+            rend.Visible = true;
+        }
+
+        private void txtBuscar_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void fechFinal_ValueChanged(object sender, EventArgs e)
         {
 
         }

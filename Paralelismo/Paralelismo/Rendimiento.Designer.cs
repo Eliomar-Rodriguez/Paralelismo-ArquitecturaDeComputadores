@@ -36,7 +36,7 @@
             // txtCantNuc
             // 
             this.txtCantNuc.Font = new System.Drawing.Font("Imprint MT Shadow", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCantNuc.Location = new System.Drawing.Point(538, 163);
+            this.txtCantNuc.Location = new System.Drawing.Point(509, 142);
             this.txtCantNuc.Name = "txtCantNuc";
             this.txtCantNuc.Size = new System.Drawing.Size(83, 40);
             this.txtCantNuc.TabIndex = 0;
