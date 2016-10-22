@@ -14,7 +14,8 @@ namespace Paralelismo
     public partial class Form1 : Form
     {
         public static System.IO.StreamReader perfiles = null, compras = null, clientes = null;
-        string direccionPer, direccionComp, direccionClie;
+        public static string direccionPer, direccionComp, direccionClie;
+        public static bool chorizo = false;
 
         public Form1()
         {
@@ -23,6 +24,10 @@ namespace Paralelismo
             TiempoPrimero.Visible = false;
             label19.Visible = false;
             label18.Visible = false;
+            AvisoTiempo.Visible = false;
+            Tiempo.Visible = false;
+            txtChoriso.Visible = false;
+            txtNormal.Visible = false;
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
@@ -160,10 +165,13 @@ namespace Paralelismo
         {
             Prueba.inicio = dateTimePicker1.Value.Date;
             Prueba.final = fechFinal.Value.Date;
+            Paralelo.inicio = dateTimePicker1.Value.Date;
+            Paralelo.final = fechFinal.Value.Date;
             compras = new System.IO.StreamReader(direccionComp);
             clientes = new System.IO.StreamReader(direccionClie);
             perfiles = new System.IO.StreamReader(direccionPer);
-            Prueba.Buscar1();
+            //Prueba.Buscar1();
+            Parallel.Invoke(() => Paralelo.Buscar1());
             AvisoTiempoPrimer.Visible = true;
             TiempoPrimero.Text = Prueba.tiempoTot;
             TiempoPrimero.Visible = true;
@@ -191,42 +199,69 @@ namespace Paralelismo
 
         private void AnadirCed_Click(object sender, EventArgs e)
         {
-            if (CedulaGrupal.Text != null)
+            if (CedulaGrupal.Text != "")
             {
                 Prueba.cedulas[Prueba.ind] = CedulaGrupal.Text;
                 Prueba.comprasTot[Prueba.ind] = 0;
                 Prueba.ind++;
+                CedulaGrupal.Text = "";
             }
+            else
+                System.Console.WriteLine("Debe ingresar una cedula.");
         }
 
         private void BuscarGrup_Click(object sender, EventArgs e)
         {
-            Prueba.inicio = Calendario1.Value.Date;
-            Prueba.final = Calendario2.Value.Date;
-            compras = new System.IO.StreamReader(direccionComp);
-            clientes = new System.IO.StreamReader(direccionClie);
-            perfiles = new System.IO.StreamReader(direccionPer);
-            Prueba.BuscarCompras();
-            label19.Visible = true;
-            label18.Text = Prueba.tiempoTot;
-            label18.Visible = true;
-            int cont = 0;
-            for (int v = 0; v < Prueba.cedulas.Length; v++)
+            if (Prueba.cedulas[0] != "")
             {
-                TablaDatos.Rows.Insert(cont, Prueba.cedulas[v], Prueba.cliente, Prueba.comprasTot[v]);
-                /*TablaDatos.Rows[v].Cells[0].Value = Prueba.cedulas[v];
-                TablaDatos.Rows[v].Cells[1].Value = Prueba.cliente;
-                TablaDatos.Rows[v].Cells[2].Value = Prueba.comprasTot[v];*/
-                cont++;
+                Prueba.inicio = Calendario1.Value.Date;
+                Prueba.final = Calendario2.Value.Date;
+                compras = new System.IO.StreamReader(direccionComp);
+                clientes = new System.IO.StreamReader(direccionClie);
+                perfiles = new System.IO.StreamReader(direccionPer);
+                Prueba.BuscarCompras();
+                //Parallel.Invoke(() => Prueba.BuscarCompras());
+                label19.Visible = true;
+                label18.Text = Prueba.tiempoTot;
+                label18.Visible = true;
+                for (int v = 0; v < Prueba.cedulas.Length; v++)
+                {
+                    TablaDatos.Rows.Insert(v, Prueba.cedulas[v], Prueba.nombres[v], Prueba.comprasTot[v]);
+                }
             }
+            else
+                System.Console.WriteLine("Debe ingresar una cedula.");
+        }
 
-            /*
-                        //TablaDatos.Rows(1).Cells(1).Text = Prueba.cliente;
-                        txtNombre.Visible = true;
-                        txtCedula.Text = Prueba.ced;
-                        txtCedula.Visible = true;
-                        txtMonto.Text = Prueba.mayorC.ToString();
-                        txtMonto.Visible = true;*/
+        private void btnBuscar_Click(object sender, EventArgs e)
+        {
+            if (txtID.Text != "")
+            {
+                txtChoriso.Visible = false;
+                txtNormal.Visible = false;
+                Prueba.ced = txtID.Text;
+                compras = new System.IO.StreamReader(direccionComp);
+                clientes = new System.IO.StreamReader(direccionClie);
+                perfiles = new System.IO.StreamReader(direccionPer);
+                Prueba.BuscarSospechosos();
+                AvisoTiempo.Visible = true;
+                Tiempo.Text = Prueba.tiempoTot;
+                Tiempo.Visible = true;
+                txtName.Text = Prueba.cliente;
+                txtName.Visible = true;
+                txtID.Text = Prueba.ced;
+                txtID.Visible = true;
+                txtLimite.Text = Prueba.limitBreak.ToString();
+                txtLimite.Visible = true;
+                txtCompra.Text = Prueba.mayorC.ToString();
+                txtCompra.Visible = true;
+                if (chorizo == true)
+                    txtChoriso.Visible = true;
+                else
+                    txtNormal.Visible = true;
+            }
+            else
+                System.Console.WriteLine("Debe ingresar una cedula.");
         }
 
         private void fechFinal_ValueChanged(object sender, EventArgs e)
@@ -276,8 +311,10 @@ namespace Paralelismo
 
         private void btnCPU_Click(object sender, EventArgs e)
         {
-            Rendimiento rend = new Rendimiento();
-            rend.Show();
+            //Rendimiento rend = new Rendimiento();
+            //rend.Show();
+            CPU_Ventana rendi = new CPU_Ventana();
+            rendi.Show();
         }
 
         private void panel3_Paint(object sender, PaintEventArgs e)

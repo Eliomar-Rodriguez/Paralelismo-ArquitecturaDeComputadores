@@ -1,0 +1,10 @@
+C:\Users\Steven\Desktop\TEC\Progras\Progra-paralelismo-Arqui\Paralelismo\Paralelismo\bin\Release\Paralelismo.exe.config
+C:\Users\Steven\Desktop\TEC\Progras\Progra-paralelismo-Arqui\Paralelismo\Paralelismo\bin\Release\Paralelismo.exe
+C:\Users\Steven\Desktop\TEC\Progras\Progra-paralelismo-Arqui\Paralelismo\Paralelismo\bin\Release\Paralelismo.pdb
+C:\Users\Steven\Desktop\TEC\Progras\Progra-paralelismo-Arqui\Paralelismo\Paralelismo\obj\Release\Paralelismo.csprojResolveAssemblyReference.cache
+C:\Users\Steven\Desktop\TEC\Progras\Progra-paralelismo-Arqui\Paralelismo\Paralelismo\obj\Release\Paralelismo.Form1.resources
+C:\Users\Steven\Desktop\TEC\Progras\Progra-paralelismo-Arqui\Paralelismo\Paralelismo\obj\Release\Paralelismo.Properties.Resources.resources
+C:\Users\Steven\Desktop\TEC\Progras\Progra-paralelismo-Arqui\Paralelismo\Paralelismo\obj\Release\Paralelismo.Rendimiento.resources
+C:\Users\Steven\Desktop\TEC\Progras\Progra-paralelismo-Arqui\Paralelismo\Paralelismo\obj\Release\Paralelismo.csproj.GenerateResource.Cache
+C:\Users\Steven\Desktop\TEC\Progras\Progra-paralelismo-Arqui\Paralelismo\Paralelismo\obj\Release\Paralelismo.exe
+C:\Users\Steven\Desktop\TEC\Progras\Progra-paralelismo-Arqui\Paralelismo\Paralelismo\obj\Release\Paralelismo.pdb

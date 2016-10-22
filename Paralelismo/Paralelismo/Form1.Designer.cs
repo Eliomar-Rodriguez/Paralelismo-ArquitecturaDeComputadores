@@ -466,6 +466,7 @@
             this.btnBuscar.TabIndex = 8;
             this.btnBuscar.Text = "Buscar";
             this.btnBuscar.UseVisualStyleBackColor = true;
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
             // txtNormal
             // 
@@ -505,9 +506,9 @@
             this.label15.Font = new System.Drawing.Font("Imprint MT Shadow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label15.Location = new System.Drawing.Point(244, 312);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(95, 28);
+            this.label15.Size = new System.Drawing.Size(167, 28);
             this.label15.TabIndex = 6;
-            this.label15.Text = "Compra";
+            this.label15.Text = "Mayor Compra";
             // 
             // txtLimite
             // 
@@ -775,8 +776,8 @@
             this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(1766, 753);
-            this.Controls.Add(this.panel4);
             this.Controls.Add(this.panelMostrar);
+            this.Controls.Add(this.panel4);
             this.Name = "Form1";
             this.Text = "Pagina principal";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;

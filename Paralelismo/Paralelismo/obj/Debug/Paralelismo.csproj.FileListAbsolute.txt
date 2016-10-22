@@ -17,3 +17,5 @@ C:\Users\USUARIO\Desktop\ProyectoParalelismo\Progra-paralelismo-Arqui\Paralelism
 C:\Users\USUARIO\Desktop\ProyectoParalelismo\Progra-paralelismo-Arqui\Paralelismo\Paralelismo\obj\Debug\Paralelismo.Properties.Resources.resources
 C:\Users\USUARIO\Desktop\ProyectoParalelismo\Progra-paralelismo-Arqui\Paralelismo\Paralelismo\obj\Debug\Paralelismo.csproj.GenerateResource.Cache
 C:\Users\USUARIO\Desktop\ProyectoParalelismo\Progra-paralelismo-Arqui\Paralelismo\Paralelismo\obj\Debug\Paralelismo.Rendimiento.resources
+C:\Users\Steven\Desktop\TEC\Progras\Progra-paralelismo-Arqui\Paralelismo\Paralelismo\obj\Debug\Paralelismo.Rendimiento.resources
+C:\Users\USUARIO\Desktop\ProyectoParalelismo\Progra-paralelismo-Arqui\Paralelismo\Paralelismo\obj\Debug\Paralelismo.CPU_Ventana.resources
