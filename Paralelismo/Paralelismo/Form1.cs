@@ -19,6 +19,10 @@ namespace Paralelismo
         public Form1()
         {
             InitializeComponent();
+            AvisoTiempoPrimer.Visible = false;
+            TiempoPrimero.Visible = false;
+            label19.Visible = false;
+            label18.Visible = false;
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
@@ -149,6 +153,15 @@ namespace Paralelismo
             clientes = new System.IO.StreamReader(direccionClie);
             perfiles = new System.IO.StreamReader(direccionPer);
             Prueba.Buscar1();
+            AvisoTiempoPrimer.Visible = true;
+            TiempoPrimero.Text = Prueba.tiempoTot;
+            TiempoPrimero.Visible = true;
+            txtNombre.Text = Prueba.cliente;
+            txtNombre.Visible = true;
+            txtCedula.Text = Prueba.ced;
+            txtCedula.Visible = true;
+            txtMonto.Text = Prueba.mayorC.ToString();
+            txtMonto.Visible = true;
         }
 
         private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
@@ -158,6 +171,51 @@ namespace Paralelismo
         private void label3_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void txtCedula_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void AnadirCed_Click(object sender, EventArgs e)
+        {
+            if (CedulaGrupal.Text != null)
+            {
+                Prueba.cedulas[Prueba.ind] = CedulaGrupal.Text;
+                Prueba.comprasTot[Prueba.ind] = 0;
+                Prueba.ind++;
+            }
+        }
+
+        private void BuscarGrup_Click(object sender, EventArgs e)
+        {
+            Prueba.inicio = Calendario1.Value.Date;
+            Prueba.final = Calendario2.Value.Date;
+            compras = new System.IO.StreamReader(direccionComp);
+            clientes = new System.IO.StreamReader(direccionClie);
+            perfiles = new System.IO.StreamReader(direccionPer);
+            Prueba.BuscarCompras();
+            label19.Visible = true;
+            label18.Text = Prueba.tiempoTot;
+            label18.Visible = true;
+            int cont = 0;
+            for (int v = 0; v < Prueba.cedulas.Length; v++)
+            {
+                TablaDatos.Rows.Insert(cont, Prueba.cedulas[v], Prueba.cliente, Prueba.comprasTot[v]);
+                /*TablaDatos.Rows[v].Cells[0].Value = Prueba.cedulas[v];
+                TablaDatos.Rows[v].Cells[1].Value = Prueba.cliente;
+                TablaDatos.Rows[v].Cells[2].Value = Prueba.comprasTot[v];*/
+                cont++;
+            }
+
+            /*
+                        //TablaDatos.Rows(1).Cells(1).Text = Prueba.cliente;
+                        txtNombre.Visible = true;
+                        txtCedula.Text = Prueba.ced;
+                        txtCedula.Visible = true;
+                        txtMonto.Text = Prueba.mayorC.ToString();
+                        txtMonto.Visible = true;*/
         }
 
         private void fechFinal_ValueChanged(object sender, EventArgs e)

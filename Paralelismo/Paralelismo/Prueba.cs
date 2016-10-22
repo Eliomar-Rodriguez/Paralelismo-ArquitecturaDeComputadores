@@ -12,16 +12,16 @@ namespace Paralelismo
         static string line;
         public static DateTime inicio;
         public static DateTime final;
-        static string ced;
-        static string cliente;
-        static string[] cedulas = new string[10];
+        public static string ced;
+        public static string cliente;
+        public static string[] cedulas = new string[10];
         static string[] arr;
-        static int[] comprasTot = new int[10];
-        static int mayorC = 0;
+        public static int[] comprasTot = new int[10];
+        public static int mayorC = 0;
+        public static string tiempoTot;
+        public static int ind;
 
         public static void Buscar1() {
-            /*Form1.comprasTemp = Form1.compras;
-            Form1.clientesTemp = Form1.clientes;*/
             var tiempo = System.Diagnostics.Stopwatch.StartNew();
             while ((line = Form1.compras.ReadLine()) != null)
             {
@@ -44,10 +44,10 @@ namespace Paralelismo
             while ((line = Form1.clientes.ReadLine()) != null)
             {
                 arr = line.Split(',');
-                if (ced == " " + arr[0])
+                if (ced == arr[0])
                 {
                     ced = arr[0];
-                    cliente = arr[1] + arr[2] + arr[3];
+                    cliente = arr[1] + " " + arr[2] + " " + arr[3];
                     break;
                 }
                 else
@@ -56,15 +56,7 @@ namespace Paralelismo
             Form1.clientes.Close();
             tiempo.Stop();
             TimeSpan timeSpan = tiempo.Elapsed;
-            //esto se tiene que mostrar en ventana, supongo?
-            Console.WriteLine("Tiempo Total: {0}h {1}m {2}s {3}ms", timeSpan.Hours, timeSpan.Minutes, timeSpan.Seconds, timeSpan.Milliseconds);
-            //esto hay que cambiarlo para mostrarlo en la ventana...
-            System.Console.WriteLine("La mayor compra fue de:");
-            System.Console.WriteLine(mayorC);
-            System.Console.WriteLine("De el/la cliente:");
-            System.Console.WriteLine(cliente);
-            System.Console.WriteLine("Cedula:");
-            System.Console.WriteLine(ced);
+            tiempoTot = timeSpan.Hours.ToString()+ "h, " + timeSpan.Minutes.ToString() + "m, " + timeSpan.Seconds.ToString() + "s, " + timeSpan.Milliseconds.ToString() + "ms";
         }
 
         public static void BuscarCompras()
@@ -73,10 +65,10 @@ namespace Paralelismo
             //tengo que hacer un indice...
             //hay que hacer la vara del textfield que reciba el array de cedulas...
             //mientras tanto...
-            cedulas[0] = "240642622";
+            /*cedulas[0] = "240642622";
             cedulas[1] = "224808034";
             comprasTot[0] = 0;
-            comprasTot[1] = 0;
+            comprasTot[1] = 0;*/
             while ((line = Form1.compras.ReadLine()) != null)
             {
                 arr = line.Split(',');
@@ -84,7 +76,7 @@ namespace Paralelismo
                 {
                     for (int i = 0; i < cedulas.Length; i++)
                     {
-                        if (" " + cedulas[i] == arr[1])
+                        if (cedulas[i] == arr[1])
                         {
                             comprasTot[i]++;
                             break;
@@ -97,19 +89,29 @@ namespace Paralelismo
             }
 
             Form1.compras.Close();
+
+            while ((line = Form1.clientes.ReadLine()) != null)
+            {
+                arr = line.Split(',');
+                if (ced == arr[0])
+                {
+                    ced = arr[0];
+                    cliente = arr[1] + " " + arr[2] + " " + arr[3];
+                    break;
+                }
+                else
+                    continue;
+            }
+            Form1.clientes.Close();
+
             tiempo.Stop();
             TimeSpan timeSpan = tiempo.Elapsed;
-            //esto se tiene que mostrar en ventana, supongo?
-            Console.WriteLine("Tiempo Total: {0}h {1}m {2}s {3}ms", timeSpan.Hours, timeSpan.Minutes, timeSpan.Seconds, timeSpan.Milliseconds);
+            tiempoTot = timeSpan.Hours.ToString() + "h, " + timeSpan.Minutes.ToString() + "m, " + timeSpan.Seconds.ToString() + "s, " + timeSpan.Milliseconds.ToString() + "ms";
             //se tiene que hacer que esto se muestre en la ventana con un for en ambos arrays...
             System.Console.WriteLine("Cliente:");
             System.Console.WriteLine(cedulas[0]);
             System.Console.WriteLine("El total de compras fue de:");
             System.Console.WriteLine(comprasTot[0]);
-            System.Console.WriteLine("Cliente:");
-            System.Console.WriteLine(cedulas[1]);
-            System.Console.WriteLine("El total de compras fue de:");
-            System.Console.WriteLine(comprasTot[1]);
         }
 
         public static void BuscarSospechosos()
@@ -151,7 +153,7 @@ namespace Paralelismo
             {
                 arr = line.Split(',');
                 System.Console.WriteLine(limitBreak);
-                if (" " + ced == arr[1])
+                if (ced == arr[1])
                 {
                     if (Int32.Parse(arr[5]) > limitBreak)
                     {
@@ -167,8 +169,7 @@ namespace Paralelismo
             Form1.compras.Close();
             tiempo.Stop();
             TimeSpan timeSpan = tiempo.Elapsed;
-            //esto se tiene que mostrar en ventana, supongo?
-            Console.WriteLine("Tiempo Total: {0}h {1}m {2}s {3}ms", timeSpan.Hours, timeSpan.Minutes, timeSpan.Seconds, timeSpan.Milliseconds);
+            tiempoTot = timeSpan.Hours.ToString() + "h, " + timeSpan.Minutes.ToString() + "m, " + timeSpan.Seconds.ToString() + "s, " + timeSpan.Milliseconds.ToString() + "ms";
             System.Console.WriteLine("Cedula: ");
             System.Console.WriteLine(ced);
             System.Console.WriteLine("Limite: ");
