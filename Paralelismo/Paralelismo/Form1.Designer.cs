@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             this.panel0 = new System.Windows.Forms.Panel();
+            this.TiempoPrimero = new System.Windows.Forms.Label();
+            this.AvisoTiempoPrimer = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.txtMonto = new System.Windows.Forms.TextBox();
@@ -43,12 +45,24 @@
             this.txtBuscar = new System.Windows.Forms.Button();
             this.cmbOps = new System.Windows.Forms.ComboBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label21 = new System.Windows.Forms.Label();
+            this.label22 = new System.Windows.Forms.Label();
+            this.Calendario2 = new System.Windows.Forms.DateTimePicker();
+            this.Calendario1 = new System.Windows.Forms.DateTimePicker();
+            this.BuscarGrup = new System.Windows.Forms.Button();
+            this.label18 = new System.Windows.Forms.Label();
+            this.label19 = new System.Windows.Forms.Label();
+            this.AnadirCed = new System.Windows.Forms.Button();
+            this.CedulaGrupal = new System.Windows.Forms.TextBox();
+            this.label20 = new System.Windows.Forms.Label();
             this.TablaDatos = new System.Windows.Forms.DataGridView();
             this.Cedula = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Cantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label3 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.Tiempo = new System.Windows.Forms.Label();
+            this.AvisoTiempo = new System.Windows.Forms.Label();
             this.btnBuscar = new System.Windows.Forms.Button();
             this.txtNormal = new System.Windows.Forms.Label();
             this.txtChoriso = new System.Windows.Forms.Label();
@@ -76,20 +90,6 @@
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.AvisoTiempo = new System.Windows.Forms.Label();
-            this.Tiempo = new System.Windows.Forms.Label();
-            this.TiempoPrimero = new System.Windows.Forms.Label();
-            this.AvisoTiempoPrimer = new System.Windows.Forms.Label();
-            this.label18 = new System.Windows.Forms.Label();
-            this.label19 = new System.Windows.Forms.Label();
-            this.AnadirCed = new System.Windows.Forms.Button();
-            this.CedulaGrupal = new System.Windows.Forms.TextBox();
-            this.label20 = new System.Windows.Forms.Label();
-            this.BuscarGrup = new System.Windows.Forms.Button();
-            this.label21 = new System.Windows.Forms.Label();
-            this.label22 = new System.Windows.Forms.Label();
-            this.Calendario2 = new System.Windows.Forms.DateTimePicker();
-            this.Calendario1 = new System.Windows.Forms.DateTimePicker();
             this.panel0.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.TablaDatos)).BeginInit();
@@ -120,6 +120,27 @@
             this.panel0.Size = new System.Drawing.Size(923, 334);
             this.panel0.TabIndex = 0;
             this.panel0.Paint += new System.Windows.Forms.PaintEventHandler(this.panel0_Paint);
+            // 
+            // TiempoPrimero
+            // 
+            this.TiempoPrimero.AutoSize = true;
+            this.TiempoPrimero.Font = new System.Drawing.Font("Imprint MT Shadow", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TiempoPrimero.Location = new System.Drawing.Point(710, 229);
+            this.TiempoPrimero.Name = "TiempoPrimero";
+            this.TiempoPrimero.Size = new System.Drawing.Size(44, 19);
+            this.TiempoPrimero.TabIndex = 13;
+            this.TiempoPrimero.Text = "asdas";
+            // 
+            // AvisoTiempoPrimer
+            // 
+            this.AvisoTiempoPrimer.AutoSize = true;
+            this.AvisoTiempoPrimer.Font = new System.Drawing.Font("Imprint MT Shadow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AvisoTiempoPrimer.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.AvisoTiempoPrimer.Location = new System.Drawing.Point(706, 192);
+            this.AvisoTiempoPrimer.Name = "AvisoTiempoPrimer";
+            this.AvisoTiempoPrimer.Size = new System.Drawing.Size(156, 19);
+            this.AvisoTiempoPrimer.TabIndex = 12;
+            this.AvisoTiempoPrimer.Text = "Tiempo Transcurrido";
             // 
             // label16
             // 
@@ -270,6 +291,105 @@
             this.panel1.TabIndex = 2;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
+            // label21
+            // 
+            this.label21.AutoSize = true;
+            this.label21.Font = new System.Drawing.Font("Imprint MT Shadow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label21.Location = new System.Drawing.Point(571, 106);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(103, 19);
+            this.label21.TabIndex = 21;
+            this.label21.Text = "Fecha de final";
+            // 
+            // label22
+            // 
+            this.label22.AutoSize = true;
+            this.label22.Font = new System.Drawing.Font("Imprint MT Shadow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label22.Location = new System.Drawing.Point(137, 106);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(110, 19);
+            this.label22.TabIndex = 20;
+            this.label22.Text = "Fecha de inicio";
+            // 
+            // Calendario2
+            // 
+            this.Calendario2.Font = new System.Drawing.Font("Imprint MT Shadow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Calendario2.Location = new System.Drawing.Point(475, 139);
+            this.Calendario2.Name = "Calendario2";
+            this.Calendario2.Size = new System.Drawing.Size(312, 26);
+            this.Calendario2.TabIndex = 19;
+            // 
+            // Calendario1
+            // 
+            this.Calendario1.AccessibleDescription = "fechInicio";
+            this.Calendario1.Font = new System.Drawing.Font("Imprint MT Shadow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Calendario1.Location = new System.Drawing.Point(50, 142);
+            this.Calendario1.Name = "Calendario1";
+            this.Calendario1.Size = new System.Drawing.Size(285, 26);
+            this.Calendario1.TabIndex = 18;
+            // 
+            // BuscarGrup
+            // 
+            this.BuscarGrup.Font = new System.Drawing.Font("Imprint MT Shadow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BuscarGrup.Location = new System.Drawing.Point(589, 44);
+            this.BuscarGrup.Name = "BuscarGrup";
+            this.BuscarGrup.Size = new System.Drawing.Size(99, 38);
+            this.BuscarGrup.TabIndex = 17;
+            this.BuscarGrup.Text = "Buscar";
+            this.BuscarGrup.UseVisualStyleBackColor = true;
+            this.BuscarGrup.Click += new System.EventHandler(this.BuscarGrup_Click);
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Font = new System.Drawing.Font("Imprint MT Shadow", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label18.Location = new System.Drawing.Point(799, 293);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(44, 19);
+            this.label18.TabIndex = 16;
+            this.label18.Text = "asdas";
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.Font = new System.Drawing.Font("Imprint MT Shadow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label19.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.label19.Location = new System.Drawing.Point(799, 252);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(156, 19);
+            this.label19.TabIndex = 15;
+            this.label19.Text = "Tiempo Transcurrido";
+            // 
+            // AnadirCed
+            // 
+            this.AnadirCed.Font = new System.Drawing.Font("Imprint MT Shadow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AnadirCed.Location = new System.Drawing.Point(456, 44);
+            this.AnadirCed.Name = "AnadirCed";
+            this.AnadirCed.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.AnadirCed.Size = new System.Drawing.Size(99, 38);
+            this.AnadirCed.TabIndex = 14;
+            this.AnadirCed.Text = "Anadir";
+            this.AnadirCed.UseVisualStyleBackColor = true;
+            this.AnadirCed.Click += new System.EventHandler(this.AnadirCed_Click);
+            // 
+            // CedulaGrupal
+            // 
+            this.CedulaGrupal.Font = new System.Drawing.Font("Imprint MT Shadow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CedulaGrupal.Location = new System.Drawing.Point(199, 51);
+            this.CedulaGrupal.Name = "CedulaGrupal";
+            this.CedulaGrupal.Size = new System.Drawing.Size(210, 26);
+            this.CedulaGrupal.TabIndex = 13;
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.Font = new System.Drawing.Font("Imprint MT Shadow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label20.Location = new System.Drawing.Point(46, 54);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(57, 19);
+            this.label20.TabIndex = 12;
+            this.label20.Text = "Cedula";
+            // 
             // TablaDatos
             // 
             this.TablaDatos.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -335,6 +455,27 @@
             this.panel2.TabIndex = 3;
             this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
+            // Tiempo
+            // 
+            this.Tiempo.AutoSize = true;
+            this.Tiempo.Font = new System.Drawing.Font("Imprint MT Shadow", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Tiempo.Location = new System.Drawing.Point(617, 237);
+            this.Tiempo.Name = "Tiempo";
+            this.Tiempo.Size = new System.Drawing.Size(44, 19);
+            this.Tiempo.TabIndex = 11;
+            this.Tiempo.Text = "asdas";
+            // 
+            // AvisoTiempo
+            // 
+            this.AvisoTiempo.AutoSize = true;
+            this.AvisoTiempo.Font = new System.Drawing.Font("Imprint MT Shadow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AvisoTiempo.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.AvisoTiempo.Location = new System.Drawing.Point(613, 200);
+            this.AvisoTiempo.Name = "AvisoTiempo";
+            this.AvisoTiempo.Size = new System.Drawing.Size(156, 19);
+            this.AvisoTiempo.TabIndex = 10;
+            this.AvisoTiempo.Text = "Tiempo Transcurrido";
+            // 
             // btnBuscar
             // 
             this.btnBuscar.Font = new System.Drawing.Font("Imprint MT Shadow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -344,6 +485,7 @@
             this.btnBuscar.TabIndex = 8;
             this.btnBuscar.Text = "Buscar";
             this.btnBuscar.UseVisualStyleBackColor = true;
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
             // txtNormal
             // 
@@ -380,11 +522,11 @@
             // 
             this.label15.AutoSize = true;
             this.label15.Font = new System.Drawing.Font("Imprint MT Shadow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.Location = new System.Drawing.Point(178, 216);
+            this.label15.Location = new System.Drawing.Point(162, 225);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(65, 19);
+            this.label15.Size = new System.Drawing.Size(113, 19);
             this.label15.TabIndex = 6;
-            this.label15.Text = "Compra";
+            this.label15.Text = "Mayor Compra";
             // 
             // txtLimite
             // 
@@ -442,10 +584,10 @@
             // 
             // panelMostrar
             // 
+            this.panelMostrar.Controls.Add(this.panel2);
             this.panelMostrar.Controls.Add(this.panel1);
             this.panelMostrar.Controls.Add(this.btnAtras);
             this.panelMostrar.Controls.Add(this.cmbOps);
-            this.panelMostrar.Controls.Add(this.panel2);
             this.panelMostrar.Controls.Add(this.panel0);
             this.panelMostrar.Location = new System.Drawing.Point(2, 19);
             this.panelMostrar.Name = "panelMostrar";
@@ -621,147 +763,6 @@
             this.label5.Size = new System.Drawing.Size(173, 25);
             this.label5.TabIndex = 0;
             this.label5.Text = "Cargar archivos";
-            // 
-            // AvisoTiempo
-            // 
-            this.AvisoTiempo.AutoSize = true;
-            this.AvisoTiempo.Font = new System.Drawing.Font("Imprint MT Shadow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.AvisoTiempo.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.AvisoTiempo.Location = new System.Drawing.Point(613, 200);
-            this.AvisoTiempo.Name = "AvisoTiempo";
-            this.AvisoTiempo.Size = new System.Drawing.Size(156, 19);
-            this.AvisoTiempo.TabIndex = 10;
-            this.AvisoTiempo.Text = "Tiempo Transcurrido";
-            // 
-            // Tiempo
-            // 
-            this.Tiempo.AutoSize = true;
-            this.Tiempo.Font = new System.Drawing.Font("Imprint MT Shadow", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Tiempo.Location = new System.Drawing.Point(617, 237);
-            this.Tiempo.Name = "Tiempo";
-            this.Tiempo.Size = new System.Drawing.Size(44, 19);
-            this.Tiempo.TabIndex = 11;
-            this.Tiempo.Text = "asdas";
-            // 
-            // TiempoPrimero
-            // 
-            this.TiempoPrimero.AutoSize = true;
-            this.TiempoPrimero.Font = new System.Drawing.Font("Imprint MT Shadow", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TiempoPrimero.Location = new System.Drawing.Point(710, 229);
-            this.TiempoPrimero.Name = "TiempoPrimero";
-            this.TiempoPrimero.Size = new System.Drawing.Size(44, 19);
-            this.TiempoPrimero.TabIndex = 13;
-            this.TiempoPrimero.Text = "asdas";
-            // 
-            // AvisoTiempoPrimer
-            // 
-            this.AvisoTiempoPrimer.AutoSize = true;
-            this.AvisoTiempoPrimer.Font = new System.Drawing.Font("Imprint MT Shadow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.AvisoTiempoPrimer.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.AvisoTiempoPrimer.Location = new System.Drawing.Point(706, 192);
-            this.AvisoTiempoPrimer.Name = "AvisoTiempoPrimer";
-            this.AvisoTiempoPrimer.Size = new System.Drawing.Size(156, 19);
-            this.AvisoTiempoPrimer.TabIndex = 12;
-            this.AvisoTiempoPrimer.Text = "Tiempo Transcurrido";
-            // 
-            // label18
-            // 
-            this.label18.AutoSize = true;
-            this.label18.Font = new System.Drawing.Font("Imprint MT Shadow", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label18.Location = new System.Drawing.Point(799, 293);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(44, 19);
-            this.label18.TabIndex = 16;
-            this.label18.Text = "asdas";
-            // 
-            // label19
-            // 
-            this.label19.AutoSize = true;
-            this.label19.Font = new System.Drawing.Font("Imprint MT Shadow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label19.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.label19.Location = new System.Drawing.Point(799, 252);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(156, 19);
-            this.label19.TabIndex = 15;
-            this.label19.Text = "Tiempo Transcurrido";
-            // 
-            // AnadirCed
-            // 
-            this.AnadirCed.Font = new System.Drawing.Font("Imprint MT Shadow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.AnadirCed.Location = new System.Drawing.Point(456, 44);
-            this.AnadirCed.Name = "AnadirCed";
-            this.AnadirCed.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.AnadirCed.Size = new System.Drawing.Size(99, 38);
-            this.AnadirCed.TabIndex = 14;
-            this.AnadirCed.Text = "Anadir";
-            this.AnadirCed.UseVisualStyleBackColor = true;
-            this.AnadirCed.Click += new System.EventHandler(this.AnadirCed_Click);
-            // 
-            // CedulaGrupal
-            // 
-            this.CedulaGrupal.Font = new System.Drawing.Font("Imprint MT Shadow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CedulaGrupal.Location = new System.Drawing.Point(199, 51);
-            this.CedulaGrupal.Name = "CedulaGrupal";
-            this.CedulaGrupal.Size = new System.Drawing.Size(210, 26);
-            this.CedulaGrupal.TabIndex = 13;
-            // 
-            // label20
-            // 
-            this.label20.AutoSize = true;
-            this.label20.Font = new System.Drawing.Font("Imprint MT Shadow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label20.Location = new System.Drawing.Point(46, 54);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(57, 19);
-            this.label20.TabIndex = 12;
-            this.label20.Text = "Cedula";
-            // 
-            // BuscarGrup
-            // 
-            this.BuscarGrup.Font = new System.Drawing.Font("Imprint MT Shadow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BuscarGrup.Location = new System.Drawing.Point(589, 44);
-            this.BuscarGrup.Name = "BuscarGrup";
-            this.BuscarGrup.Size = new System.Drawing.Size(99, 38);
-            this.BuscarGrup.TabIndex = 17;
-            this.BuscarGrup.Text = "Buscar";
-            this.BuscarGrup.UseVisualStyleBackColor = true;
-            this.BuscarGrup.Click += new System.EventHandler(this.BuscarGrup_Click);
-            // 
-            // label21
-            // 
-            this.label21.AutoSize = true;
-            this.label21.Font = new System.Drawing.Font("Imprint MT Shadow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label21.Location = new System.Drawing.Point(571, 106);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(103, 19);
-            this.label21.TabIndex = 21;
-            this.label21.Text = "Fecha de final";
-            // 
-            // label22
-            // 
-            this.label22.AutoSize = true;
-            this.label22.Font = new System.Drawing.Font("Imprint MT Shadow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label22.Location = new System.Drawing.Point(137, 106);
-            this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(110, 19);
-            this.label22.TabIndex = 20;
-            this.label22.Text = "Fecha de inicio";
-            // 
-            // Calendario2
-            // 
-            this.Calendario2.Font = new System.Drawing.Font("Imprint MT Shadow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Calendario2.Location = new System.Drawing.Point(475, 139);
-            this.Calendario2.Name = "Calendario2";
-            this.Calendario2.Size = new System.Drawing.Size(312, 26);
-            this.Calendario2.TabIndex = 19;
-            // 
-            // Calendario1
-            // 
-            this.Calendario1.AccessibleDescription = "fechInicio";
-            this.Calendario1.Font = new System.Drawing.Font("Imprint MT Shadow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Calendario1.Location = new System.Drawing.Point(50, 142);
-            this.Calendario1.Name = "Calendario1";
-            this.Calendario1.Size = new System.Drawing.Size(285, 26);
-            this.Calendario1.TabIndex = 18;
             // 
             // Form1
             // 

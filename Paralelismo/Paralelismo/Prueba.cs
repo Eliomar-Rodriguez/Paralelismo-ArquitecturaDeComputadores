@@ -16,16 +16,19 @@ namespace Paralelismo
         public static string cliente;
         public static string[] cedulas = new string[10];
         static string[] arr;
+        public static string[] nombres = new string[10];
         public static int[] comprasTot = new int[10];
         public static int mayorC = 0;
         public static string tiempoTot;
         public static int ind;
+        public static double limitBreak;
 
         public static void Buscar1() {
             var tiempo = System.Diagnostics.Stopwatch.StartNew();
             while ((line = Form1.compras.ReadLine()) != null)
             {
                 arr = line.Split(',');
+                System.Console.WriteLine("Buscando... Espere por favor...");
                 if ((Convert.ToDateTime(arr[6]) >= inicio) && (Convert.ToDateTime(arr[6]) <= final))
                 {
                     if (mayorC < Int32.Parse(arr[5]))
@@ -62,16 +65,10 @@ namespace Paralelismo
         public static void BuscarCompras()
         {
             var tiempo = System.Diagnostics.Stopwatch.StartNew();
-            //tengo que hacer un indice...
-            //hay que hacer la vara del textfield que reciba el array de cedulas...
-            //mientras tanto...
-            /*cedulas[0] = "240642622";
-            cedulas[1] = "224808034";
-            comprasTot[0] = 0;
-            comprasTot[1] = 0;*/
             while ((line = Form1.compras.ReadLine()) != null)
             {
                 arr = line.Split(',');
+                System.Console.WriteLine("Buscando... Espere por favor...");
                 if ((Convert.ToDateTime(arr[6]) >= inicio) && (Convert.ToDateTime(arr[6]) <= final))
                 {
                     for (int i = 0; i < cedulas.Length; i++)
@@ -93,10 +90,36 @@ namespace Paralelismo
             while ((line = Form1.clientes.ReadLine()) != null)
             {
                 arr = line.Split(',');
+                for (int i = 0; i < nombres.Length; i++)
+                {
+                    if (cedulas[i] == arr[0])
+                    {
+                        nombres[i] = arr[1] + " " + arr[2] + " " + arr[3];
+                        break;
+                    }
+                    else
+                        continue;
+                }
+            }
+            Form1.clientes.Close();
+
+            tiempo.Stop();
+            TimeSpan timeSpan = tiempo.Elapsed;
+            tiempoTot = timeSpan.Hours.ToString() + "h, " + timeSpan.Minutes.ToString() + "m, " + timeSpan.Seconds.ToString() + "s, " + timeSpan.Milliseconds.ToString() + "ms";
+        }
+
+        public static void BuscarSospechosos()
+        {
+            var tiempo = System.Diagnostics.Stopwatch.StartNew();
+            string perfil = "";
+            limitBreak = 0;
+            while ((line = Form1.clientes.ReadLine()) != null)
+            {
+                arr = line.Split(',');
                 if (ced == arr[0])
                 {
-                    ced = arr[0];
                     cliente = arr[1] + " " + arr[2] + " " + arr[3];
+                    perfil = arr[6];
                     break;
                 }
                 else
@@ -104,42 +127,10 @@ namespace Paralelismo
             }
             Form1.clientes.Close();
 
-            tiempo.Stop();
-            TimeSpan timeSpan = tiempo.Elapsed;
-            tiempoTot = timeSpan.Hours.ToString() + "h, " + timeSpan.Minutes.ToString() + "m, " + timeSpan.Seconds.ToString() + "s, " + timeSpan.Milliseconds.ToString() + "ms";
-            //se tiene que hacer que esto se muestre en la ventana con un for en ambos arrays...
-            System.Console.WriteLine("Cliente:");
-            System.Console.WriteLine(cedulas[0]);
-            System.Console.WriteLine("El total de compras fue de:");
-            System.Console.WriteLine(comprasTot[0]);
-        }
-
-        public static void BuscarSospechosos()
-        {
-            var tiempo = System.Diagnostics.Stopwatch.StartNew();
-            //se tiene que recibir de un textfield de la ventana...
-            ced = "224808034";
-            string perfil = "";
-            double limitBreak = 0;
-            while ((line = Form1.compras.ReadLine()) != null)
-            {
-                arr = line.Split(',');
-                if (ced == arr[0])
-                {
-                    perfil = arr[6];
-                    break;
-                }
-                else
-                    continue;
-            }
-            Form1.compras.Close();
-
             while ((line = Form1.perfiles.ReadLine()) != null)
             {
                 arr = line.Split(',');
-                System.Console.WriteLine(arr[0]);
-                System.Console.WriteLine(perfil);
-                if (perfil == " " + arr[0])
+                if (perfil == arr[0])
                 {
                     limitBreak = Convert.ToDouble(arr[2]);
                     break;
@@ -155,27 +146,28 @@ namespace Paralelismo
                 System.Console.WriteLine(limitBreak);
                 if (ced == arr[1])
                 {
-                    if (Int32.Parse(arr[5]) > limitBreak)
+                    if (Int32.Parse(arr[5]) > limitBreak * 1.2)
                     {
-                        System.Console.WriteLine("Jojo, parece que aqui huele a chorizo!!");
+                        mayorC = Int32.Parse(arr[5]);
+                        Form1.chorizo = true;
                         break;
                     }
                     else
+                    {
+                        if (mayorC < Int32.Parse(arr[5]))
+                           mayorC = Int32.Parse(arr[5]);
                         System.Console.WriteLine("Por el momento, todo esta limpio, como mi conciencia... XD");
+                    }
                 }
                 else
                     continue;
             }
             Form1.compras.Close();
+
+
             tiempo.Stop();
             TimeSpan timeSpan = tiempo.Elapsed;
             tiempoTot = timeSpan.Hours.ToString() + "h, " + timeSpan.Minutes.ToString() + "m, " + timeSpan.Seconds.ToString() + "s, " + timeSpan.Milliseconds.ToString() + "ms";
-            System.Console.WriteLine("Cedula: ");
-            System.Console.WriteLine(ced);
-            System.Console.WriteLine("Limite: ");
-            System.Console.WriteLine(limitBreak);
-            System.Console.WriteLine("Compra:");
-            System.Console.WriteLine(arr[5]);
         }
     }
 }
