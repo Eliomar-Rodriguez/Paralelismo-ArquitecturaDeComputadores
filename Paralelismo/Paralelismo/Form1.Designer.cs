@@ -414,8 +414,8 @@
             // panelMostrar
             // 
             this.panelMostrar.Controls.Add(this.panel0);
-            this.panelMostrar.Controls.Add(this.btnCPU);
             this.panelMostrar.Controls.Add(this.panel2);
+            this.panelMostrar.Controls.Add(this.btnCPU);
             this.panelMostrar.Controls.Add(this.btnAtras);
             this.panelMostrar.Controls.Add(this.panel1);
             this.panelMostrar.Controls.Add(this.cmbOps);

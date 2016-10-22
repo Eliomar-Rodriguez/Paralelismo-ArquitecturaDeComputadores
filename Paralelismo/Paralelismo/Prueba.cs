@@ -10,13 +10,8 @@ namespace Paralelismo
     class Prueba
     {
         static string line;
-        //***********************
-        //esto se tiene que recibir de la ventana...
-        static string fechaInicio = "2006/1/25";
-        static DateTime inicio = Convert.ToDateTime(fechaInicio);
-        static string fechaFinal = "2016/6/2";
-        static DateTime final = Convert.ToDateTime(fechaFinal);
-        //************************
+        public static DateTime inicio;
+        public static DateTime final;
         static string ced;
         static string cliente;
         static string[] cedulas = new string[10];
@@ -24,11 +19,11 @@ namespace Paralelismo
         static int[] comprasTot = new int[10];
         static int mayorC = 0;
 
-        // Read the file and display it line by line.
-        
         public static void Buscar1() {
+            /*Form1.comprasTemp = Form1.compras;
+            Form1.clientesTemp = Form1.clientes;*/
             var tiempo = System.Diagnostics.Stopwatch.StartNew();
-            while ((line = file.ReadLine()) != null)
+            while ((line = Form1.compras.ReadLine()) != null)
             {
                 arr = line.Split(',');
                 if ((Convert.ToDateTime(arr[6]) >= inicio) && (Convert.ToDateTime(arr[6]) <= final))
@@ -43,10 +38,10 @@ namespace Paralelismo
                 }
             }
 
-                file.Close();
+                Form1.compras.Close();
             System.Console.WriteLine(ced);
 
-            while ((line = file2.ReadLine()) != null)
+            while ((line = Form1.clientes.ReadLine()) != null)
             {
                 arr = line.Split(',');
                 if (ced == " " + arr[0])
@@ -58,7 +53,7 @@ namespace Paralelismo
                 else
                     continue;
             }
-            file2.Close();
+            Form1.clientes.Close();
             tiempo.Stop();
             TimeSpan timeSpan = tiempo.Elapsed;
             //esto se tiene que mostrar en ventana, supongo?
@@ -82,7 +77,7 @@ namespace Paralelismo
             cedulas[1] = "224808034";
             comprasTot[0] = 0;
             comprasTot[1] = 0;
-            while ((line = file.ReadLine()) != null)
+            while ((line = Form1.compras.ReadLine()) != null)
             {
                 arr = line.Split(',');
                 if ((Convert.ToDateTime(arr[6]) >= inicio) && (Convert.ToDateTime(arr[6]) <= final))
@@ -101,7 +96,7 @@ namespace Paralelismo
                 
             }
 
-            file.Close();
+            Form1.compras.Close();
             tiempo.Stop();
             TimeSpan timeSpan = tiempo.Elapsed;
             //esto se tiene que mostrar en ventana, supongo?
@@ -124,7 +119,7 @@ namespace Paralelismo
             ced = "224808034";
             string perfil = "";
             double limitBreak = 0;
-            while ((line = file2.ReadLine()) != null)
+            while ((line = Form1.compras.ReadLine()) != null)
             {
                 arr = line.Split(',');
                 if (ced == arr[0])
@@ -135,9 +130,9 @@ namespace Paralelismo
                 else
                     continue;
             }
-            file2.Close();
+            Form1.compras.Close();
 
-            while ((line = file3.ReadLine()) != null)
+            while ((line = Form1.perfiles.ReadLine()) != null)
             {
                 arr = line.Split(',');
                 System.Console.WriteLine(arr[0]);
@@ -150,15 +145,15 @@ namespace Paralelismo
                 else
                     continue;
             }
-            file3.Close();
+            Form1.perfiles.Close();
 
-            while ((line = file.ReadLine()) != null)
+            while ((line = Form1.compras.ReadLine()) != null)
             {
                 arr = line.Split(',');
                 System.Console.WriteLine(limitBreak);
                 if (" " + ced == arr[1])
                 {
-                    if (Int32.Parse(arr[5]) > limitBreak * 1.5)
+                    if (Int32.Parse(arr[5]) > limitBreak)
                     {
                         System.Console.WriteLine("Jojo, parece que aqui huele a chorizo!!");
                         break;
@@ -169,7 +164,7 @@ namespace Paralelismo
                 else
                     continue;
             }
-            file.Close();
+            Form1.compras.Close();
             tiempo.Stop();
             TimeSpan timeSpan = tiempo.Elapsed;
             //esto se tiene que mostrar en ventana, supongo?
@@ -181,6 +176,5 @@ namespace Paralelismo
             System.Console.WriteLine("Compra:");
             System.Console.WriteLine(arr[5]);
         }
-
     }
 }

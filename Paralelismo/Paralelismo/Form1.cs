@@ -8,18 +8,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+
 namespace Paralelismo
 {
     public partial class Form1 : Form
     {
-        static System.IO.StreamReader perfiles = null, compras = null, clientes = null;
-
-        //string UnionCompras;
-        static string line;
-        static string ced;
-        static string cliente;
-        static string[] arr;
-        static int mayorC = 0;
+        public static System.IO.StreamReader perfiles = null, compras = null, clientes = null;
+        string direccionPer, direccionComp, direccionClie;
 
         public Form1()
         {
@@ -31,45 +26,7 @@ namespace Paralelismo
             if (cmbOps.SelectedIndex == 0)
             {
                 panel0.Visible = true;
-                panel1.Visible = false;
-                panel2.Visible = false;
-
-                //
-                System.IO.StreamReader ArchivoCompra = compras;
-                while ((line = ArchivoCompra.ReadLine()) != null)
-                {
-                    arr = line.Split(',');
-                    if (mayorC < Int32.Parse(arr[5]))
-                    {
-                        mayorC = Int32.Parse(arr[5]);
-                        ced = arr[1];
-                    }
-                    else
-                        continue;
-                }
-
-                ArchivoCompra.Close();
-                System.Console.WriteLine(ced);
-                System.IO.StreamReader ArchivoCliente = clientes;
-                while ((line = ArchivoCliente.ReadLine()) != null)
-                {
-                    arr = line.Split(',');
-                    if (ced == " " + arr[0])
-                    {
-                        cliente = arr[1] + arr[2] + arr[3];
-                        break;
-                    }
-                    else
-                        continue;
-                }
-                ArchivoCliente.Close();
-                System.Console.WriteLine("La mayor compra fue de:");
-                System.Console.WriteLine(mayorC);
-                System.Console.WriteLine("De el/la cliente:");
-                System.Console.WriteLine(cliente);
-
-                //
-                //panel0.Enabled = true;
+                panel0.Enabled = true;
             }
             else if (cmbOps.SelectedIndex == 1)
             {
@@ -116,7 +73,9 @@ namespace Paralelismo
                 System.IO.StreamReader ArchivoCompras = new System.IO.StreamReader(ventana.FileName);
                 //MessageBox.Show(sr.ReadToEnd());
                 lblCompras.Text = ventana.FileName;
+                direccionComp = ventana.FileName;
                 compras = ArchivoCompras;
+                //comprasTemp = ArchivoCompras;
                 //System.Console.WriteLine(ventana.FileName);
                 //ArchivoCompras.Close();
             }
@@ -130,7 +89,9 @@ namespace Paralelismo
             {
                 System.IO.StreamReader archivoPerfiles = new System.IO.StreamReader(ventana.FileName);
                 lblPerfiles.Text = ventana.FileName;
+                direccionPer = ventana.FileName;
                 perfiles = archivoPerfiles;
+                //perfilesTemp = archivoPerfiles;
                 //archivoPerfiles.Close();
             }
 
@@ -180,11 +141,29 @@ namespace Paralelismo
 
         }
 
+        private void txtBuscar_Click(object sender, EventArgs e)
+        {
+            Prueba.inicio = dateTimePicker1.Value.Date;
+            Prueba.final = fechFinal.Value.Date;
+            compras = new System.IO.StreamReader(direccionComp);
+            clientes = new System.IO.StreamReader(direccionClie);
+            perfiles = new System.IO.StreamReader(direccionPer);
+            Prueba.Buscar1();
+        }
+
+        private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
         private void label3_Click(object sender, EventArgs e)
         {
 
         }
 
+        private void fechFinal_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
         private void label17_Click(object sender, EventArgs e)
         {
 
@@ -193,17 +172,7 @@ namespace Paralelismo
         private void btnCPU_Click(object sender, EventArgs e)
         {
             Rendimiento rend = new Rendimiento();
-            rend.Visible = true;
-        }
-
-        private void txtBuscar_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void fechFinal_ValueChanged(object sender, EventArgs e)
-        {
-
+            rend.Show();
         }
 
         private void panel3_Paint(object sender, PaintEventArgs e)
@@ -220,8 +189,9 @@ namespace Paralelismo
                 System.IO.StreamReader ArchivoClientes = new System.IO.StreamReader(ventana.FileName);
                 //MessageBox.Show(sr.ReadToEnd());
                 lblClientes.Text = ventana.FileName;
+                direccionClie = ventana.FileName;
                 clientes = ArchivoClientes;
-
+                //clientesTemp = ArchivoClientes;
                 //System.Console.WriteLine(ventana.FileName);
                 //ArchivoClientes.Close();
             }
