@@ -31,6 +31,8 @@ namespace Paralelismo
             {
                 panel0.Visible = true;
                 panel0.Enabled = true;
+                panel1.Visible = false;
+                panel2.Visible = false;
             }
             else if (cmbOps.SelectedIndex == 1)
             {
@@ -58,7 +60,7 @@ namespace Paralelismo
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            
+            label9.Visible = false;
             panelMostrar.Visible = false;
         }
 
@@ -103,12 +105,21 @@ namespace Paralelismo
 
         private void button5_Click(object sender, EventArgs e)
         {
-            panel4.Visible = false;
-            panelMostrar.Visible = true;
-            cmbOps.Visible = true;
-            panel0.Visible = false;
-            panel1.Visible = false;
-            panel2.Visible = false;
+            if (lblClientes.Text=="Direccion"||lblCompras.Text=="Direccion"||lblPerfiles.Text=="Direccion")
+            {
+                label9.Visible = true;
+            }
+            else
+            {
+                panel4.Visible = false;
+                panelMostrar.Visible = true;
+                cmbOps.Visible = true;
+                panel0.Visible = false;
+                panel1.Visible = false;
+                panel2.Visible = false;
+            }
+            
+            
             //panel4.Visible = true;
 
         }
@@ -222,6 +233,42 @@ namespace Paralelismo
         {
 
         }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label7_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label8_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblClientes_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblCompras_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblPerfiles_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label9_Click(object sender, EventArgs e)
+        {
+
+        }
+
         private void label17_Click(object sender, EventArgs e)
         {
 
