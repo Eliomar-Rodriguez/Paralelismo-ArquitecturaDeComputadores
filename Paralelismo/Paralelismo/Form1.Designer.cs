@@ -675,7 +675,7 @@
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Imprint MT Shadow", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.Color.Red;
-            this.label9.Location = new System.Drawing.Point(396, 494);
+            this.label9.Location = new System.Drawing.Point(563, 510);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(366, 38);
             this.label9.TabIndex = 8;
@@ -685,44 +685,45 @@
             // btnIniciar
             // 
             this.btnIniciar.Font = new System.Drawing.Font("Imprint MT Shadow", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnIniciar.Location = new System.Drawing.Point(507, 553);
+            this.btnIniciar.Image = ((System.Drawing.Image)(resources.GetObject("btnIniciar.Image")));
+            this.btnIniciar.Location = new System.Drawing.Point(670, 576);
             this.btnIniciar.Name = "btnIniciar";
-            this.btnIniciar.Size = new System.Drawing.Size(134, 48);
+            this.btnIniciar.Size = new System.Drawing.Size(131, 61);
             this.btnIniciar.TabIndex = 7;
-            this.btnIniciar.Text = "Iniciar";
             this.btnIniciar.UseVisualStyleBackColor = true;
             this.btnIniciar.Click += new System.EventHandler(this.button5_Click);
             // 
             // btnPerfiles
             // 
             this.btnPerfiles.Font = new System.Drawing.Font("Imprint MT Shadow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPerfiles.Location = new System.Drawing.Point(341, 384);
+            this.btnPerfiles.Image = ((System.Drawing.Image)(resources.GetObject("btnPerfiles.Image")));
+            this.btnPerfiles.Location = new System.Drawing.Point(366, 383);
             this.btnPerfiles.Name = "btnPerfiles";
-            this.btnPerfiles.Size = new System.Drawing.Size(94, 42);
+            this.btnPerfiles.Size = new System.Drawing.Size(43, 54);
             this.btnPerfiles.TabIndex = 6;
-            this.btnPerfiles.Text = "Cargar";
             this.btnPerfiles.UseVisualStyleBackColor = true;
             this.btnPerfiles.Click += new System.EventHandler(this.btnPerfiles_Click);
             // 
             // btnCompras
             // 
             this.btnCompras.Font = new System.Drawing.Font("Imprint MT Shadow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCompras.Location = new System.Drawing.Point(341, 290);
+            this.btnCompras.Image = ((System.Drawing.Image)(resources.GetObject("btnCompras.Image")));
+            this.btnCompras.Location = new System.Drawing.Point(366, 289);
             this.btnCompras.Name = "btnCompras";
-            this.btnCompras.Size = new System.Drawing.Size(94, 42);
+            this.btnCompras.Size = new System.Drawing.Size(43, 54);
             this.btnCompras.TabIndex = 5;
-            this.btnCompras.Text = "Cargar";
             this.btnCompras.UseVisualStyleBackColor = true;
             this.btnCompras.Click += new System.EventHandler(this.button3_Click);
             // 
             // btnClientes
             // 
             this.btnClientes.Font = new System.Drawing.Font("Imprint MT Shadow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnClientes.Location = new System.Drawing.Point(341, 196);
+            this.btnClientes.Image = ((System.Drawing.Image)(resources.GetObject("btnClientes.Image")));
+            this.btnClientes.Location = new System.Drawing.Point(366, 194);
             this.btnClientes.Name = "btnClientes";
-            this.btnClientes.Size = new System.Drawing.Size(94, 43);
+            this.btnClientes.Size = new System.Drawing.Size(43, 54);
             this.btnClientes.TabIndex = 4;
-            this.btnClientes.Text = "Cargar";
+            this.btnClientes.Tag = "";
             this.btnClientes.UseVisualStyleBackColor = true;
             this.btnClientes.Click += new System.EventHandler(this.button2_Click);
             // 
@@ -776,8 +777,8 @@
             this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(1766, 753);
-            this.Controls.Add(this.panelMostrar);
             this.Controls.Add(this.panel4);
+            this.Controls.Add(this.panelMostrar);
             this.Name = "Form1";
             this.Text = "Pagina principal";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;

@@ -9,6 +9,7 @@ namespace Paralelismo
     public partial class CPU_Ventana : Form
     {
         bool iscontinue = true;
+        public static int cantNucleos;
         private static CpuUsage cpu;
         public CPU_Ventana()
         {
@@ -17,6 +18,7 @@ namespace Paralelismo
 
         private void CPU_Ventana_Load(object sender, EventArgs e)
         {
+            cantNucleos = Environment.ProcessorCount;
             //Chart Settings 
 
             // Populating the data arrays.

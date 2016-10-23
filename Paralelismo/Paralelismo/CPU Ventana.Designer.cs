@@ -32,6 +32,7 @@
             System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
             System.Windows.Forms.DataVisualization.Charting.Title title1 = new System.Windows.Forms.DataVisualization.Charting.Title();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CPU_Ventana));
             this.proVal = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.cpuUsageChart = new System.Windows.Forms.DataVisualization.Charting.Chart();
@@ -41,6 +42,7 @@
             // proVal
             // 
             this.proVal.AutoSize = true;
+            this.proVal.BackColor = System.Drawing.Color.Transparent;
             this.proVal.Font = new System.Drawing.Font("Imprint MT Shadow", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.proVal.Location = new System.Drawing.Point(362, 500);
             this.proVal.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
@@ -52,6 +54,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Imprint MT Shadow", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(143, 500);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
@@ -62,17 +65,19 @@
             // 
             // cpuUsageChart
             // 
+            this.cpuUsageChart.BackColor = System.Drawing.Color.Transparent;
             chartArea1.AxisX.TitleFont = new System.Drawing.Font("Imprint MT Shadow", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             chartArea1.AxisX2.TitleFont = new System.Drawing.Font("Imprint MT Shadow", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             chartArea1.AxisY.TitleFont = new System.Drawing.Font("Imprint MT Shadow", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             chartArea1.AxisY2.TitleFont = new System.Drawing.Font("Imprint MT Shadow", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             chartArea1.Name = "ChartArea1";
             this.cpuUsageChart.ChartAreas.Add(chartArea1);
+            legend1.BackColor = System.Drawing.Color.Transparent;
             legend1.Font = new System.Drawing.Font("Imprint MT Shadow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             legend1.IsTextAutoFit = false;
             legend1.Name = "Legend1";
             this.cpuUsageChart.Legends.Add(legend1);
-            this.cpuUsageChart.Location = new System.Drawing.Point(-3, 34);
+            this.cpuUsageChart.Location = new System.Drawing.Point(-3, 68);
             this.cpuUsageChart.Name = "cpuUsageChart";
             this.cpuUsageChart.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.SeaGreen;
             series1.ChartArea = "ChartArea1";
@@ -92,7 +97,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1101, 557);
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.ClientSize = new System.Drawing.Size(1101, 655);
             this.Controls.Add(this.cpuUsageChart);
             this.Controls.Add(this.proVal);
             this.Controls.Add(this.label1);

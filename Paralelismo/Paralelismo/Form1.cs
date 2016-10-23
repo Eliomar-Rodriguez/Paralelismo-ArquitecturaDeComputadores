@@ -8,7 +8,6 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-
 namespace Paralelismo
 {
     public partial class Form1 : Form
@@ -19,6 +18,7 @@ namespace Paralelismo
 
         public Form1()
         {
+            
             InitializeComponent();
             AvisoTiempoPrimer.Visible = false;
             TiempoPrimero.Visible = false;
@@ -65,8 +65,18 @@ namespace Paralelismo
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            ToolTip toolType = new ToolTip();
+            toolType.AutoPopDelay = 5000;
+            toolType.InitialDelay = 1000;
+            toolType.ReshowDelay = 500;
+            toolType.ShowAlways = true;
+            toolType.SetToolTip(this.btnClientes, "Cargar Archivo Clientes");
+            toolType.SetToolTip(this.btnCompras, "Cargar Archivo Compras");
+            toolType.SetToolTip(this.btnPerfiles, "Cargar Archivo Perfiles");
+
             label9.Visible = false;
             panelMostrar.Visible = false;
+            
         }
 
         private void label1_Click(object sender, EventArgs e)
