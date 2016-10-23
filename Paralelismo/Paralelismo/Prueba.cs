@@ -28,7 +28,6 @@ namespace Paralelismo
             while ((line = Form1.compras.ReadLine()) != null)
             {
                 arr = line.Split(',');
-                System.Console.WriteLine("Buscando... Espere por favor...");
                 if ((Convert.ToDateTime(arr[6]) >= inicio) && (Convert.ToDateTime(arr[6]) <= final))
                 {
                     if (mayorC < Int32.Parse(arr[5]))
@@ -42,7 +41,6 @@ namespace Paralelismo
             }
 
                 Form1.compras.Close();
-            System.Console.WriteLine(ced);
 
             while ((line = Form1.clientes.ReadLine()) != null)
             {
@@ -68,7 +66,6 @@ namespace Paralelismo
             while ((line = Form1.compras.ReadLine()) != null)
             {
                 arr = line.Split(',');
-                System.Console.WriteLine("Buscando... Espere por favor...");
                 if ((Convert.ToDateTime(arr[6]) >= inicio) && (Convert.ToDateTime(arr[6]) <= final))
                 {
                     for (int i = 0; i < cedulas.Length; i++)
@@ -143,7 +140,6 @@ namespace Paralelismo
             while ((line = Form1.compras.ReadLine()) != null)
             {
                 arr = line.Split(',');
-                System.Console.WriteLine(limitBreak);
                 if (ced == arr[1])
                 {
                     if (Int32.Parse(arr[5]) > limitBreak * 1.2)

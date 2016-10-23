@@ -172,7 +172,7 @@ namespace Paralelismo
             perfiles = new System.IO.StreamReader(direccionPer);
             //Prueba.Buscar1();
             Parallel.Invoke(() => Paralelo.Buscar1());
-            AvisoTiempoPrimer.Visible = true;
+            /*AvisoTiempoPrimer.Visible = true;
             TiempoPrimero.Text = Prueba.tiempoTot;
             TiempoPrimero.Visible = true;
             txtNombre.Text = Prueba.cliente;
@@ -180,6 +180,16 @@ namespace Paralelismo
             txtCedula.Text = Prueba.ced;
             txtCedula.Visible = true;
             txtMonto.Text = Prueba.mayorC.ToString();
+            txtMonto.Visible = true;*/
+
+            AvisoTiempoPrimer.Visible = true;
+            TiempoPrimero.Text = Paralelo.tiempoTot;
+            TiempoPrimero.Visible = true;
+            txtNombre.Text = Paralelo.cliente;
+            txtNombre.Visible = true;
+            txtCedula.Text = Paralelo.ced;
+            txtCedula.Visible = true;
+            txtMonto.Text = Paralelo.mayorC.ToString();
             txtMonto.Visible = true;
         }
 
