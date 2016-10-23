@@ -777,10 +777,10 @@
             this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(1766, 753);
-            this.Controls.Add(this.panel4);
             this.Controls.Add(this.panelMostrar);
+            this.Controls.Add(this.panel4);
             this.Name = "Form1";
-            this.Text = "Pagina principal";
+            this.Text = "Carga de Arhivos";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Form1_Load);
             this.panel0.ResumeLayout(false);
