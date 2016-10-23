@@ -28,7 +28,6 @@ namespace Paralelismo
             while ((line = Form1.compras.ReadLine()) != null)
             {
                 arr = line.Split(',');
-                System.Console.WriteLine("Buscando... Espere por favor...");
                 if ((Convert.ToDateTime(arr[6]) >= inicio) && (Convert.ToDateTime(arr[6]) <= final))
                 {
                     if (mayorC < Int32.Parse(arr[5]))
@@ -42,7 +41,6 @@ namespace Paralelismo
             }
 
                 Form1.compras.Close();
-            System.Console.WriteLine(ced);
 
             while ((line = Form1.clientes.ReadLine()) != null)
             {
@@ -68,7 +66,6 @@ namespace Paralelismo
             while ((line = Form1.compras.ReadLine()) != null)
             {
                 arr = line.Split(',');
-                System.Console.WriteLine("Buscando... Espere por favor...");
                 if ((Convert.ToDateTime(arr[6]) >= inicio) && (Convert.ToDateTime(arr[6]) <= final))
                 {
                     for (int i = 0; i < cedulas.Length; i++)
@@ -101,8 +98,8 @@ namespace Paralelismo
                         continue;
                 }
             }
-            Form1.clientes.Close();
 
+            Form1.clientes.Close();
             tiempo.Stop();
             TimeSpan timeSpan = tiempo.Elapsed;
             tiempoTot = timeSpan.Hours.ToString() + "h, " + timeSpan.Minutes.ToString() + "m, " + timeSpan.Seconds.ToString() + "s, " + timeSpan.Milliseconds.ToString() + "ms";
@@ -143,7 +140,6 @@ namespace Paralelismo
             while ((line = Form1.compras.ReadLine()) != null)
             {
                 arr = line.Split(',');
-                System.Console.WriteLine(limitBreak);
                 if (ced == arr[1])
                 {
                     if (Int32.Parse(arr[5]) > limitBreak * 1.2)
@@ -156,7 +152,7 @@ namespace Paralelismo
                     {
                         if (mayorC < Int32.Parse(arr[5]))
                            mayorC = Int32.Parse(arr[5]);
-                        System.Console.WriteLine("Por el momento, todo esta limpio, como mi conciencia... XD");
+                        System.Console.WriteLine("Por el momento, todo esta limpio...");
                     }
                 }
                 else
