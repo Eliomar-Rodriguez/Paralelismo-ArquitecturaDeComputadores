@@ -8,7 +8,6 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-
 namespace Paralelismo
 {
     public partial class Form1 : Form
@@ -19,6 +18,7 @@ namespace Paralelismo
 
         public Form1()
         {
+            
             InitializeComponent();
             AvisoTiempoPrimer.Visible = false;
             TiempoPrimero.Visible = false;
@@ -65,8 +65,18 @@ namespace Paralelismo
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            ToolTip toolType = new ToolTip();
+            toolType.AutoPopDelay = 5000;
+            toolType.InitialDelay = 1000;
+            toolType.ReshowDelay = 500;
+            toolType.ShowAlways = true;
+            toolType.SetToolTip(this.btnClientes, "Cargar Archivo Clientes");
+            toolType.SetToolTip(this.btnCompras, "Cargar Archivo Compras");
+            toolType.SetToolTip(this.btnPerfiles, "Cargar Archivo Perfiles");
+
             label9.Visible = false;
             panelMostrar.Visible = false;
+            
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -163,34 +173,39 @@ namespace Paralelismo
 
         private void txtBuscar_Click(object sender, EventArgs e)
         {
-            Prueba.inicio = dateTimePicker1.Value.Date;
-            Prueba.final = fechFinal.Value.Date;
-            Paralelo.inicio = dateTimePicker1.Value.Date;
-            Paralelo.final = fechFinal.Value.Date;
             compras = new System.IO.StreamReader(direccionComp);
             clientes = new System.IO.StreamReader(direccionClie);
             perfiles = new System.IO.StreamReader(direccionPer);
-            //Prueba.Buscar1();
-            Parallel.Invoke(() => Paralelo.Buscar1());
-            /*AvisoTiempoPrimer.Visible = true;
-            TiempoPrimero.Text = Prueba.tiempoTot;
-            TiempoPrimero.Visible = true;
-            txtNombre.Text = Prueba.cliente;
-            txtNombre.Visible = true;
-            txtCedula.Text = Prueba.ced;
-            txtCedula.Visible = true;
-            txtMonto.Text = Prueba.mayorC.ToString();
-            txtMonto.Visible = true;*/
-
-            AvisoTiempoPrimer.Visible = true;
-            TiempoPrimero.Text = Paralelo.tiempoTot;
-            TiempoPrimero.Visible = true;
-            txtNombre.Text = Paralelo.cliente;
-            txtNombre.Visible = true;
-            txtCedula.Text = Paralelo.ced;
-            txtCedula.Visible = true;
-            txtMonto.Text = Paralelo.mayorC.ToString();
-            txtMonto.Visible = true;
+            if (paraleloCompra.Checked)
+            {
+                Paralelo.inicio = dateTimePicker1.Value.Date;
+                Paralelo.final = fechFinal.Value.Date;
+                Parallel.Invoke(() => Paralelo.Buscar1());
+                AvisoTiempoPrimer.Visible = true;
+                TiempoPrimero.Text = Paralelo.tiempoTot;
+                TiempoPrimero.Visible = true;
+                txtNombre.Text = Paralelo.cliente;
+                txtNombre.Visible = true;
+                txtCedula.Text = Paralelo.ced;
+                txtCedula.Visible = true;
+                txtMonto.Text = Paralelo.mayorC.ToString();
+                txtMonto.Visible = true;
+            }
+            else
+            {
+                Prueba.inicio = dateTimePicker1.Value.Date;
+                Prueba.final = fechFinal.Value.Date;
+                Prueba.Buscar1();
+                AvisoTiempoPrimer.Visible = true;
+                TiempoPrimero.Text = Prueba.tiempoTot;
+                TiempoPrimero.Visible = true;
+                txtNombre.Text = Prueba.cliente;
+                txtNombre.Visible = true;
+                txtCedula.Text = Prueba.ced;
+                txtCedula.Visible = true;
+                txtMonto.Text = Prueba.mayorC.ToString();
+                txtMonto.Visible = true;
+            }
         }
 
         private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
@@ -214,6 +229,9 @@ namespace Paralelismo
                 Prueba.cedulas[Prueba.ind] = CedulaGrupal.Text;
                 Prueba.comprasTot[Prueba.ind] = 0;
                 Prueba.ind++;
+                Paralelo.cedulas[Paralelo.ind] = CedulaGrupal.Text;
+                Paralelo.comprasTot[Paralelo.ind] = 0;
+                Paralelo.ind++;
                 CedulaGrupal.Text = "";
             }
             else
@@ -222,30 +240,46 @@ namespace Paralelismo
 
         private void BuscarGrup_Click(object sender, EventArgs e)
         {
-            if (Prueba.cedulas[0] != "")
+            if (((Prueba.cedulas[0] != "") && (Paralelo.cedulas[0] != "")) && ((paraleloLista.Checked) || (secuencialLista.Checked)))
             {
-                Prueba.inicio = Calendario1.Value.Date;
-                Prueba.final = Calendario2.Value.Date;
+                
                 compras = new System.IO.StreamReader(direccionComp);
                 clientes = new System.IO.StreamReader(direccionClie);
                 perfiles = new System.IO.StreamReader(direccionPer);
-                Prueba.BuscarCompras();
-                //Parallel.Invoke(() => Prueba.BuscarCompras());
-                label19.Visible = true;
-                label18.Text = Prueba.tiempoTot;
-                label18.Visible = true;
-                for (int v = 0; v < Prueba.cedulas.Length; v++)
+                if (paraleloLista.Checked)
                 {
-                    TablaDatos.Rows.Insert(v, Prueba.cedulas[v], Prueba.nombres[v], Prueba.comprasTot[v]);
+                    Paralelo.inicio = Calendario1.Value.Date;
+                    Paralelo.final = Calendario2.Value.Date;
+                    Parallel.Invoke(() => Paralelo.BuscarCompras());
+                    label19.Visible = true;
+                    label18.Text = Paralelo.tiempoTot;
+                    label18.Visible = true;
+                    for (int v = 0; v < Paralelo.cedulas.Length; v++)
+                    {
+                        TablaDatos.Rows.Insert(v, Paralelo.cedulas[v], Paralelo.nombres[v], Paralelo.comprasTot[v]);
+                    }
+                }
+                else
+                {
+                    Prueba.inicio = Calendario1.Value.Date;
+                    Prueba.final = Calendario2.Value.Date;
+                    Prueba.BuscarCompras();
+                    label19.Visible = true;
+                    label18.Text = Prueba.tiempoTot;
+                    label18.Visible = true;
+                    for (int v = 0; v < Prueba.cedulas.Length; v++)
+                    {
+                        TablaDatos.Rows.Insert(v, Prueba.cedulas[v], Prueba.nombres[v], Prueba.comprasTot[v]);
+                    }
                 }
             }
             else
-                System.Console.WriteLine("Debe ingresar una cedula.");
+                System.Console.WriteLine("Debe ingresar una cedula y/o activar alguna opcion de tipo de búsqueda.");
         }
 
         private void btnBuscar_Click(object sender, EventArgs e)
         {
-            if (txtID.Text != "")
+            if ((txtID.Text != "") && ((paraleloMayor.Checked) || (secuencialMayor.Checked)))
             {
                 txtChoriso.Visible = false;
                 txtNormal.Visible = false;
@@ -253,25 +287,49 @@ namespace Paralelismo
                 compras = new System.IO.StreamReader(direccionComp);
                 clientes = new System.IO.StreamReader(direccionClie);
                 perfiles = new System.IO.StreamReader(direccionPer);
-                Prueba.BuscarSospechosos();
-                AvisoTiempo.Visible = true;
-                Tiempo.Text = Prueba.tiempoTot;
-                Tiempo.Visible = true;
-                txtName.Text = Prueba.cliente;
-                txtName.Visible = true;
-                txtID.Text = Prueba.ced;
-                txtID.Visible = true;
-                txtLimite.Text = Prueba.limitBreak.ToString();
-                txtLimite.Visible = true;
-                txtCompra.Text = Prueba.mayorC.ToString();
-                txtCompra.Visible = true;
-                if (chorizo == true)
-                    txtChoriso.Visible = true;
+                if (paraleloMayor.Checked)
+                {
+                    Paralelo.BuscarSospechosos();
+                    AvisoTiempo.Visible = true;
+                    Tiempo.Text = Paralelo.tiempoTot;
+                    Tiempo.Visible = true;
+                    txtName.Text = Paralelo.cliente;
+                    txtName.Visible = true;
+                    txtID.Text = Paralelo.ced;
+                    txtID.Visible = true;
+                    txtLimite.Text = Paralelo.limitBreak.ToString();
+                    txtLimite.Visible = true;
+                    txtCompra.Text = Paralelo.mayorC.ToString();
+                    txtCompra.Visible = true;
+                    if (chorizo == true)
+                        txtChoriso.Visible = true;
+                    else
+                        txtNormal.Visible = true;
+                    txtID.Text = "";
+                }
                 else
-                    txtNormal.Visible = true;
+                {
+                    Prueba.BuscarSospechosos();
+                    AvisoTiempo.Visible = true;
+                    Tiempo.Text = Prueba.tiempoTot;
+                    Tiempo.Visible = true;
+                    txtName.Text = Prueba.cliente;
+                    txtName.Visible = true;
+                    txtID.Text = Prueba.ced;
+                    txtID.Visible = true;
+                    txtLimite.Text = Prueba.limitBreak.ToString();
+                    txtLimite.Visible = true;
+                    txtCompra.Text = Prueba.mayorC.ToString();
+                    txtCompra.Visible = true;
+                    if (chorizo == true)
+                        txtChoriso.Visible = true;
+                    else
+                        txtNormal.Visible = true;
+                    txtID.Text = "";
+                }
             }
             else
-                System.Console.WriteLine("Debe ingresar una cedula.");
+                System.Console.WriteLine("Debe ingresar una cedula y/o activar alguna opcion de tipo de búsqueda.");
         }
 
         private void fechFinal_ValueChanged(object sender, EventArgs e)
@@ -314,6 +372,11 @@ namespace Paralelismo
 
         }
 
+        private void radioButton1_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
         private void label17_Click(object sender, EventArgs e)
         {
 
@@ -321,8 +384,10 @@ namespace Paralelismo
 
         private void btnCPU_Click(object sender, EventArgs e)
         {
-            Rendimiento rend = new Rendimiento();
-            rend.Show();
+            //Rendimiento rend = new Rendimiento();
+            //rend.Show();
+            CPU_Ventana rendi = new CPU_Ventana();
+            rendi.Show();
         }
 
         private void panel3_Paint(object sender, PaintEventArgs e)

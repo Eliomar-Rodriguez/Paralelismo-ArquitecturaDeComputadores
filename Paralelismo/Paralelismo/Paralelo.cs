@@ -1,8 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.IO;
 using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 
 namespace Paralelismo
@@ -35,7 +33,7 @@ namespace Paralelismo
             Parallel.ForEach(File.ReadLines(Form1.direccionComp), (line, estado, lineNumber) =>
             {
                       arr = line.Split(',');
-                      System.Console.WriteLine(line);
+                      //System.Console.WriteLine(line);
                       /*System.Console.WriteLine(inicio);
                       System.Console.WriteLine(final);*/
                       //System.Console.WriteLine("Hi!");
@@ -51,7 +49,6 @@ namespace Paralelismo
               });
 
             Form1.compras.Close();
-            System.Console.WriteLine(ced);
 
 
             Parallel.ForEach(File.ReadLines(Form1.direccionClie), (line, c, lineNumber) =>
@@ -158,7 +155,7 @@ namespace Paralelismo
                     {
                         if (mayorC < Int32.Parse(arr[5]))
                             mayorC = Int32.Parse(arr[5]);
-                        System.Console.WriteLine("Por el momento, todo esta limpio, como mi conciencia... XD");
+                        Console.WriteLine("Por el momento, todo esta limpio, como mi conciencia... XD");
                     }
                 }
             });

@@ -98,8 +98,8 @@ namespace Paralelismo
                         continue;
                 }
             }
-            Form1.clientes.Close();
 
+            Form1.clientes.Close();
             tiempo.Stop();
             TimeSpan timeSpan = tiempo.Elapsed;
             tiempoTot = timeSpan.Hours.ToString() + "h, " + timeSpan.Minutes.ToString() + "m, " + timeSpan.Seconds.ToString() + "s, " + timeSpan.Milliseconds.ToString() + "ms";
@@ -152,7 +152,7 @@ namespace Paralelismo
                     {
                         if (mayorC < Int32.Parse(arr[5]))
                            mayorC = Int32.Parse(arr[5]);
-                        System.Console.WriteLine("Por el momento, todo esta limpio, como mi conciencia... XD");
+                        System.Console.WriteLine("Por el momento, todo esta limpio...");
                     }
                 }
                 else

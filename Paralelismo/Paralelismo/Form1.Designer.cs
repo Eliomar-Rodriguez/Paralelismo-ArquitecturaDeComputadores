@@ -30,6 +30,9 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.panel0 = new System.Windows.Forms.Panel();
+            this.label16 = new System.Windows.Forms.Label();
+            this.secuencialCompra = new System.Windows.Forms.RadioButton();
+            this.paraleloCompra = new System.Windows.Forms.RadioButton();
             this.TiempoPrimero = new System.Windows.Forms.Label();
             this.AvisoTiempoPrimer = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
@@ -60,6 +63,9 @@
             this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Cantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.label3 = new System.Windows.Forms.Label();
+            this.secuencialMayor = new System.Windows.Forms.RadioButton();
+            this.paraleloMayor = new System.Windows.Forms.RadioButton();
             this.Tiempo = new System.Windows.Forms.Label();
             this.AvisoTiempo = new System.Windows.Forms.Label();
             this.btnBuscar = new System.Windows.Forms.Button();
@@ -90,6 +96,9 @@
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
+            this.label23 = new System.Windows.Forms.Label();
+            this.secuencialLista = new System.Windows.Forms.RadioButton();
+            this.paraleloLista = new System.Windows.Forms.RadioButton();
             this.panel0.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.TablaDatos)).BeginInit();
@@ -100,6 +109,9 @@
             // 
             // panel0
             // 
+            this.panel0.Controls.Add(this.label16);
+            this.panel0.Controls.Add(this.secuencialCompra);
+            this.panel0.Controls.Add(this.paraleloCompra);
             this.panel0.Controls.Add(this.TiempoPrimero);
             this.panel0.Controls.Add(this.AvisoTiempoPrimer);
             this.panel0.Controls.Add(this.label12);
@@ -114,19 +126,56 @@
             this.panel0.Controls.Add(this.dateTimePicker1);
             this.panel0.Controls.Add(this.txtBuscar);
             this.panel0.Enabled = false;
-            this.panel0.Location = new System.Drawing.Point(99, 128);
+            this.panel0.Location = new System.Drawing.Point(66, 83);
+            this.panel0.Margin = new System.Windows.Forms.Padding(2);
             this.panel0.Name = "panel0";
-            this.panel0.Size = new System.Drawing.Size(1209, 484);
+            this.panel0.Size = new System.Drawing.Size(806, 315);
             this.panel0.TabIndex = 0;
             this.panel0.Paint += new System.Windows.Forms.PaintEventHandler(this.panel0_Paint);
             // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Font = new System.Drawing.Font("Imprint MT Shadow", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label16.Location = new System.Drawing.Point(549, 115);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(162, 23);
+            this.label16.TabIndex = 17;
+            this.label16.Text = "Tipo de Algoritmo";
+            // 
+            // secuencialCompra
+            // 
+            this.secuencialCompra.AutoSize = true;
+            this.secuencialCompra.Font = new System.Drawing.Font("Imprint MT Shadow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.secuencialCompra.Location = new System.Drawing.Point(567, 189);
+            this.secuencialCompra.Name = "secuencialCompra";
+            this.secuencialCompra.Size = new System.Drawing.Size(98, 23);
+            this.secuencialCompra.TabIndex = 16;
+            this.secuencialCompra.TabStop = true;
+            this.secuencialCompra.Text = "Secuencial";
+            this.secuencialCompra.UseVisualStyleBackColor = true;
+            this.secuencialCompra.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged);
+            // 
+            // paraleloCompra
+            // 
+            this.paraleloCompra.AutoSize = true;
+            this.paraleloCompra.Font = new System.Drawing.Font("Imprint MT Shadow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.paraleloCompra.Location = new System.Drawing.Point(567, 156);
+            this.paraleloCompra.Name = "paraleloCompra";
+            this.paraleloCompra.Size = new System.Drawing.Size(81, 23);
+            this.paraleloCompra.TabIndex = 15;
+            this.paraleloCompra.TabStop = true;
+            this.paraleloCompra.Text = "Paralelo";
+            this.paraleloCompra.UseVisualStyleBackColor = true;
+            // 
             // TiempoPrimero
-
+            // 
             this.TiempoPrimero.AutoSize = true;
             this.TiempoPrimero.Font = new System.Drawing.Font("Imprint MT Shadow", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TiempoPrimero.Location = new System.Drawing.Point(771, 274);
+            this.TiempoPrimero.Location = new System.Drawing.Point(604, 268);
+            this.TiempoPrimero.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.TiempoPrimero.Name = "TiempoPrimero";
-            this.TiempoPrimero.Size = new System.Drawing.Size(65, 28);
+            this.TiempoPrimero.Size = new System.Drawing.Size(44, 19);
             this.TiempoPrimero.TabIndex = 13;
             this.TiempoPrimero.Text = "asdas";
             // 
@@ -135,9 +184,10 @@
             this.AvisoTiempoPrimer.AutoSize = true;
             this.AvisoTiempoPrimer.Font = new System.Drawing.Font("Imprint MT Shadow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.AvisoTiempoPrimer.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.AvisoTiempoPrimer.Location = new System.Drawing.Point(767, 237);
+            this.AvisoTiempoPrimer.Location = new System.Drawing.Point(549, 238);
+            this.AvisoTiempoPrimer.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.AvisoTiempoPrimer.Name = "AvisoTiempoPrimer";
-            this.AvisoTiempoPrimer.Size = new System.Drawing.Size(234, 28);
+            this.AvisoTiempoPrimer.Size = new System.Drawing.Size(156, 19);
             this.AvisoTiempoPrimer.TabIndex = 12;
             this.AvisoTiempoPrimer.Text = "Tiempo Transcurrido";
             // 
@@ -145,9 +195,10 @@
             // 
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Imprint MT Shadow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(129, 359);
+            this.label12.Location = new System.Drawing.Point(86, 233);
+            this.label12.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(80, 28);
+            this.label12.Size = new System.Drawing.Size(54, 19);
             this.label12.TabIndex = 10;
             this.label12.Text = "Monto";
             // 
@@ -155,18 +206,20 @@
             // 
             this.txtMonto.Enabled = false;
             this.txtMonto.Font = new System.Drawing.Font("Imprint MT Shadow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtMonto.Location = new System.Drawing.Point(269, 351);
+            this.txtMonto.Location = new System.Drawing.Point(179, 228);
+            this.txtMonto.Margin = new System.Windows.Forms.Padding(2);
             this.txtMonto.Name = "txtMonto";
-            this.txtMonto.Size = new System.Drawing.Size(395, 36);
+            this.txtMonto.Size = new System.Drawing.Size(265, 26);
             this.txtMonto.TabIndex = 9;
             // 
             // label11
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Imprint MT Shadow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(129, 301);
+            this.label11.Location = new System.Drawing.Point(86, 196);
+            this.label11.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(85, 28);
+            this.label11.Size = new System.Drawing.Size(57, 19);
             this.label11.TabIndex = 8;
             this.label11.Text = "Cedula";
             // 
@@ -174,9 +227,10 @@
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Imprint MT Shadow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(129, 246);
+            this.label10.Location = new System.Drawing.Point(86, 160);
+            this.label10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(97, 28);
+            this.label10.Size = new System.Drawing.Size(66, 19);
             this.label10.TabIndex = 7;
             this.label10.Text = "Nombre";
             // 
@@ -184,9 +238,10 @@
             // 
             this.txtCedula.Enabled = false;
             this.txtCedula.Font = new System.Drawing.Font("Imprint MT Shadow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCedula.Location = new System.Drawing.Point(269, 293);
+            this.txtCedula.Location = new System.Drawing.Point(179, 190);
+            this.txtCedula.Margin = new System.Windows.Forms.Padding(2);
             this.txtCedula.Name = "txtCedula";
-            this.txtCedula.Size = new System.Drawing.Size(395, 36);
+            this.txtCedula.Size = new System.Drawing.Size(265, 26);
             this.txtCedula.TabIndex = 6;
             this.txtCedula.TextChanged += new System.EventHandler(this.txtCedula_TextChanged);
             // 
@@ -194,9 +249,10 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Imprint MT Shadow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(837, 44);
+            this.label2.Location = new System.Drawing.Point(558, 29);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(157, 28);
+            this.label2.Size = new System.Drawing.Size(103, 19);
             this.label2.TabIndex = 5;
             this.label2.Text = "Fecha de final";
             // 
@@ -204,9 +260,10 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Imprint MT Shadow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(223, 44);
+            this.label1.Location = new System.Drawing.Point(149, 29);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(169, 28);
+            this.label1.Size = new System.Drawing.Size(110, 19);
             this.label1.TabIndex = 4;
             this.label1.Text = "Fecha de inicio";
             this.label1.Click += new System.EventHandler(this.label1_Click);
@@ -214,9 +271,10 @@
             // fechFinal
             // 
             this.fechFinal.Font = new System.Drawing.Font("Imprint MT Shadow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.fechFinal.Location = new System.Drawing.Point(709, 82);
+            this.fechFinal.Location = new System.Drawing.Point(473, 53);
+            this.fechFinal.Margin = new System.Windows.Forms.Padding(2);
             this.fechFinal.Name = "fechFinal";
-            this.fechFinal.Size = new System.Drawing.Size(406, 36);
+            this.fechFinal.Size = new System.Drawing.Size(272, 26);
             this.fechFinal.TabIndex = 3;
             this.fechFinal.ValueChanged += new System.EventHandler(this.fechFinal_ValueChanged);
             // 
@@ -224,26 +282,29 @@
             // 
             this.txtNombre.Enabled = false;
             this.txtNombre.Font = new System.Drawing.Font("Imprint MT Shadow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNombre.Location = new System.Drawing.Point(269, 238);
+            this.txtNombre.Location = new System.Drawing.Point(179, 155);
+            this.txtNombre.Margin = new System.Windows.Forms.Padding(2);
             this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(395, 36);
+            this.txtNombre.Size = new System.Drawing.Size(265, 26);
             this.txtNombre.TabIndex = 2;
             // 
             // dateTimePicker1
             // 
             this.dateTimePicker1.AccessibleDescription = "fechInicio";
             this.dateTimePicker1.Font = new System.Drawing.Font("Imprint MT Shadow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePicker1.Location = new System.Drawing.Point(121, 82);
+            this.dateTimePicker1.Location = new System.Drawing.Point(81, 53);
+            this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(2);
             this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(407, 36);
+            this.dateTimePicker1.Size = new System.Drawing.Size(273, 26);
             this.dateTimePicker1.TabIndex = 1;
             // 
             // txtBuscar
             // 
             this.txtBuscar.Font = new System.Drawing.Font("Imprint MT Shadow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBuscar.Location = new System.Drawing.Point(552, 133);
+            this.txtBuscar.Location = new System.Drawing.Point(368, 86);
+            this.txtBuscar.Margin = new System.Windows.Forms.Padding(2);
             this.txtBuscar.Name = "txtBuscar";
-            this.txtBuscar.Size = new System.Drawing.Size(112, 42);
+            this.txtBuscar.Size = new System.Drawing.Size(75, 27);
             this.txtBuscar.TabIndex = 0;
             this.txtBuscar.Text = "Buscar";
             this.txtBuscar.UseVisualStyleBackColor = true;
@@ -257,14 +318,18 @@
             "Mayor compra realizada en lapso de tiempo",
             "Cantidad de compras realizadas por una o varias personas en lapso de tiempo",
             "Actividad sospechas de un cliente"});
-            this.cmbOps.Location = new System.Drawing.Point(217, 23);
+            this.cmbOps.Location = new System.Drawing.Point(145, 15);
+            this.cmbOps.Margin = new System.Windows.Forms.Padding(2);
             this.cmbOps.Name = "cmbOps";
-            this.cmbOps.Size = new System.Drawing.Size(783, 40);
+            this.cmbOps.Size = new System.Drawing.Size(523, 32);
             this.cmbOps.TabIndex = 1;
             this.cmbOps.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.label23);
+            this.panel1.Controls.Add(this.secuencialLista);
+            this.panel1.Controls.Add(this.paraleloLista);
             this.panel1.Controls.Add(this.label21);
             this.panel1.Controls.Add(this.label22);
             this.panel1.Controls.Add(this.Calendario2);
@@ -276,9 +341,10 @@
             this.panel1.Controls.Add(this.CedulaGrupal);
             this.panel1.Controls.Add(this.label20);
             this.panel1.Controls.Add(this.TablaDatos);
-            this.panel1.Location = new System.Drawing.Point(155, 115);
+            this.panel1.Location = new System.Drawing.Point(103, 75);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1212, 527);
+            this.panel1.Size = new System.Drawing.Size(808, 343);
             this.panel1.TabIndex = 2;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
@@ -286,9 +352,10 @@
             // 
             this.label21.AutoSize = true;
             this.label21.Font = new System.Drawing.Font("Imprint MT Shadow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label21.Location = new System.Drawing.Point(552, 106);
+            this.label21.Location = new System.Drawing.Point(368, 69);
+            this.label21.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(157, 28);
+            this.label21.Size = new System.Drawing.Size(103, 19);
             this.label21.TabIndex = 21;
             this.label21.Text = "Fecha de final";
             // 
@@ -296,35 +363,39 @@
             // 
             this.label22.AutoSize = true;
             this.label22.Font = new System.Drawing.Font("Imprint MT Shadow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label22.Location = new System.Drawing.Point(112, 106);
+            this.label22.Location = new System.Drawing.Point(75, 69);
+            this.label22.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(169, 28);
+            this.label22.Size = new System.Drawing.Size(110, 19);
             this.label22.TabIndex = 20;
             this.label22.Text = "Fecha de inicio";
             // 
             // Calendario2
             // 
             this.Calendario2.Font = new System.Drawing.Font("Imprint MT Shadow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Calendario2.Location = new System.Drawing.Point(475, 139);
+            this.Calendario2.Location = new System.Drawing.Point(317, 90);
+            this.Calendario2.Margin = new System.Windows.Forms.Padding(2);
             this.Calendario2.Name = "Calendario2";
-            this.Calendario2.Size = new System.Drawing.Size(312, 36);
+            this.Calendario2.Size = new System.Drawing.Size(261, 26);
             this.Calendario2.TabIndex = 19;
             // 
             // Calendario1
             // 
             this.Calendario1.AccessibleDescription = "fechInicio";
             this.Calendario1.Font = new System.Drawing.Font("Imprint MT Shadow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Calendario1.Location = new System.Drawing.Point(50, 142);
+            this.Calendario1.Location = new System.Drawing.Point(33, 92);
+            this.Calendario1.Margin = new System.Windows.Forms.Padding(2);
             this.Calendario1.Name = "Calendario1";
-            this.Calendario1.Size = new System.Drawing.Size(285, 36);
+            this.Calendario1.Size = new System.Drawing.Size(263, 26);
             this.Calendario1.TabIndex = 18;
             // 
             // BuscarGrup
             // 
             this.BuscarGrup.Font = new System.Drawing.Font("Imprint MT Shadow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BuscarGrup.Location = new System.Drawing.Point(676, 36);
+            this.BuscarGrup.Location = new System.Drawing.Point(451, 23);
+            this.BuscarGrup.Margin = new System.Windows.Forms.Padding(2);
             this.BuscarGrup.Name = "BuscarGrup";
-            this.BuscarGrup.Size = new System.Drawing.Size(99, 38);
+            this.BuscarGrup.Size = new System.Drawing.Size(66, 25);
             this.BuscarGrup.TabIndex = 17;
             this.BuscarGrup.Text = "Buscar";
             this.BuscarGrup.UseVisualStyleBackColor = true;
@@ -334,9 +405,10 @@
             // 
             this.label18.AutoSize = true;
             this.label18.Font = new System.Drawing.Font("Imprint MT Shadow", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label18.Location = new System.Drawing.Point(981, 280);
+            this.label18.Location = new System.Drawing.Point(654, 182);
+            this.label18.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(65, 28);
+            this.label18.Size = new System.Drawing.Size(44, 19);
             this.label18.TabIndex = 16;
             this.label18.Text = "asdas";
             // 
@@ -345,19 +417,21 @@
             this.label19.AutoSize = true;
             this.label19.Font = new System.Drawing.Font("Imprint MT Shadow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label19.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.label19.Location = new System.Drawing.Point(981, 239);
+            this.label19.Location = new System.Drawing.Point(654, 155);
+            this.label19.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(234, 28);
+            this.label19.Size = new System.Drawing.Size(156, 19);
             this.label19.TabIndex = 15;
             this.label19.Text = "Tiempo Transcurrido";
             // 
             // AnadirCed
             // 
             this.AnadirCed.Font = new System.Drawing.Font("Imprint MT Shadow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.AnadirCed.Location = new System.Drawing.Point(543, 36);
+            this.AnadirCed.Location = new System.Drawing.Point(362, 23);
+            this.AnadirCed.Margin = new System.Windows.Forms.Padding(2);
             this.AnadirCed.Name = "AnadirCed";
             this.AnadirCed.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.AnadirCed.Size = new System.Drawing.Size(99, 38);
+            this.AnadirCed.Size = new System.Drawing.Size(66, 25);
             this.AnadirCed.TabIndex = 14;
             this.AnadirCed.Text = "Anadir";
             this.AnadirCed.UseVisualStyleBackColor = true;
@@ -366,18 +440,20 @@
             // CedulaGrupal
             // 
             this.CedulaGrupal.Font = new System.Drawing.Font("Imprint MT Shadow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CedulaGrupal.Location = new System.Drawing.Point(286, 43);
+            this.CedulaGrupal.Location = new System.Drawing.Point(191, 28);
+            this.CedulaGrupal.Margin = new System.Windows.Forms.Padding(2);
             this.CedulaGrupal.Name = "CedulaGrupal";
-            this.CedulaGrupal.Size = new System.Drawing.Size(210, 36);
+            this.CedulaGrupal.Size = new System.Drawing.Size(141, 26);
             this.CedulaGrupal.TabIndex = 13;
             // 
             // label20
             // 
             this.label20.AutoSize = true;
             this.label20.Font = new System.Drawing.Font("Imprint MT Shadow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label20.Location = new System.Drawing.Point(133, 46);
+            this.label20.Location = new System.Drawing.Point(89, 30);
+            this.label20.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(85, 28);
+            this.label20.Size = new System.Drawing.Size(57, 19);
             this.label20.TabIndex = 12;
             this.label20.Text = "Cedula";
             // 
@@ -390,10 +466,11 @@
             this.Cedula,
             this.Nombre,
             this.Cantidad});
-            this.TablaDatos.Location = new System.Drawing.Point(17, 208);
+            this.TablaDatos.Location = new System.Drawing.Point(11, 135);
+            this.TablaDatos.Margin = new System.Windows.Forms.Padding(2);
             this.TablaDatos.Name = "TablaDatos";
             this.TablaDatos.RowTemplate.Height = 28;
-            this.TablaDatos.Size = new System.Drawing.Size(958, 316);
+            this.TablaDatos.Size = new System.Drawing.Size(639, 205);
             this.TablaDatos.TabIndex = 1;
             this.TablaDatos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
@@ -417,6 +494,9 @@
             // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.label3);
+            this.panel2.Controls.Add(this.secuencialMayor);
+            this.panel2.Controls.Add(this.paraleloMayor);
             this.panel2.Controls.Add(this.Tiempo);
             this.panel2.Controls.Add(this.AvisoTiempo);
             this.panel2.Controls.Add(this.btnBuscar);
@@ -430,19 +510,55 @@
             this.panel2.Controls.Add(this.label13);
             this.panel2.Controls.Add(this.txtID);
             this.panel2.Controls.Add(this.label4);
-            this.panel2.Location = new System.Drawing.Point(54, 168);
+            this.panel2.Location = new System.Drawing.Point(36, 109);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1316, 474);
+            this.panel2.Size = new System.Drawing.Size(877, 308);
             this.panel2.TabIndex = 3;
             this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Imprint MT Shadow", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(12, 15);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(162, 23);
+            this.label3.TabIndex = 14;
+            this.label3.Text = "Tipo de Algoritmo";
+            // 
+            // secuencialMayor
+            // 
+            this.secuencialMayor.AutoSize = true;
+            this.secuencialMayor.Font = new System.Drawing.Font("Imprint MT Shadow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.secuencialMayor.Location = new System.Drawing.Point(30, 89);
+            this.secuencialMayor.Name = "secuencialMayor";
+            this.secuencialMayor.Size = new System.Drawing.Size(98, 23);
+            this.secuencialMayor.TabIndex = 13;
+            this.secuencialMayor.TabStop = true;
+            this.secuencialMayor.Text = "Secuencial";
+            this.secuencialMayor.UseVisualStyleBackColor = true;
+            // 
+            // paraleloMayor
+            // 
+            this.paraleloMayor.AutoSize = true;
+            this.paraleloMayor.Font = new System.Drawing.Font("Imprint MT Shadow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.paraleloMayor.Location = new System.Drawing.Point(30, 56);
+            this.paraleloMayor.Name = "paraleloMayor";
+            this.paraleloMayor.Size = new System.Drawing.Size(81, 23);
+            this.paraleloMayor.TabIndex = 12;
+            this.paraleloMayor.TabStop = true;
+            this.paraleloMayor.Text = "Paralelo";
+            this.paraleloMayor.UseVisualStyleBackColor = true;
             // 
             // Tiempo
             // 
             this.Tiempo.AutoSize = true;
             this.Tiempo.Font = new System.Drawing.Font("Imprint MT Shadow", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Tiempo.Location = new System.Drawing.Point(700, 239);
+            this.Tiempo.Location = new System.Drawing.Point(467, 155);
+            this.Tiempo.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.Tiempo.Name = "Tiempo";
-            this.Tiempo.Size = new System.Drawing.Size(65, 28);
+            this.Tiempo.Size = new System.Drawing.Size(44, 19);
             this.Tiempo.TabIndex = 11;
             this.Tiempo.Text = "asdas";
             // 
@@ -451,18 +567,20 @@
             this.AvisoTiempo.AutoSize = true;
             this.AvisoTiempo.Font = new System.Drawing.Font("Imprint MT Shadow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.AvisoTiempo.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.AvisoTiempo.Location = new System.Drawing.Point(696, 202);
+            this.AvisoTiempo.Location = new System.Drawing.Point(464, 131);
+            this.AvisoTiempo.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.AvisoTiempo.Name = "AvisoTiempo";
-            this.AvisoTiempo.Size = new System.Drawing.Size(234, 28);
+            this.AvisoTiempo.Size = new System.Drawing.Size(156, 19);
             this.AvisoTiempo.TabIndex = 10;
             this.AvisoTiempo.Text = "Tiempo Transcurrido";
             // 
             // btnBuscar
             // 
             this.btnBuscar.Font = new System.Drawing.Font("Imprint MT Shadow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBuscar.Location = new System.Drawing.Point(847, 57);
+            this.btnBuscar.Location = new System.Drawing.Point(565, 37);
+            this.btnBuscar.Margin = new System.Windows.Forms.Padding(2);
             this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(99, 38);
+            this.btnBuscar.Size = new System.Drawing.Size(66, 25);
             this.btnBuscar.TabIndex = 8;
             this.btnBuscar.Text = "Buscar";
             this.btnBuscar.UseVisualStyleBackColor = true;
@@ -473,9 +591,10 @@
             this.txtNormal.AutoSize = true;
             this.txtNormal.Font = new System.Drawing.Font("Imprint MT Shadow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNormal.ForeColor = System.Drawing.Color.ForestGreen;
-            this.txtNormal.Location = new System.Drawing.Point(997, 259);
+            this.txtNormal.Location = new System.Drawing.Point(665, 168);
+            this.txtNormal.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.txtNormal.Name = "txtNormal";
-            this.txtNormal.Size = new System.Drawing.Size(91, 28);
+            this.txtNormal.Size = new System.Drawing.Size(61, 19);
             this.txtNormal.TabIndex = 9;
             this.txtNormal.Text = "Normal";
             this.txtNormal.Click += new System.EventHandler(this.label16_Click);
@@ -485,9 +604,10 @@
             this.txtChoriso.AutoSize = true;
             this.txtChoriso.Font = new System.Drawing.Font("Imprint MT Shadow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtChoriso.ForeColor = System.Drawing.Color.Red;
-            this.txtChoriso.Location = new System.Drawing.Point(997, 199);
+            this.txtChoriso.Location = new System.Drawing.Point(665, 129);
+            this.txtChoriso.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.txtChoriso.Name = "txtChoriso";
-            this.txtChoriso.Size = new System.Drawing.Size(174, 28);
+            this.txtChoriso.Size = new System.Drawing.Size(114, 19);
             this.txtChoriso.TabIndex = 8;
             this.txtChoriso.Text = "Huele a chorizo";
             // 
@@ -495,18 +615,20 @@
             // 
             this.txtCompra.Enabled = false;
             this.txtCompra.Font = new System.Drawing.Font("Imprint MT Shadow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCompra.Location = new System.Drawing.Point(454, 315);
+            this.txtCompra.Location = new System.Drawing.Point(303, 205);
+            this.txtCompra.Margin = new System.Windows.Forms.Padding(2);
             this.txtCompra.Name = "txtCompra";
-            this.txtCompra.Size = new System.Drawing.Size(210, 36);
+            this.txtCompra.Size = new System.Drawing.Size(141, 26);
             this.txtCompra.TabIndex = 7;
             // 
             // label15
             // 
             this.label15.AutoSize = true;
             this.label15.Font = new System.Drawing.Font("Imprint MT Shadow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.Location = new System.Drawing.Point(244, 312);
+            this.label15.Location = new System.Drawing.Point(163, 203);
+            this.label15.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(95, 28);
+            this.label15.Size = new System.Drawing.Size(113, 19);
             this.label15.TabIndex = 6;
             this.label15.Text = "Mayor Compra";
             // 
@@ -514,18 +636,20 @@
             // 
             this.txtLimite.Enabled = false;
             this.txtLimite.Font = new System.Drawing.Font("Imprint MT Shadow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtLimite.Location = new System.Drawing.Point(454, 257);
+            this.txtLimite.Location = new System.Drawing.Point(303, 167);
+            this.txtLimite.Margin = new System.Windows.Forms.Padding(2);
             this.txtLimite.Name = "txtLimite";
-            this.txtLimite.Size = new System.Drawing.Size(210, 36);
+            this.txtLimite.Size = new System.Drawing.Size(141, 26);
             this.txtLimite.TabIndex = 5;
             // 
             // label14
             // 
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Imprint MT Shadow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(244, 254);
+            this.label14.Location = new System.Drawing.Point(163, 165);
+            this.label14.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(83, 28);
+            this.label14.Size = new System.Drawing.Size(54, 19);
             this.label14.TabIndex = 4;
             this.label14.Text = "Limite";
             // 
@@ -533,60 +657,66 @@
             // 
             this.txtName.Enabled = false;
             this.txtName.Font = new System.Drawing.Font("Imprint MT Shadow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtName.Location = new System.Drawing.Point(454, 202);
+            this.txtName.Location = new System.Drawing.Point(303, 131);
+            this.txtName.Margin = new System.Windows.Forms.Padding(2);
             this.txtName.Name = "txtName";
-            this.txtName.Size = new System.Drawing.Size(210, 36);
+            this.txtName.Size = new System.Drawing.Size(141, 26);
             this.txtName.TabIndex = 3;
             // 
             // label13
             // 
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Imprint MT Shadow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(244, 199);
+            this.label13.Location = new System.Drawing.Point(163, 129);
+            this.label13.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(97, 28);
+            this.label13.Size = new System.Drawing.Size(66, 19);
             this.label13.TabIndex = 2;
             this.label13.Text = "Nombre";
             // 
             // txtID
             // 
             this.txtID.Font = new System.Drawing.Font("Imprint MT Shadow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtID.Location = new System.Drawing.Point(550, 57);
+            this.txtID.Location = new System.Drawing.Point(367, 37);
+            this.txtID.Margin = new System.Windows.Forms.Padding(2);
             this.txtID.Name = "txtID";
-            this.txtID.Size = new System.Drawing.Size(210, 36);
+            this.txtID.Size = new System.Drawing.Size(141, 26);
             this.txtID.TabIndex = 1;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Imprint MT Shadow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(397, 65);
+            this.label4.Location = new System.Drawing.Point(265, 42);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(85, 28);
+            this.label4.Size = new System.Drawing.Size(57, 19);
             this.label4.TabIndex = 0;
             this.label4.Text = "Cedula";
             // 
             // panelMostrar
             // 
             this.panelMostrar.BackColor = System.Drawing.Color.Transparent;
-            this.panelMostrar.Controls.Add(this.panel2);
             this.panelMostrar.Controls.Add(this.panel0);
             this.panelMostrar.Controls.Add(this.panel1);
+            this.panelMostrar.Controls.Add(this.panel2);
             this.panelMostrar.Controls.Add(this.btnCPU);
             this.panelMostrar.Controls.Add(this.btnAtras);
             this.panelMostrar.Controls.Add(this.cmbOps);
-            this.panelMostrar.Location = new System.Drawing.Point(70, 45);
+            this.panelMostrar.Location = new System.Drawing.Point(47, 29);
+            this.panelMostrar.Margin = new System.Windows.Forms.Padding(2);
             this.panelMostrar.Name = "panelMostrar";
-            this.panelMostrar.Size = new System.Drawing.Size(1400, 780);
+            this.panelMostrar.Size = new System.Drawing.Size(933, 507);
             this.panelMostrar.TabIndex = 4;
             this.panelMostrar.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
             // 
             // btnCPU
             // 
             this.btnCPU.Font = new System.Drawing.Font("Constantia", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCPU.Location = new System.Drawing.Point(1061, 21);
+            this.btnCPU.Location = new System.Drawing.Point(707, 14);
+            this.btnCPU.Margin = new System.Windows.Forms.Padding(2);
             this.btnCPU.Name = "btnCPU";
-            this.btnCPU.Size = new System.Drawing.Size(178, 42);
+            this.btnCPU.Size = new System.Drawing.Size(119, 27);
             this.btnCPU.TabIndex = 8;
             this.btnCPU.Text = "Monitorear CPU";
             this.btnCPU.UseVisualStyleBackColor = true;
@@ -595,9 +725,10 @@
             // btnAtras
             // 
             this.btnAtras.Font = new System.Drawing.Font("Constantia", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAtras.Location = new System.Drawing.Point(1268, 21);
+            this.btnAtras.Location = new System.Drawing.Point(845, 14);
+            this.btnAtras.Margin = new System.Windows.Forms.Padding(2);
             this.btnAtras.Name = "btnAtras";
-            this.btnAtras.Size = new System.Drawing.Size(112, 42);
+            this.btnAtras.Size = new System.Drawing.Size(75, 27);
             this.btnAtras.TabIndex = 7;
             this.btnAtras.Text = "Atras";
             this.btnAtras.UseVisualStyleBackColor = true;
@@ -619,9 +750,10 @@
             this.panel4.Controls.Add(this.label7);
             this.panel4.Controls.Add(this.label6);
             this.panel4.Controls.Add(this.label5);
-            this.panel4.Location = new System.Drawing.Point(56, 66);
+            this.panel4.Location = new System.Drawing.Point(37, 43);
+            this.panel4.Margin = new System.Windows.Forms.Padding(2);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(1742, 640);
+            this.panel4.Size = new System.Drawing.Size(1161, 416);
             this.panel4.TabIndex = 5;
             this.panel4.Paint += new System.Windows.Forms.PaintEventHandler(this.panel4_Paint);
             // 
@@ -630,9 +762,10 @@
             this.label17.AutoSize = true;
             this.label17.Font = new System.Drawing.Font("Imprint MT Shadow", 26F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label17.ForeColor = System.Drawing.Color.Red;
-            this.label17.Location = new System.Drawing.Point(275, 2);
+            this.label17.Location = new System.Drawing.Point(183, 1);
+            this.label17.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(1315, 61);
+            this.label17.Size = new System.Drawing.Size(889, 42);
             this.label17.TabIndex = 12;
             this.label17.Text = "Asegurarse de cargar los archivos respectivos a cada opción\r\n";
             this.label17.Click += new System.EventHandler(this.label17_Click);
@@ -641,9 +774,10 @@
             // 
             this.lblClientes.AutoSize = true;
             this.lblClientes.Font = new System.Drawing.Font("Imprint MT Shadow", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblClientes.Location = new System.Drawing.Point(473, 201);
+            this.lblClientes.Location = new System.Drawing.Point(315, 131);
+            this.lblClientes.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblClientes.Name = "lblClientes";
-            this.lblClientes.Size = new System.Drawing.Size(150, 38);
+            this.lblClientes.Size = new System.Drawing.Size(105, 25);
             this.lblClientes.TabIndex = 11;
             this.lblClientes.Text = "Direccion";
             this.lblClientes.Click += new System.EventHandler(this.lblClientes_Click);
@@ -652,9 +786,10 @@
             // 
             this.lblCompras.AutoSize = true;
             this.lblCompras.Font = new System.Drawing.Font("Imprint MT Shadow", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCompras.Location = new System.Drawing.Point(473, 294);
+            this.lblCompras.Location = new System.Drawing.Point(315, 191);
+            this.lblCompras.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblCompras.Name = "lblCompras";
-            this.lblCompras.Size = new System.Drawing.Size(150, 38);
+            this.lblCompras.Size = new System.Drawing.Size(105, 25);
             this.lblCompras.TabIndex = 10;
             this.lblCompras.Text = "Direccion";
             this.lblCompras.Click += new System.EventHandler(this.lblCompras_Click);
@@ -663,9 +798,10 @@
             // 
             this.lblPerfiles.AutoSize = true;
             this.lblPerfiles.Font = new System.Drawing.Font("Imprint MT Shadow", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPerfiles.Location = new System.Drawing.Point(471, 388);
+            this.lblPerfiles.Location = new System.Drawing.Point(314, 252);
+            this.lblPerfiles.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblPerfiles.Name = "lblPerfiles";
-            this.lblPerfiles.Size = new System.Drawing.Size(150, 38);
+            this.lblPerfiles.Size = new System.Drawing.Size(105, 25);
             this.lblPerfiles.TabIndex = 9;
             this.lblPerfiles.Text = "Direccion";
             this.lblPerfiles.Click += new System.EventHandler(this.lblPerfiles_Click);
@@ -675,9 +811,10 @@
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Imprint MT Shadow", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.Color.Red;
-            this.label9.Location = new System.Drawing.Point(396, 494);
+            this.label9.Location = new System.Drawing.Point(375, 331);
+            this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(366, 38);
+            this.label9.Size = new System.Drawing.Size(257, 25);
             this.label9.TabIndex = 8;
             this.label9.Text = "Falta cargar algun archivo";
             this.label9.Click += new System.EventHandler(this.label9_Click);
@@ -685,44 +822,49 @@
             // btnIniciar
             // 
             this.btnIniciar.Font = new System.Drawing.Font("Imprint MT Shadow", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnIniciar.Location = new System.Drawing.Point(507, 553);
+            this.btnIniciar.Image = ((System.Drawing.Image)(resources.GetObject("btnIniciar.Image")));
+            this.btnIniciar.Location = new System.Drawing.Point(447, 374);
+            this.btnIniciar.Margin = new System.Windows.Forms.Padding(2);
             this.btnIniciar.Name = "btnIniciar";
-            this.btnIniciar.Size = new System.Drawing.Size(134, 48);
+            this.btnIniciar.Size = new System.Drawing.Size(87, 40);
             this.btnIniciar.TabIndex = 7;
-            this.btnIniciar.Text = "Iniciar";
             this.btnIniciar.UseVisualStyleBackColor = true;
             this.btnIniciar.Click += new System.EventHandler(this.button5_Click);
             // 
             // btnPerfiles
             // 
             this.btnPerfiles.Font = new System.Drawing.Font("Imprint MT Shadow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPerfiles.Location = new System.Drawing.Point(341, 384);
+            this.btnPerfiles.Image = ((System.Drawing.Image)(resources.GetObject("btnPerfiles.Image")));
+            this.btnPerfiles.Location = new System.Drawing.Point(244, 249);
+            this.btnPerfiles.Margin = new System.Windows.Forms.Padding(2);
             this.btnPerfiles.Name = "btnPerfiles";
-            this.btnPerfiles.Size = new System.Drawing.Size(94, 42);
+            this.btnPerfiles.Size = new System.Drawing.Size(29, 35);
             this.btnPerfiles.TabIndex = 6;
-            this.btnPerfiles.Text = "Cargar";
             this.btnPerfiles.UseVisualStyleBackColor = true;
             this.btnPerfiles.Click += new System.EventHandler(this.btnPerfiles_Click);
             // 
             // btnCompras
             // 
             this.btnCompras.Font = new System.Drawing.Font("Imprint MT Shadow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCompras.Location = new System.Drawing.Point(341, 290);
+            this.btnCompras.Image = ((System.Drawing.Image)(resources.GetObject("btnCompras.Image")));
+            this.btnCompras.Location = new System.Drawing.Point(244, 188);
+            this.btnCompras.Margin = new System.Windows.Forms.Padding(2);
             this.btnCompras.Name = "btnCompras";
-            this.btnCompras.Size = new System.Drawing.Size(94, 42);
+            this.btnCompras.Size = new System.Drawing.Size(29, 35);
             this.btnCompras.TabIndex = 5;
-            this.btnCompras.Text = "Cargar";
             this.btnCompras.UseVisualStyleBackColor = true;
             this.btnCompras.Click += new System.EventHandler(this.button3_Click);
             // 
             // btnClientes
             // 
             this.btnClientes.Font = new System.Drawing.Font("Imprint MT Shadow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnClientes.Location = new System.Drawing.Point(341, 196);
+            this.btnClientes.Image = ((System.Drawing.Image)(resources.GetObject("btnClientes.Image")));
+            this.btnClientes.Location = new System.Drawing.Point(244, 126);
+            this.btnClientes.Margin = new System.Windows.Forms.Padding(2);
             this.btnClientes.Name = "btnClientes";
-            this.btnClientes.Size = new System.Drawing.Size(94, 43);
+            this.btnClientes.Size = new System.Drawing.Size(29, 35);
             this.btnClientes.TabIndex = 4;
-            this.btnClientes.Text = "Cargar";
+            this.btnClientes.Tag = "";
             this.btnClientes.UseVisualStyleBackColor = true;
             this.btnClientes.Click += new System.EventHandler(this.button2_Click);
             // 
@@ -730,9 +872,10 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Imprint MT Shadow", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(32, 388);
+            this.label8.Location = new System.Drawing.Point(21, 252);
+            this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(270, 38);
+            this.label8.Size = new System.Drawing.Size(187, 25);
             this.label8.TabIndex = 3;
             this.label8.Text = "Archivo de perfiles";
             this.label8.Click += new System.EventHandler(this.label8_Click);
@@ -741,9 +884,10 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Imprint MT Shadow", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(32, 294);
+            this.label7.Location = new System.Drawing.Point(21, 191);
+            this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(287, 38);
+            this.label7.Size = new System.Drawing.Size(199, 25);
             this.label7.TabIndex = 2;
             this.label7.Text = "Archivo de compras";
             this.label7.Click += new System.EventHandler(this.label7_Click);
@@ -752,9 +896,10 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Imprint MT Shadow", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(32, 201);
+            this.label6.Location = new System.Drawing.Point(21, 131);
+            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(273, 38);
+            this.label6.Size = new System.Drawing.Size(191, 25);
             this.label6.TabIndex = 1;
             this.label6.Text = "Archivo de clientes";
             this.label6.Click += new System.EventHandler(this.label6_Click);
@@ -763,21 +908,57 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Imprint MT Shadow", 22F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(788, 75);
+            this.label5.Location = new System.Drawing.Point(525, 49);
+            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(332, 52);
+            this.label5.Size = new System.Drawing.Size(226, 35);
             this.label5.TabIndex = 0;
             this.label5.Text = "Cargar archivos";
             // 
+            // label23
+            // 
+            this.label23.AutoSize = true;
+            this.label23.Font = new System.Drawing.Font("Imprint MT Shadow", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label23.Location = new System.Drawing.Point(575, 14);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(162, 23);
+            this.label23.TabIndex = 24;
+            this.label23.Text = "Tipo de Algoritmo";
+            // 
+            // secuencialLista
+            // 
+            this.secuencialLista.AutoSize = true;
+            this.secuencialLista.Font = new System.Drawing.Font("Imprint MT Shadow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.secuencialLista.Location = new System.Drawing.Point(593, 88);
+            this.secuencialLista.Name = "secuencialLista";
+            this.secuencialLista.Size = new System.Drawing.Size(98, 23);
+            this.secuencialLista.TabIndex = 23;
+            this.secuencialLista.TabStop = true;
+            this.secuencialLista.Text = "Secuencial";
+            this.secuencialLista.UseVisualStyleBackColor = true;
+            // 
+            // paraleloLista
+            // 
+            this.paraleloLista.AutoSize = true;
+            this.paraleloLista.Font = new System.Drawing.Font("Imprint MT Shadow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.paraleloLista.Location = new System.Drawing.Point(593, 55);
+            this.paraleloLista.Name = "paraleloLista";
+            this.paraleloLista.Size = new System.Drawing.Size(81, 23);
+            this.paraleloLista.TabIndex = 22;
+            this.paraleloLista.TabStop = true;
+            this.paraleloLista.Text = "Paralelo";
+            this.paraleloLista.UseVisualStyleBackColor = true;
+            // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.ClientSize = new System.Drawing.Size(1766, 753);
-            this.Controls.Add(this.panel4);
+            this.ClientSize = new System.Drawing.Size(908, 482);
             this.Controls.Add(this.panelMostrar);
+            this.Controls.Add(this.panel4);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Form1";
             this.Text = "Pagina principal";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
@@ -861,7 +1042,15 @@
         private System.Windows.Forms.Label label22;
         private System.Windows.Forms.DateTimePicker Calendario2;
         private System.Windows.Forms.DateTimePicker Calendario1;
-
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.RadioButton secuencialMayor;
+        private System.Windows.Forms.RadioButton paraleloMayor;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.RadioButton secuencialCompra;
+        private System.Windows.Forms.RadioButton paraleloCompra;
+        private System.Windows.Forms.Label label23;
+        private System.Windows.Forms.RadioButton secuencialLista;
+        private System.Windows.Forms.RadioButton paraleloLista;
     }
 }
 
