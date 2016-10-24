@@ -71,6 +71,7 @@
             this.core7 = new System.Windows.Forms.ProgressBar();
             this.core6 = new System.Windows.Forms.ProgressBar();
             this.cbEnable3D = new System.Windows.Forms.CheckBox();
+            this.perfCount8 = new System.Diagnostics.PerformanceCounter();
             ((System.ComponentModel.ISupportInitialize)(this.cpuUsageChart)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.perfCount0)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.perfCount1)).BeginInit();
@@ -80,6 +81,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.perfCount5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.perfCount6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.perfCount7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.perfCount8)).BeginInit();
             this.SuspendLayout();
             // 
             // proVal
@@ -118,8 +120,7 @@
             legend1.IsTextAutoFit = false;
             legend1.Name = "Legend1";
             this.cpuUsageChart.Legends.Add(legend1);
-            this.cpuUsageChart.Location = new System.Drawing.Point(-2, 32);
-            this.cpuUsageChart.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cpuUsageChart.Location = new System.Drawing.Point(-3, 50);
             this.cpuUsageChart.Name = "cpuUsageChart";
             this.cpuUsageChart.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.SeaGreen;
             series1.ChartArea = "ChartArea1";
@@ -127,7 +128,7 @@
             series1.Legend = "Legend1";
             series1.Name = "Series1";
             this.cpuUsageChart.Series.Add(series1);
-            this.cpuUsageChart.Size = new System.Drawing.Size(512, 226);
+            this.cpuUsageChart.Size = new System.Drawing.Size(768, 347);
             this.cpuUsageChart.TabIndex = 5;
             this.cpuUsageChart.Text = "cpuChart";
             title1.Font = new System.Drawing.Font("Imprint MT Shadow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -138,7 +139,7 @@
             // core0
             // 
             this.core0.Location = new System.Drawing.Point(590, 32);
-            this.core0.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.core0.Margin = new System.Windows.Forms.Padding(2);
             this.core0.Name = "core0";
             this.core0.Size = new System.Drawing.Size(139, 21);
             this.core0.TabIndex = 6;
@@ -146,7 +147,7 @@
             // core1
             // 
             this.core1.Location = new System.Drawing.Point(590, 57);
-            this.core1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.core1.Margin = new System.Windows.Forms.Padding(2);
             this.core1.Name = "core1";
             this.core1.Size = new System.Drawing.Size(139, 21);
             this.core1.TabIndex = 7;
@@ -154,7 +155,7 @@
             // core2
             // 
             this.core2.Location = new System.Drawing.Point(590, 82);
-            this.core2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.core2.Margin = new System.Windows.Forms.Padding(2);
             this.core2.Name = "core2";
             this.core2.Size = new System.Drawing.Size(139, 21);
             this.core2.TabIndex = 8;
@@ -206,44 +207,44 @@
             // 
             // perfCount1
             // 
-            this.perfCount1.CategoryName = "Procesador";
-            this.perfCount1.CounterName = "% de tiempo de procesador";
+            this.perfCount1.CategoryName = "Processor";
+            this.perfCount1.CounterName = "% Processor Time";
             this.perfCount1.InstanceName = "1";
             // 
             // perfCount2
             // 
-            this.perfCount2.CategoryName = "Procesador";
-            this.perfCount2.CounterName = "% de tiempo de procesador";
+            this.perfCount2.CategoryName = "Processor";
+            this.perfCount2.CounterName = "% Processor Time";
             this.perfCount2.InstanceName = "2";
             // 
             // perfCount3
             // 
-            this.perfCount3.CategoryName = "Procesador";
-            this.perfCount3.CounterName = "% de tiempo de procesador";
+            this.perfCount3.CategoryName = "Processor";
+            this.perfCount3.CounterName = "% Processor Time";
             this.perfCount3.InstanceName = "3";
             // 
             // perfCount4
             // 
-            this.perfCount4.CategoryName = "Procesador";
-            this.perfCount4.CounterName = "% de tiempo de procesador";
+            this.perfCount4.CategoryName = "Processor";
+            this.perfCount4.CounterName = "% Processor Time";
             this.perfCount4.InstanceName = "4";
             // 
             // perfCount5
             // 
-            this.perfCount5.CategoryName = "Procesador";
-            this.perfCount5.CounterName = "% de tiempo de procesador";
+            this.perfCount5.CategoryName = "Processor";
+            this.perfCount5.CounterName = "% Processor Time";
             this.perfCount5.InstanceName = "5";
             // 
             // perfCount6
             // 
-            this.perfCount6.CategoryName = "Procesador";
-            this.perfCount6.CounterName = "% de tiempo de procesador";
+            this.perfCount6.CategoryName = "Processor";
+            this.perfCount6.CounterName = "% Processor Time";
             this.perfCount6.InstanceName = "6";
             // 
             // perfCount7
             // 
-            this.perfCount7.CategoryName = "Procesador";
-            this.perfCount7.CounterName = "% de tiempo de procesador";
+            this.perfCount7.CategoryName = "Processor";
+            this.perfCount7.CounterName = "% Processor Time";
             this.perfCount7.InstanceName = "7";
             // 
             // lbl5
@@ -282,7 +283,7 @@
             // core5
             // 
             this.core5.Location = new System.Drawing.Point(590, 156);
-            this.core5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.core5.Margin = new System.Windows.Forms.Padding(2);
             this.core5.Name = "core5";
             this.core5.Size = new System.Drawing.Size(139, 21);
             this.core5.TabIndex = 18;
@@ -290,7 +291,7 @@
             // core4
             // 
             this.core4.Location = new System.Drawing.Point(590, 131);
-            this.core4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.core4.Margin = new System.Windows.Forms.Padding(2);
             this.core4.Name = "core4";
             this.core4.Size = new System.Drawing.Size(139, 21);
             this.core4.TabIndex = 17;
@@ -298,7 +299,7 @@
             // core3
             // 
             this.core3.Location = new System.Drawing.Point(590, 107);
-            this.core3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.core3.Margin = new System.Windows.Forms.Padding(2);
             this.core3.Name = "core3";
             this.core3.Size = new System.Drawing.Size(139, 21);
             this.core3.TabIndex = 16;
@@ -416,7 +417,7 @@
             // core7
             // 
             this.core7.Location = new System.Drawing.Point(590, 205);
-            this.core7.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.core7.Margin = new System.Windows.Forms.Padding(2);
             this.core7.Name = "core7";
             this.core7.Size = new System.Drawing.Size(139, 21);
             this.core7.TabIndex = 29;
@@ -424,7 +425,7 @@
             // core6
             // 
             this.core6.Location = new System.Drawing.Point(590, 181);
-            this.core6.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.core6.Margin = new System.Windows.Forms.Padding(2);
             this.core6.Name = "core6";
             this.core6.Size = new System.Drawing.Size(139, 21);
             this.core6.TabIndex = 28;
@@ -435,13 +436,19 @@
             this.cbEnable3D.BackColor = System.Drawing.Color.Transparent;
             this.cbEnable3D.Font = new System.Drawing.Font("Imprint MT Shadow", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbEnable3D.Location = new System.Drawing.Point(8, 8);
-            this.cbEnable3D.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cbEnable3D.Margin = new System.Windows.Forms.Padding(2);
             this.cbEnable3D.Name = "cbEnable3D";
             this.cbEnable3D.Size = new System.Drawing.Size(162, 27);
             this.cbEnable3D.TabIndex = 35;
             this.cbEnable3D.Text = "Activar vista 3D";
             this.cbEnable3D.UseVisualStyleBackColor = false;
             this.cbEnable3D.CheckedChanged += new System.EventHandler(this.cbEnable3D_CheckedChanged);
+            // 
+            // perfCount8
+            // 
+            this.perfCount8.CategoryName = "Processor";
+            this.perfCount8.CounterName = "% Processor Time";
+            this.perfCount8.InstanceName = "8";
             // 
             // CPU_Ventana
             // 
@@ -477,7 +484,7 @@
             this.Controls.Add(this.cpuUsageChart);
             this.Controls.Add(this.proVal);
             this.Controls.Add(this.label1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "CPU_Ventana";
             this.Text = "Monitoreo de CPU";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.CPU_Ventana_FormClosed);
@@ -491,6 +498,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.perfCount5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.perfCount6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.perfCount7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.perfCount8)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -535,5 +543,6 @@
         private System.Windows.Forms.ProgressBar core7;
         private System.Windows.Forms.ProgressBar core6;
         private System.Windows.Forms.CheckBox cbEnable3D;
+        private System.Diagnostics.PerformanceCounter perfCount8;
     }
 }
