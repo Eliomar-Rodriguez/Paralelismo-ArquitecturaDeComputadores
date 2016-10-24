@@ -332,5 +332,125 @@ namespace Paralelismo
                 cpuUsageChart.ChartAreas[0].Area3DStyle.Enable3D = false;
             }
         }
+
+        private void nucleo7_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lbl7_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lbl6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void core7_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void core6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void nucleo6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void nucleo5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void nucleo4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void nucleo3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void nucleo2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void nucleo1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lbl5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lbl4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lbl3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void core5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void core4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void core3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lbl2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lbl1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lbl0_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void core2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void core1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void core0_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void nucleo8_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
