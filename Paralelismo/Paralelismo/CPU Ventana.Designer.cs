@@ -29,10 +29,10 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Title title1 = new System.Windows.Forms.DataVisualization.Charting.Title();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Title title2 = new System.Windows.Forms.DataVisualization.Charting.Title();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CPU_Ventana));
             this.proVal = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -71,6 +71,7 @@
             this.core7 = new System.Windows.Forms.ProgressBar();
             this.core6 = new System.Windows.Forms.ProgressBar();
             this.cbEnable3D = new System.Windows.Forms.CheckBox();
+            this.perfCount8 = new System.Diagnostics.PerformanceCounter();
             ((System.ComponentModel.ISupportInitialize)(this.cpuUsageChart)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.perfCount0)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.perfCount1)).BeginInit();
@@ -80,6 +81,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.perfCount5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.perfCount6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.perfCount7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.perfCount8)).BeginInit();
             this.SuspendLayout();
             // 
             // proVal
@@ -109,31 +111,31 @@
             // cpuUsageChart
             // 
             this.cpuUsageChart.BackColor = System.Drawing.Color.Transparent;
-            chartArea1.AxisX.TitleFont = new System.Drawing.Font("Imprint MT Shadow", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            chartArea1.AxisX2.TitleFont = new System.Drawing.Font("Imprint MT Shadow", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            chartArea1.AxisY.TitleFont = new System.Drawing.Font("Imprint MT Shadow", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            chartArea1.AxisY2.TitleFont = new System.Drawing.Font("Imprint MT Shadow", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            chartArea1.Name = "ChartArea1";
-            this.cpuUsageChart.ChartAreas.Add(chartArea1);
-            legend1.BackColor = System.Drawing.Color.Transparent;
-            legend1.Font = new System.Drawing.Font("Imprint MT Shadow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            legend1.IsTextAutoFit = false;
-            legend1.Name = "Legend1";
-            this.cpuUsageChart.Legends.Add(legend1);
+            chartArea2.AxisX.TitleFont = new System.Drawing.Font("Imprint MT Shadow", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            chartArea2.AxisX2.TitleFont = new System.Drawing.Font("Imprint MT Shadow", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            chartArea2.AxisY.TitleFont = new System.Drawing.Font("Imprint MT Shadow", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            chartArea2.AxisY2.TitleFont = new System.Drawing.Font("Imprint MT Shadow", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            chartArea2.Name = "ChartArea1";
+            this.cpuUsageChart.ChartAreas.Add(chartArea2);
+            legend2.BackColor = System.Drawing.Color.Transparent;
+            legend2.Font = new System.Drawing.Font("Imprint MT Shadow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            legend2.IsTextAutoFit = false;
+            legend2.Name = "Legend1";
+            this.cpuUsageChart.Legends.Add(legend2);
             this.cpuUsageChart.Location = new System.Drawing.Point(-3, 50);
             this.cpuUsageChart.Name = "cpuUsageChart";
             this.cpuUsageChart.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.SeaGreen;
-            series1.ChartArea = "ChartArea1";
-            series1.Font = new System.Drawing.Font("Imprint MT Shadow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            series1.Legend = "Legend1";
-            series1.Name = "Series1";
-            this.cpuUsageChart.Series.Add(series1);
+            series2.ChartArea = "ChartArea1";
+            series2.Font = new System.Drawing.Font("Imprint MT Shadow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            series2.Legend = "Legend1";
+            series2.Name = "Series1";
+            this.cpuUsageChart.Series.Add(series2);
             this.cpuUsageChart.Size = new System.Drawing.Size(768, 347);
             this.cpuUsageChart.TabIndex = 5;
             this.cpuUsageChart.Text = "cpuChart";
-            title1.Font = new System.Drawing.Font("Imprint MT Shadow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            title1.Name = "Title1";
-            this.cpuUsageChart.Titles.Add(title1);
+            title2.Font = new System.Drawing.Font("Imprint MT Shadow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            title2.Name = "Title1";
+            this.cpuUsageChart.Titles.Add(title2);
             this.cpuUsageChart.Click += new System.EventHandler(this.cpuUsageChart_Click);
             // 
             // core0
@@ -201,50 +203,50 @@
             // 
             // perfCount0
             // 
-            this.perfCount0.CategoryName = "Procesador";
-            this.perfCount0.CounterName = "% de tiempo de procesador";
+            this.perfCount0.CategoryName = "Processor";
+            this.perfCount0.CounterName = "% Processor Time";
             this.perfCount0.InstanceName = "0";
             // 
             // perfCount1
             // 
-            this.perfCount1.CategoryName = "Procesador";
-            this.perfCount1.CounterName = "% de tiempo de procesador";
+            this.perfCount1.CategoryName = "Processor";
+            this.perfCount1.CounterName = "% Processor Time";
             this.perfCount1.InstanceName = "1";
             // 
             // perfCount2
             // 
-            this.perfCount2.CategoryName = "Procesador";
-            this.perfCount2.CounterName = "% de tiempo de procesador";
+            this.perfCount2.CategoryName = "Processor";
+            this.perfCount2.CounterName = "% Processor Time";
             this.perfCount2.InstanceName = "2";
             // 
             // perfCount3
             // 
-            this.perfCount3.CategoryName = "Procesador";
-            this.perfCount3.CounterName = "% de tiempo de procesador";
+            this.perfCount3.CategoryName = "Processor";
+            this.perfCount3.CounterName = "% Processor Time";
             this.perfCount3.InstanceName = "3";
             // 
             // perfCount4
             // 
-            this.perfCount4.CategoryName = "Procesador";
-            this.perfCount4.CounterName = "% de tiempo de procesador";
+            this.perfCount4.CategoryName = "Processor";
+            this.perfCount4.CounterName = "% Processor Time";
             this.perfCount4.InstanceName = "4";
             // 
             // perfCount5
             // 
-            this.perfCount5.CategoryName = "Procesador";
-            this.perfCount5.CounterName = "% de tiempo de procesador";
+            this.perfCount5.CategoryName = "Processor";
+            this.perfCount5.CounterName = "% Processor Time";
             this.perfCount5.InstanceName = "5";
             // 
             // perfCount6
             // 
-            this.perfCount6.CategoryName = "Procesador";
-            this.perfCount6.CounterName = "% de tiempo de procesador";
+            this.perfCount6.CategoryName = "Processor";
+            this.perfCount6.CounterName = "% Processor Time";
             this.perfCount6.InstanceName = "6";
             // 
             // perfCount7
             // 
-            this.perfCount7.CategoryName = "Procesador";
-            this.perfCount7.CounterName = "% de tiempo de procesador";
+            this.perfCount7.CategoryName = "Processor";
+            this.perfCount7.CounterName = "% Processor Time";
             this.perfCount7.InstanceName = "7";
             // 
             // lbl5
@@ -451,6 +453,12 @@
             this.cbEnable3D.UseVisualStyleBackColor = false;
             this.cbEnable3D.CheckedChanged += new System.EventHandler(this.cbEnable3D_CheckedChanged);
             // 
+            // perfCount8
+            // 
+            this.perfCount8.CategoryName = "Processor";
+            this.perfCount8.CounterName = "% Processor Time";
+            this.perfCount8.InstanceName = "8";
+            // 
             // CPU_Ventana
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -498,6 +506,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.perfCount5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.perfCount6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.perfCount7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.perfCount8)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -542,5 +551,6 @@
         private System.Windows.Forms.ProgressBar core7;
         private System.Windows.Forms.ProgressBar core6;
         private System.Windows.Forms.CheckBox cbEnable3D;
+        private System.Diagnostics.PerformanceCounter perfCount8;
     }
 }

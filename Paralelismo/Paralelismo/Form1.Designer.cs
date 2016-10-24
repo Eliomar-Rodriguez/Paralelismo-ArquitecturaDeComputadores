@@ -126,7 +126,7 @@
             this.panel0.Controls.Add(this.dateTimePicker1);
             this.panel0.Controls.Add(this.txtBuscar);
             this.panel0.Enabled = false;
-            this.panel0.Location = new System.Drawing.Point(99, 128);
+            this.panel0.Location = new System.Drawing.Point(17, 118);
             this.panel0.Name = "panel0";
             this.panel0.Size = new System.Drawing.Size(1209, 485);
             this.panel0.TabIndex = 0;
@@ -136,7 +136,7 @@
             // 
             this.label16.AutoSize = true;
             this.label16.Font = new System.Drawing.Font("Imprint MT Shadow", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.Location = new System.Drawing.Point(824, 177);
+            this.label16.Location = new System.Drawing.Point(704, 203);
             this.label16.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(245, 34);
@@ -147,7 +147,7 @@
             // 
             this.secuencialCompra.AutoSize = true;
             this.secuencialCompra.Font = new System.Drawing.Font("Imprint MT Shadow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.secuencialCompra.Location = new System.Drawing.Point(850, 291);
+            this.secuencialCompra.Location = new System.Drawing.Point(730, 317);
             this.secuencialCompra.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.secuencialCompra.Name = "secuencialCompra";
             this.secuencialCompra.Size = new System.Drawing.Size(148, 32);
@@ -161,7 +161,7 @@
             // 
             this.paraleloCompra.AutoSize = true;
             this.paraleloCompra.Font = new System.Drawing.Font("Imprint MT Shadow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.paraleloCompra.Location = new System.Drawing.Point(850, 240);
+            this.paraleloCompra.Location = new System.Drawing.Point(730, 266);
             this.paraleloCompra.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.paraleloCompra.Name = "paraleloCompra";
             this.paraleloCompra.Size = new System.Drawing.Size(122, 32);
@@ -174,7 +174,7 @@
             // 
             this.TiempoPrimero.AutoSize = true;
             this.TiempoPrimero.Font = new System.Drawing.Font("Imprint MT Shadow", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TiempoPrimero.Location = new System.Drawing.Point(906, 412);
+            this.TiempoPrimero.Location = new System.Drawing.Point(786, 438);
             this.TiempoPrimero.Name = "TiempoPrimero";
             this.TiempoPrimero.Size = new System.Drawing.Size(65, 28);
             this.TiempoPrimero.TabIndex = 13;
@@ -185,7 +185,7 @@
             this.AvisoTiempoPrimer.AutoSize = true;
             this.AvisoTiempoPrimer.Font = new System.Drawing.Font("Imprint MT Shadow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.AvisoTiempoPrimer.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.AvisoTiempoPrimer.Location = new System.Drawing.Point(824, 366);
+            this.AvisoTiempoPrimer.Location = new System.Drawing.Point(704, 392);
             this.AvisoTiempoPrimer.Name = "AvisoTiempoPrimer";
             this.AvisoTiempoPrimer.Size = new System.Drawing.Size(234, 28);
             this.AvisoTiempoPrimer.TabIndex = 12;
@@ -195,7 +195,7 @@
             // 
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Imprint MT Shadow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(129, 358);
+            this.label12.Location = new System.Drawing.Point(9, 384);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(80, 28);
             this.label12.TabIndex = 10;
@@ -205,7 +205,7 @@
             // 
             this.txtMonto.Enabled = false;
             this.txtMonto.Font = new System.Drawing.Font("Imprint MT Shadow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtMonto.Location = new System.Drawing.Point(268, 351);
+            this.txtMonto.Location = new System.Drawing.Point(148, 377);
             this.txtMonto.Name = "txtMonto";
             this.txtMonto.Size = new System.Drawing.Size(396, 36);
             this.txtMonto.TabIndex = 9;
@@ -214,7 +214,7 @@
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Imprint MT Shadow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(129, 302);
+            this.label11.Location = new System.Drawing.Point(9, 328);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(85, 28);
             this.label11.TabIndex = 8;
@@ -224,7 +224,7 @@
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Imprint MT Shadow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(129, 246);
+            this.label10.Location = new System.Drawing.Point(9, 272);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(97, 28);
             this.label10.TabIndex = 7;
@@ -234,7 +234,7 @@
             // 
             this.txtCedula.Enabled = false;
             this.txtCedula.Font = new System.Drawing.Font("Imprint MT Shadow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCedula.Location = new System.Drawing.Point(268, 292);
+            this.txtCedula.Location = new System.Drawing.Point(148, 318);
             this.txtCedula.Name = "txtCedula";
             this.txtCedula.Size = new System.Drawing.Size(396, 36);
             this.txtCedula.TabIndex = 6;
@@ -244,7 +244,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Imprint MT Shadow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(837, 45);
+            this.label2.Location = new System.Drawing.Point(721, 43);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(157, 28);
             this.label2.TabIndex = 5;
@@ -254,7 +254,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Imprint MT Shadow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(224, 45);
+            this.label1.Location = new System.Drawing.Point(108, 43);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(169, 28);
             this.label1.TabIndex = 4;
@@ -264,7 +264,7 @@
             // fechFinal
             // 
             this.fechFinal.Font = new System.Drawing.Font("Imprint MT Shadow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.fechFinal.Location = new System.Drawing.Point(710, 82);
+            this.fechFinal.Location = new System.Drawing.Point(594, 80);
             this.fechFinal.Name = "fechFinal";
             this.fechFinal.Size = new System.Drawing.Size(406, 36);
             this.fechFinal.TabIndex = 3;
@@ -274,7 +274,7 @@
             // 
             this.txtNombre.Enabled = false;
             this.txtNombre.Font = new System.Drawing.Font("Imprint MT Shadow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNombre.Location = new System.Drawing.Point(268, 238);
+            this.txtNombre.Location = new System.Drawing.Point(148, 264);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(396, 36);
             this.txtNombre.TabIndex = 2;
@@ -283,7 +283,7 @@
             // 
             this.dateTimePicker1.AccessibleDescription = "fechInicio";
             this.dateTimePicker1.Font = new System.Drawing.Font("Imprint MT Shadow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePicker1.Location = new System.Drawing.Point(122, 82);
+            this.dateTimePicker1.Location = new System.Drawing.Point(6, 80);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(408, 36);
             this.dateTimePicker1.TabIndex = 1;
@@ -291,7 +291,7 @@
             // txtBuscar
             // 
             this.txtBuscar.Font = new System.Drawing.Font("Imprint MT Shadow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBuscar.Location = new System.Drawing.Point(552, 132);
+            this.txtBuscar.Location = new System.Drawing.Point(436, 130);
             this.txtBuscar.Name = "txtBuscar";
             this.txtBuscar.Size = new System.Drawing.Size(112, 42);
             this.txtBuscar.TabIndex = 0;
@@ -329,9 +329,9 @@
             this.panel1.Controls.Add(this.CedulaGrupal);
             this.panel1.Controls.Add(this.label20);
             this.panel1.Controls.Add(this.TablaDatos);
-            this.panel1.Location = new System.Drawing.Point(154, 115);
+            this.panel1.Location = new System.Drawing.Point(11, 111);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1212, 528);
+            this.panel1.Size = new System.Drawing.Size(1212, 700);
             this.panel1.TabIndex = 2;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
@@ -350,7 +350,7 @@
             // 
             this.secuencialLista.AutoSize = true;
             this.secuencialLista.Font = new System.Drawing.Font("Imprint MT Shadow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.secuencialLista.Location = new System.Drawing.Point(890, 135);
+            this.secuencialLista.Location = new System.Drawing.Point(860, 153);
             this.secuencialLista.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.secuencialLista.Name = "secuencialLista";
             this.secuencialLista.Size = new System.Drawing.Size(148, 32);
@@ -363,7 +363,7 @@
             // 
             this.paraleloLista.AutoSize = true;
             this.paraleloLista.Font = new System.Drawing.Font("Imprint MT Shadow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.paraleloLista.Location = new System.Drawing.Point(890, 85);
+            this.paraleloLista.Location = new System.Drawing.Point(860, 103);
             this.paraleloLista.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.paraleloLista.Name = "paraleloLista";
             this.paraleloLista.Size = new System.Drawing.Size(122, 32);
@@ -376,7 +376,7 @@
             // 
             this.label21.AutoSize = true;
             this.label21.Font = new System.Drawing.Font("Imprint MT Shadow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label21.Location = new System.Drawing.Point(552, 106);
+            this.label21.Location = new System.Drawing.Point(522, 124);
             this.label21.Name = "label21";
             this.label21.Size = new System.Drawing.Size(157, 28);
             this.label21.TabIndex = 21;
@@ -386,7 +386,7 @@
             // 
             this.label22.AutoSize = true;
             this.label22.Font = new System.Drawing.Font("Imprint MT Shadow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label22.Location = new System.Drawing.Point(112, 106);
+            this.label22.Location = new System.Drawing.Point(82, 124);
             this.label22.Name = "label22";
             this.label22.Size = new System.Drawing.Size(169, 28);
             this.label22.TabIndex = 20;
@@ -395,7 +395,7 @@
             // Calendario2
             // 
             this.Calendario2.Font = new System.Drawing.Font("Imprint MT Shadow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Calendario2.Location = new System.Drawing.Point(476, 138);
+            this.Calendario2.Location = new System.Drawing.Point(446, 156);
             this.Calendario2.Name = "Calendario2";
             this.Calendario2.Size = new System.Drawing.Size(390, 36);
             this.Calendario2.TabIndex = 19;
@@ -404,7 +404,7 @@
             // 
             this.Calendario1.AccessibleDescription = "fechInicio";
             this.Calendario1.Font = new System.Drawing.Font("Imprint MT Shadow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Calendario1.Location = new System.Drawing.Point(50, 142);
+            this.Calendario1.Location = new System.Drawing.Point(20, 160);
             this.Calendario1.Name = "Calendario1";
             this.Calendario1.Size = new System.Drawing.Size(392, 36);
             this.Calendario1.TabIndex = 18;
@@ -424,7 +424,7 @@
             // 
             this.label18.AutoSize = true;
             this.label18.Font = new System.Drawing.Font("Imprint MT Shadow", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label18.Location = new System.Drawing.Point(981, 280);
+            this.label18.Location = new System.Drawing.Point(355, 611);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(65, 28);
             this.label18.TabIndex = 16;
@@ -435,7 +435,7 @@
             this.label19.AutoSize = true;
             this.label19.Font = new System.Drawing.Font("Imprint MT Shadow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label19.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.label19.Location = new System.Drawing.Point(981, 238);
+            this.label19.Location = new System.Drawing.Point(72, 611);
             this.label19.Name = "label19";
             this.label19.Size = new System.Drawing.Size(234, 28);
             this.label19.TabIndex = 15;
@@ -480,10 +480,10 @@
             this.Cedula,
             this.Nombre,
             this.Cantidad});
-            this.TablaDatos.Location = new System.Drawing.Point(16, 208);
+            this.TablaDatos.Location = new System.Drawing.Point(17, 247);
             this.TablaDatos.Name = "TablaDatos";
             this.TablaDatos.RowTemplate.Height = 28;
-            this.TablaDatos.Size = new System.Drawing.Size(958, 315);
+            this.TablaDatos.Size = new System.Drawing.Size(958, 332);
             this.TablaDatos.TabIndex = 1;
             this.TablaDatos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
@@ -533,7 +533,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Imprint MT Shadow", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(18, 23);
+            this.label3.Location = new System.Drawing.Point(947, 46);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(245, 34);
@@ -544,7 +544,7 @@
             // 
             this.secuencialMayor.AutoSize = true;
             this.secuencialMayor.Font = new System.Drawing.Font("Imprint MT Shadow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.secuencialMayor.Location = new System.Drawing.Point(45, 137);
+            this.secuencialMayor.Location = new System.Drawing.Point(974, 160);
             this.secuencialMayor.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.secuencialMayor.Name = "secuencialMayor";
             this.secuencialMayor.Size = new System.Drawing.Size(148, 32);
@@ -557,7 +557,7 @@
             // 
             this.paraleloMayor.AutoSize = true;
             this.paraleloMayor.Font = new System.Drawing.Font("Imprint MT Shadow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.paraleloMayor.Location = new System.Drawing.Point(45, 86);
+            this.paraleloMayor.Location = new System.Drawing.Point(974, 109);
             this.paraleloMayor.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.paraleloMayor.Name = "paraleloMayor";
             this.paraleloMayor.Size = new System.Drawing.Size(122, 32);
@@ -570,7 +570,7 @@
             // 
             this.Tiempo.AutoSize = true;
             this.Tiempo.Font = new System.Drawing.Font("Imprint MT Shadow", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Tiempo.Location = new System.Drawing.Point(700, 238);
+            this.Tiempo.Location = new System.Drawing.Point(472, 164);
             this.Tiempo.Name = "Tiempo";
             this.Tiempo.Size = new System.Drawing.Size(65, 28);
             this.Tiempo.TabIndex = 11;
@@ -581,7 +581,7 @@
             this.AvisoTiempo.AutoSize = true;
             this.AvisoTiempo.Font = new System.Drawing.Font("Imprint MT Shadow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.AvisoTiempo.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.AvisoTiempo.Location = new System.Drawing.Point(696, 202);
+            this.AvisoTiempo.Location = new System.Drawing.Point(468, 128);
             this.AvisoTiempo.Name = "AvisoTiempo";
             this.AvisoTiempo.Size = new System.Drawing.Size(234, 28);
             this.AvisoTiempo.TabIndex = 10;
@@ -590,7 +590,7 @@
             // btnBuscar
             // 
             this.btnBuscar.Font = new System.Drawing.Font("Imprint MT Shadow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBuscar.Location = new System.Drawing.Point(848, 57);
+            this.btnBuscar.Location = new System.Drawing.Point(452, 22);
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Size = new System.Drawing.Size(99, 38);
             this.btnBuscar.TabIndex = 8;
@@ -603,7 +603,7 @@
             this.txtNormal.AutoSize = true;
             this.txtNormal.Font = new System.Drawing.Font("Imprint MT Shadow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNormal.ForeColor = System.Drawing.Color.ForestGreen;
-            this.txtNormal.Location = new System.Drawing.Point(998, 258);
+            this.txtNormal.Location = new System.Drawing.Point(472, 282);
             this.txtNormal.Name = "txtNormal";
             this.txtNormal.Size = new System.Drawing.Size(91, 28);
             this.txtNormal.TabIndex = 9;
@@ -615,7 +615,7 @@
             this.txtChoriso.AutoSize = true;
             this.txtChoriso.Font = new System.Drawing.Font("Imprint MT Shadow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtChoriso.ForeColor = System.Drawing.Color.Red;
-            this.txtChoriso.Location = new System.Drawing.Point(998, 198);
+            this.txtChoriso.Location = new System.Drawing.Point(472, 222);
             this.txtChoriso.Name = "txtChoriso";
             this.txtChoriso.Size = new System.Drawing.Size(174, 28);
             this.txtChoriso.TabIndex = 8;
@@ -625,7 +625,7 @@
             // 
             this.txtCompra.Enabled = false;
             this.txtCompra.Font = new System.Drawing.Font("Imprint MT Shadow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCompra.Location = new System.Drawing.Point(454, 315);
+            this.txtCompra.Location = new System.Drawing.Point(226, 241);
             this.txtCompra.Name = "txtCompra";
             this.txtCompra.Size = new System.Drawing.Size(210, 36);
             this.txtCompra.TabIndex = 7;
@@ -634,7 +634,7 @@
             // 
             this.label15.AutoSize = true;
             this.label15.Font = new System.Drawing.Font("Imprint MT Shadow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.Location = new System.Drawing.Point(244, 312);
+            this.label15.Location = new System.Drawing.Point(16, 238);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(167, 28);
             this.label15.TabIndex = 6;
@@ -644,7 +644,7 @@
             // 
             this.txtLimite.Enabled = false;
             this.txtLimite.Font = new System.Drawing.Font("Imprint MT Shadow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtLimite.Location = new System.Drawing.Point(454, 257);
+            this.txtLimite.Location = new System.Drawing.Point(226, 183);
             this.txtLimite.Name = "txtLimite";
             this.txtLimite.Size = new System.Drawing.Size(210, 36);
             this.txtLimite.TabIndex = 5;
@@ -653,7 +653,7 @@
             // 
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Imprint MT Shadow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(244, 254);
+            this.label14.Location = new System.Drawing.Point(16, 180);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(83, 28);
             this.label14.TabIndex = 4;
@@ -663,7 +663,7 @@
             // 
             this.txtName.Enabled = false;
             this.txtName.Font = new System.Drawing.Font("Imprint MT Shadow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtName.Location = new System.Drawing.Point(454, 202);
+            this.txtName.Location = new System.Drawing.Point(226, 128);
             this.txtName.Name = "txtName";
             this.txtName.Size = new System.Drawing.Size(210, 36);
             this.txtName.TabIndex = 3;
@@ -672,7 +672,7 @@
             // 
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Imprint MT Shadow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(244, 198);
+            this.label13.Location = new System.Drawing.Point(16, 124);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(97, 28);
             this.label13.TabIndex = 2;
@@ -681,7 +681,7 @@
             // txtID
             // 
             this.txtID.Font = new System.Drawing.Font("Imprint MT Shadow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtID.Location = new System.Drawing.Point(550, 57);
+            this.txtID.Location = new System.Drawing.Point(154, 22);
             this.txtID.Name = "txtID";
             this.txtID.Size = new System.Drawing.Size(210, 36);
             this.txtID.TabIndex = 1;
@@ -690,7 +690,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Imprint MT Shadow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(398, 65);
+            this.label4.Location = new System.Drawing.Point(2, 30);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(85, 28);
             this.label4.TabIndex = 0;
@@ -699,8 +699,8 @@
             // panelMostrar
             // 
             this.panelMostrar.BackColor = System.Drawing.Color.Transparent;
-            this.panelMostrar.Controls.Add(this.panel1);
             this.panelMostrar.Controls.Add(this.panel2);
+            this.panelMostrar.Controls.Add(this.panel1);
             this.panelMostrar.Controls.Add(this.panel0);
             this.panelMostrar.Controls.Add(this.btnCPU);
             this.panelMostrar.Controls.Add(this.btnAtras);
@@ -906,7 +906,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.ClientSize = new System.Drawing.Size(1362, 742);
+            this.ClientSize = new System.Drawing.Size(1362, 964);
             this.Controls.Add(this.panelMostrar);
             this.Controls.Add(this.panel4);
             this.Name = "Form1";
