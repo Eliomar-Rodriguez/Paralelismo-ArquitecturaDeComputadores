@@ -242,9 +242,9 @@ namespace Paralelismo
 
         private void BuscarGrup_Click(object sender, EventArgs e)
         {
-            if (((Prueba.cedulas[0] != "") && (Paralelo.cedulas[0] != "")) && ((paraleloLista.Checked) || (secuencialLista.Checked)))
+            if (((Prueba.cedulas[0] != null) || (Paralelo.cedulas[0] != null)) && ((paraleloLista.Checked) || (secuencialLista.Checked)))
             {
-                
+                TablaDatos.Rows.Clear();
                 compras = new System.IO.StreamReader(direccionComp);
                 clientes = new System.IO.StreamReader(direccionClie);
                 perfiles = new System.IO.StreamReader(direccionPer);
@@ -258,8 +258,17 @@ namespace Paralelismo
                     label18.Visible = true;
                     for (int v = 0; v < Paralelo.cedulas.Length; v++)
                     {
-                        TablaDatos.Rows.Insert(v, Paralelo.cedulas[v], Paralelo.nombres[v], Paralelo.comprasTot[v]);
+                        if (Paralelo.cedulas[v] != null)
+                            TablaDatos.Rows.Insert(v, Paralelo.cedulas[v], Paralelo.nombres[v], Paralelo.comprasTot[v]);
                     }
+                    Array.Clear(Paralelo.nombres, 0, Paralelo.nombres.Length);
+                    Array.Clear(Paralelo.cedulas, 0, Paralelo.cedulas.Length);
+                    Array.Clear(Paralelo.comprasTot, 0, Paralelo.comprasTot.Length);
+                    Array.Clear(Prueba.nombres, 0, Prueba.nombres.Length);
+                    Array.Clear(Prueba.cedulas, 0, Prueba.cedulas.Length);
+                    Array.Clear(Prueba.comprasTot, 0, Prueba.comprasTot.Length);
+                    Paralelo.ind = 0;
+                    Prueba.ind = 0;
                 }
                 else
                 {
@@ -271,8 +280,17 @@ namespace Paralelismo
                     label18.Visible = true;
                     for (int v = 0; v < Prueba.cedulas.Length; v++)
                     {
-                        TablaDatos.Rows.Insert(v, Prueba.cedulas[v], Prueba.nombres[v], Prueba.comprasTot[v]);
+                        if (Prueba.cedulas[v] != null)
+                            TablaDatos.Rows.Insert(v, Prueba.cedulas[v], Prueba.nombres[v], Prueba.comprasTot[v]);
                     }
+                    Array.Clear(Prueba.nombres, 0, Prueba.nombres.Length);
+                    Array.Clear(Prueba.cedulas, 0, Prueba.cedulas.Length);
+                    Array.Clear(Prueba.comprasTot, 0, Prueba.comprasTot.Length);
+                    Array.Clear(Paralelo.nombres, 0, Paralelo.nombres.Length);
+                    Array.Clear(Paralelo.cedulas, 0, Paralelo.cedulas.Length);
+                    Array.Clear(Paralelo.comprasTot, 0, Paralelo.comprasTot.Length);
+                    Prueba.ind = 0;
+                    Paralelo.ind = 0;
                 }
             }
             else
@@ -286,12 +304,13 @@ namespace Paralelismo
                 txtChoriso.Visible = false;
                 txtNormal.Visible = false;
                 Prueba.ced = txtID.Text;
+                Paralelo.ced = txtID.Text;
                 compras = new System.IO.StreamReader(direccionComp);
                 clientes = new System.IO.StreamReader(direccionClie);
                 perfiles = new System.IO.StreamReader(direccionPer);
                 if (paraleloMayor.Checked)
                 {
-                    Paralelo.BuscarSospechosos();
+                    Parallel.Invoke(() => Paralelo.BuscarSospechosos()); 
                     AvisoTiempo.Visible = true;
                     Tiempo.Text = Paralelo.tiempoTot;
                     Tiempo.Visible = true;

@@ -25,18 +25,9 @@ namespace Paralelismo
         public static void Buscar1()
         {
             var tiempo = System.Diagnostics.Stopwatch.StartNew();
-            //while ((line = Form1.compras.ReadLine()) != null)
-            /*var lineCount = File.ReadLines(Form1.direccionComp).Count();
-            System.Console.WriteLine(lineCount);
-            Form1.compras = new System.IO.StreamReader(Form1.direccionComp);
-            Parallel.For(0, lineCount, (c) =>*/
             Parallel.ForEach(File.ReadLines(Form1.direccionComp), (line, estado, lineNumber) =>
             {
                       arr = line.Split(',');
-                      //System.Console.WriteLine(line);
-                      /*System.Console.WriteLine(inicio);
-                      System.Console.WriteLine(final);*/
-                      //System.Console.WriteLine("Hi!");
                       if ((Convert.ToDateTime(arr[6]) >= inicio) && (Convert.ToDateTime(arr[6]) <= final))
                       {
                           if (mayorC < Int32.Parse(arr[5]))
