@@ -1,12 +1,15 @@
-﻿using System;
+﻿using Paralelismo.Utilities;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Windows.Forms.DataVisualization.Charting;
 
 namespace Paralelismo
 {
@@ -15,6 +18,9 @@ namespace Paralelismo
         public static System.IO.StreamReader perfiles = null, compras = null, clientes = null;
         public static string direccionPer, direccionComp, direccionClie;
         public static bool chorizo = false;
+        public static int cantNucleos;
+        private static CpuUsage cpu;
+        bool iscontinue = true;
 
         public Form1()
         {
@@ -65,6 +71,8 @@ namespace Paralelismo
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            panel3.Visible = false;
+            label24.Visible = false;
             ToolTip toolType = new ToolTip();
             toolType.AutoPopDelay = 5000;
             toolType.InitialDelay = 1000;
@@ -73,6 +81,10 @@ namespace Paralelismo
             toolType.SetToolTip(this.btnClientes, "Cargar Archivo Clientes");
             toolType.SetToolTip(this.btnCompras, "Cargar Archivo Compras");
             toolType.SetToolTip(this.btnPerfiles, "Cargar Archivo Perfiles");
+
+            toolType.SetToolTip(this.button1, "Ver uso del CPU en esta ventana");
+            toolType.SetToolTip(this.button2, "Ocultar uso de CPU");
+            toolType.SetToolTip(this.btnCPU, "Ver uso del CPU en una ventana externa");
 
             label9.Visible = false;
             panelMostrar.Visible = false;
@@ -331,6 +343,7 @@ namespace Paralelismo
                 }
             }
             else
+                label24.Visible = true;
                 System.Console.WriteLine("Debe ingresar una cedula y/o activar alguna opcion de tipo de búsqueda.");
         }
 
@@ -379,6 +392,340 @@ namespace Paralelismo
 
         }
 
+        private void paraleloLista_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void paraleloMayor_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            
+            panel3.Visible = true;
+            button1.Enabled = true;
+
+            //load
+            lbl0.Visible = false;
+            core0.Visible = false;
+            nucleo1.Visible = false;
+
+            lbl1.Visible = false;
+            core1.Visible = false;
+            nucleo2.Visible = false;
+
+            lbl2.Visible = false;
+            core2.Visible = false;
+            nucleo3.Visible = false;
+
+            lbl3.Visible = false;
+            core3.Visible = false;
+            nucleo4.Visible = false;
+
+            lbl4.Visible = false;
+            core4.Visible = false;
+            nucleo5.Visible = false;
+
+            lbl5.Visible = false;
+            core5.Visible = false;
+            nucleo6.Visible = false;
+
+            lbl6.Visible = false;
+            core6.Visible = false;
+            nucleo7.Visible = false;
+
+            lbl7.Visible = false;
+            core7.Visible = false;
+            nucleo8.Visible = false;
+
+            cantNucleos = Environment.ProcessorCount;  // obtengo la cantidad de nucleos
+            timer1.Start();
+
+
+            //Chart Settings 
+
+            // Populating the data arrays.
+            this.cpuUsageChart.Series.Clear();
+            this.cpuUsageChart.Palette = ChartColorPalette.SeaGreen;
+
+            // Set chart title.
+            this.cpuUsageChart.Titles.Add("Uso de CPU");
+
+            // Add chart series
+            Series series = this.cpuUsageChart.Series.Add("Uso de CPU");
+            cpuUsageChart.Series[0].ChartType = SeriesChartType.Area; // Area
+
+            // Add Initial Point as Zero.
+            series.Points.Add(0);
+
+            //Populating X Y Axis  Information 
+            cpuUsageChart.Series[0].YAxisType = AxisType.Primary;
+            cpuUsageChart.Series[0].YValueType = ChartValueType.Int32;
+            cpuUsageChart.Series[0].IsXValueIndexed = false;
+
+            cpuUsageChart.ResetAutoValues();
+            cpuUsageChart.ChartAreas[0].AxisY.Maximum = 100;//Max Y 
+            cpuUsageChart.ChartAreas[0].AxisY.Minimum = 0;
+            cpuUsageChart.ChartAreas[0].AxisX.Enabled = AxisEnabled.False;
+            cpuUsageChart.ChartAreas[0].AxisY.Title = "Uso de CPU %";
+            cpuUsageChart.ChartAreas[0].AxisY.IntervalAutoMode = IntervalAutoMode.VariableCount;
+            mostrar();
+            populateCPUInfo();
+        }
+
+        private void button2_Click_1(object sender, EventArgs e)
+        {
+            button1.Enabled = true;
+            panel3.Visible = false;
+            
+        }
+
+        private void panel3_Paint_1(object sender, PaintEventArgs e)
+        {
+            
+        }
+
+        public void mostrar()
+        {
+            if (cantNucleos == 2)
+            {
+                lbl0.Visible = true;
+                core0.Visible = true;
+                nucleo1.Visible = true;
+
+                lbl1.Visible = true;
+                core1.Visible = true;
+                nucleo2.Visible = true;
+            }
+            else if (cantNucleos == 4)
+            {
+                lbl0.Visible = true;
+                core0.Visible = true;
+                nucleo1.Visible = true;
+
+                lbl1.Visible = true;
+                core1.Visible = true;
+                nucleo2.Visible = true;
+
+                lbl2.Visible = true;
+                core2.Visible = true;
+                nucleo3.Visible = true;
+
+                lbl3.Visible = true;
+                core3.Visible = true;
+                nucleo4.Visible = true;
+            }
+            else if (cantNucleos == 6)
+            {
+                lbl0.Visible = true;
+                core0.Visible = true;
+                nucleo1.Visible = true;
+
+                lbl1.Visible = true;
+                core1.Visible = true;
+                nucleo2.Visible = true;
+
+                lbl2.Visible = true;
+                core2.Visible = true;
+                nucleo3.Visible = true;
+
+                lbl3.Visible = true;
+                core3.Visible = true;
+                nucleo4.Visible = true;
+
+                lbl4.Visible = true;
+                core4.Visible = true;
+                nucleo5.Visible = true;
+
+                lbl5.Visible = true;
+                core5.Visible = true;
+                nucleo6.Visible = true;
+            }
+            else if (cantNucleos == 8)
+            {
+                lbl0.Visible = true;
+                core0.Visible = true;
+                nucleo1.Visible = true;
+
+                lbl1.Visible = true;
+                core1.Visible = true;
+                nucleo2.Visible = true;
+
+                lbl2.Visible = true;
+                core2.Visible = true;
+                nucleo3.Visible = true;
+
+                lbl3.Visible = true;
+                core3.Visible = true;
+                nucleo4.Visible = true;
+
+                lbl4.Visible = true;
+                core4.Visible = true;
+                nucleo5.Visible = true;
+
+                lbl5.Visible = true;
+                core5.Visible = true;
+                nucleo6.Visible = true;
+
+                lbl6.Visible = true;
+                core6.Visible = true;
+                nucleo7.Visible = true;
+
+                lbl7.Visible = true;
+                core7.Visible = true;
+                nucleo8.Visible = true;
+            }
+
+        }
+        private void populateCPUInfo()
+        {
+            try
+            {
+                // Crea y devuelve una instancia de uso de la CPU que se pueden utilizar para consultar el tiempo de CPU en este sistema operativo.
+                cpu = CpuUsage.Create();
+
+                /// creando un nuevo hilo
+                Thread thread = new Thread(new ThreadStart(delegate ()
+                {
+                    try
+                    {
+                        while (iscontinue)
+                        {
+                            //Para actualizar la interfaz de usuario hay que invocarlo
+                            this.Invoke(new System.Windows.Forms.MethodInvoker(delegate ()
+                            {
+                                int process = cpu.Query(); //Determina la carga de la CPU 
+                                proVal.Text = process.ToString() + "%";
+                                cpuUsageChart.Series[0].Points.AddY(process);//Agrega proceso al chart 
+
+                                if (cpuUsageChart.Series[0].Points.Count > 40)//limpiar los datos viejos despues de esperar el hilo  * 40
+                                    cpuUsageChart.Series[0].Points.RemoveAt(0);
+
+                            }));
+
+                            Thread.Sleep(400);//parar el hilo por 450 millisegundos
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+
+                    }
+
+                }));
+
+                thread.Priority = ThreadPriority.Highest;
+                thread.IsBackground = true;
+                thread.Start();//iniciar el hijo
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex);
+            }
+
+        }
+
+        private void cpuUsageChart_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel3_VisibleChanged(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void Form1_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            iscontinue = false;
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            if (cantNucleos == 2)
+            {
+                core0.Value = (int)(perfCount0.NextValue());
+                lbl0.Text = core0.Value.ToString() + "%";
+
+                core1.Value = (int)(perfCount1.NextValue());
+                lbl1.Text = core1.Value.ToString() + "%";
+            }
+            else if (cantNucleos == 4)
+            {
+                core0.Value = (int)(perfCount0.NextValue());
+                lbl0.Text = core0.Value.ToString() + "%";
+
+                core1.Value = (int)(perfCount1.NextValue());
+                lbl1.Text = core1.Value.ToString() + "%";
+
+                core2.Value = (int)(perfCount2.NextValue());
+                lbl2.Text = core2.Value.ToString() + "%";
+
+                core3.Value = (int)(perfCount3.NextValue());
+                lbl3.Text = core3.Value.ToString() + "%";
+            }
+            else if (cantNucleos == 6)
+            {
+                core0.Value = (int)(perfCount0.NextValue());
+                lbl0.Text = core0.Value.ToString() + "%";
+
+                core1.Value = (int)(perfCount1.NextValue());
+                lbl1.Text = core1.Value.ToString() + "%";
+
+                core2.Value = (int)(perfCount2.NextValue());
+                lbl2.Text = core2.Value.ToString() + "%";
+
+                core3.Value = (int)(perfCount3.NextValue());
+                lbl3.Text = core3.Value.ToString() + "%";
+
+                core4.Value = (int)(perfCount4.NextValue());
+                lbl4.Text = core4.Value.ToString() + "%";
+
+                core5.Value = (int)(perfCount5.NextValue());
+                lbl5.Text = core5.Value.ToString() + "%";
+            }
+            else if (cantNucleos == 8)
+            {
+                core0.Value = (int)(perfCount0.NextValue());
+                lbl0.Text = core0.Value.ToString() + "% ";
+
+                core1.Value = (int)(perfCount1.NextValue());
+                lbl1.Text = core1.Value.ToString() + "%";
+
+                core2.Value = (int)(perfCount2.NextValue());
+                lbl2.Text = core2.Value.ToString() + "%";
+
+                core3.Value = (int)(perfCount3.NextValue());
+                lbl3.Text = core3.Value.ToString() + "%";
+
+                core4.Value = (int)(perfCount4.NextValue());
+                lbl4.Text = core4.Value.ToString() + "%";
+
+                core5.Value = (int)(perfCount5.NextValue());
+                lbl5.Text = core5.Value.ToString() + "%";
+
+                core6.Value = (int)(perfCount6.NextValue());
+                lbl6.Text = core6.Value.ToString() + "%";
+
+                core7.Value = (int)(perfCount7.NextValue());
+                lbl7.Text = core7.Value.ToString() + "%";
+            }
+        }
+
+        private void cbEnable3D_CheckedChanged(object sender, EventArgs e)
+        {
+            if (cbEnable3D.Checked)
+            {
+                cpuUsageChart.ChartAreas[0].Area3DStyle.Enable3D = true;
+            }
+            else
+            {
+                cpuUsageChart.ChartAreas[0].Area3DStyle.Enable3D = false;
+            }
+        }
+
         private void label17_Click(object sender, EventArgs e)
         {
 
@@ -386,6 +733,7 @@ namespace Paralelismo
 
         private void btnCPU_Click(object sender, EventArgs e)
         {
+            panel3.Visible = true;
             //Rendimiento rend = new Rendimiento();
             //rend.Show();
             CPU_Ventana rendi = new CPU_Ventana();

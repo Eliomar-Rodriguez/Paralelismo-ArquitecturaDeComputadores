@@ -28,6 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea9 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend9 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series9 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Title title9 = new System.Windows.Forms.DataVisualization.Charting.Title();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.panel0 = new System.Windows.Forms.Panel();
             this.label16 = new System.Windows.Forms.Label();
@@ -66,6 +71,7 @@
             this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Cantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.label24 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.secuencialMayor = new System.Windows.Forms.RadioButton();
             this.paraleloMayor = new System.Windows.Forms.RadioButton();
@@ -83,6 +89,37 @@
             this.txtID = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.panelMostrar = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.button2 = new System.Windows.Forms.Button();
+            this.nucleo8 = new System.Windows.Forms.Label();
+            this.nucleo7 = new System.Windows.Forms.Label();
+            this.lbl7 = new System.Windows.Forms.Label();
+            this.lbl6 = new System.Windows.Forms.Label();
+            this.core7 = new System.Windows.Forms.ProgressBar();
+            this.core6 = new System.Windows.Forms.ProgressBar();
+            this.nucleo6 = new System.Windows.Forms.Label();
+            this.nucleo5 = new System.Windows.Forms.Label();
+            this.nucleo4 = new System.Windows.Forms.Label();
+            this.nucleo3 = new System.Windows.Forms.Label();
+            this.nucleo2 = new System.Windows.Forms.Label();
+            this.nucleo1 = new System.Windows.Forms.Label();
+            this.lbl5 = new System.Windows.Forms.Label();
+            this.lbl4 = new System.Windows.Forms.Label();
+            this.lbl3 = new System.Windows.Forms.Label();
+            this.core5 = new System.Windows.Forms.ProgressBar();
+            this.core4 = new System.Windows.Forms.ProgressBar();
+            this.core3 = new System.Windows.Forms.ProgressBar();
+            this.lbl2 = new System.Windows.Forms.Label();
+            this.lbl1 = new System.Windows.Forms.Label();
+            this.lbl0 = new System.Windows.Forms.Label();
+            this.core2 = new System.Windows.Forms.ProgressBar();
+            this.core1 = new System.Windows.Forms.ProgressBar();
+            this.core0 = new System.Windows.Forms.ProgressBar();
+            this.cbEnable3D = new System.Windows.Forms.CheckBox();
+            this.cpuUsageChart = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.proVal = new System.Windows.Forms.Label();
+            this.label25 = new System.Windows.Forms.Label();
             this.btnCPU = new System.Windows.Forms.Button();
             this.btnAtras = new System.Windows.Forms.Button();
             this.panel4 = new System.Windows.Forms.Panel();
@@ -99,12 +136,33 @@
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.perfCount0 = new System.Diagnostics.PerformanceCounter();
+            this.perfCount1 = new System.Diagnostics.PerformanceCounter();
+            this.perfCount2 = new System.Diagnostics.PerformanceCounter();
+            this.perfCount3 = new System.Diagnostics.PerformanceCounter();
+            this.perfCount4 = new System.Diagnostics.PerformanceCounter();
+            this.perfCount5 = new System.Diagnostics.PerformanceCounter();
+            this.perfCount6 = new System.Diagnostics.PerformanceCounter();
+            this.perfCount7 = new System.Diagnostics.PerformanceCounter();
+            this.perfCount8 = new System.Diagnostics.PerformanceCounter();
             this.panel0.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.TablaDatos)).BeginInit();
             this.panel2.SuspendLayout();
             this.panelMostrar.SuspendLayout();
+            this.panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.cpuUsageChart)).BeginInit();
             this.panel4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.perfCount0)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.perfCount1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.perfCount2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.perfCount3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.perfCount4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.perfCount5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.perfCount6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.perfCount7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.perfCount8)).BeginInit();
             this.SuspendLayout();
             // 
             // panel0
@@ -126,7 +184,7 @@
             this.panel0.Controls.Add(this.dateTimePicker1);
             this.panel0.Controls.Add(this.txtBuscar);
             this.panel0.Enabled = false;
-            this.panel0.Location = new System.Drawing.Point(17, 118);
+            this.panel0.Location = new System.Drawing.Point(20, 176);
             this.panel0.Name = "panel0";
             this.panel0.Size = new System.Drawing.Size(1209, 485);
             this.panel0.TabIndex = 0;
@@ -329,7 +387,7 @@
             this.panel1.Controls.Add(this.CedulaGrupal);
             this.panel1.Controls.Add(this.label20);
             this.panel1.Controls.Add(this.TablaDatos);
-            this.panel1.Location = new System.Drawing.Point(11, 111);
+            this.panel1.Location = new System.Drawing.Point(3, 190);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1212, 700);
             this.panel1.TabIndex = 2;
@@ -339,7 +397,7 @@
             // 
             this.label23.AutoSize = true;
             this.label23.Font = new System.Drawing.Font("Imprint MT Shadow", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label23.Location = new System.Drawing.Point(862, 22);
+            this.label23.Location = new System.Drawing.Point(772, 40);
             this.label23.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label23.Name = "label23";
             this.label23.Size = new System.Drawing.Size(245, 34);
@@ -350,7 +408,7 @@
             // 
             this.secuencialLista.AutoSize = true;
             this.secuencialLista.Font = new System.Drawing.Font("Imprint MT Shadow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.secuencialLista.Location = new System.Drawing.Point(860, 153);
+            this.secuencialLista.Location = new System.Drawing.Point(857, 115);
             this.secuencialLista.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.secuencialLista.Name = "secuencialLista";
             this.secuencialLista.Size = new System.Drawing.Size(148, 32);
@@ -363,7 +421,7 @@
             // 
             this.paraleloLista.AutoSize = true;
             this.paraleloLista.Font = new System.Drawing.Font("Imprint MT Shadow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.paraleloLista.Location = new System.Drawing.Point(860, 103);
+            this.paraleloLista.Location = new System.Drawing.Point(856, 84);
             this.paraleloLista.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.paraleloLista.Name = "paraleloLista";
             this.paraleloLista.Size = new System.Drawing.Size(122, 32);
@@ -371,12 +429,13 @@
             this.paraleloLista.TabStop = true;
             this.paraleloLista.Text = "Paralelo";
             this.paraleloLista.UseVisualStyleBackColor = true;
+            this.paraleloLista.CheckedChanged += new System.EventHandler(this.paraleloLista_CheckedChanged);
             // 
             // label21
             // 
             this.label21.AutoSize = true;
             this.label21.Font = new System.Drawing.Font("Imprint MT Shadow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label21.Location = new System.Drawing.Point(522, 124);
+            this.label21.Location = new System.Drawing.Point(557, 123);
             this.label21.Name = "label21";
             this.label21.Size = new System.Drawing.Size(157, 28);
             this.label21.TabIndex = 21;
@@ -386,7 +445,7 @@
             // 
             this.label22.AutoSize = true;
             this.label22.Font = new System.Drawing.Font("Imprint MT Shadow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label22.Location = new System.Drawing.Point(82, 124);
+            this.label22.Location = new System.Drawing.Point(125, 123);
             this.label22.Name = "label22";
             this.label22.Size = new System.Drawing.Size(169, 28);
             this.label22.TabIndex = 20;
@@ -395,24 +454,24 @@
             // Calendario2
             // 
             this.Calendario2.Font = new System.Drawing.Font("Imprint MT Shadow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Calendario2.Location = new System.Drawing.Point(446, 156);
+            this.Calendario2.Location = new System.Drawing.Point(434, 160);
             this.Calendario2.Name = "Calendario2";
-            this.Calendario2.Size = new System.Drawing.Size(390, 36);
+            this.Calendario2.Size = new System.Drawing.Size(416, 36);
             this.Calendario2.TabIndex = 19;
             // 
             // Calendario1
             // 
             this.Calendario1.AccessibleDescription = "fechInicio";
             this.Calendario1.Font = new System.Drawing.Font("Imprint MT Shadow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Calendario1.Location = new System.Drawing.Point(20, 160);
+            this.Calendario1.Location = new System.Drawing.Point(4, 160);
             this.Calendario1.Name = "Calendario1";
-            this.Calendario1.Size = new System.Drawing.Size(392, 36);
+            this.Calendario1.Size = new System.Drawing.Size(420, 36);
             this.Calendario1.TabIndex = 18;
             // 
             // BuscarGrup
             // 
             this.BuscarGrup.Font = new System.Drawing.Font("Imprint MT Shadow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BuscarGrup.Location = new System.Drawing.Point(676, 35);
+            this.BuscarGrup.Location = new System.Drawing.Point(580, 49);
             this.BuscarGrup.Name = "BuscarGrup";
             this.BuscarGrup.Size = new System.Drawing.Size(99, 38);
             this.BuscarGrup.TabIndex = 17;
@@ -444,7 +503,7 @@
             // AnadirCed
             // 
             this.AnadirCed.Font = new System.Drawing.Font("Imprint MT Shadow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.AnadirCed.Location = new System.Drawing.Point(543, 35);
+            this.AnadirCed.Location = new System.Drawing.Point(453, 47);
             this.AnadirCed.Name = "AnadirCed";
             this.AnadirCed.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.AnadirCed.Size = new System.Drawing.Size(99, 38);
@@ -456,7 +515,7 @@
             // CedulaGrupal
             // 
             this.CedulaGrupal.Font = new System.Drawing.Font("Imprint MT Shadow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CedulaGrupal.Location = new System.Drawing.Point(286, 43);
+            this.CedulaGrupal.Location = new System.Drawing.Point(176, 49);
             this.CedulaGrupal.Name = "CedulaGrupal";
             this.CedulaGrupal.Size = new System.Drawing.Size(210, 36);
             this.CedulaGrupal.TabIndex = 13;
@@ -465,7 +524,7 @@
             // 
             this.label20.AutoSize = true;
             this.label20.Font = new System.Drawing.Font("Imprint MT Shadow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label20.Location = new System.Drawing.Point(134, 46);
+            this.label20.Location = new System.Drawing.Point(24, 52);
             this.label20.Name = "label20";
             this.label20.Size = new System.Drawing.Size(85, 28);
             this.label20.TabIndex = 12;
@@ -474,7 +533,7 @@
             // TablaDatos
             // 
             this.TablaDatos.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.TablaDatos.BackgroundColor = System.Drawing.SystemColors.ActiveCaption;
+            this.TablaDatos.BackgroundColor = System.Drawing.Color.PaleTurquoise;
             this.TablaDatos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.TablaDatos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Cedula,
@@ -483,7 +542,7 @@
             this.TablaDatos.Location = new System.Drawing.Point(17, 247);
             this.TablaDatos.Name = "TablaDatos";
             this.TablaDatos.RowTemplate.Height = 28;
-            this.TablaDatos.Size = new System.Drawing.Size(958, 332);
+            this.TablaDatos.Size = new System.Drawing.Size(965, 332);
             this.TablaDatos.TabIndex = 1;
             this.TablaDatos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
@@ -507,6 +566,7 @@
             // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.label24);
             this.panel2.Controls.Add(this.label3);
             this.panel2.Controls.Add(this.secuencialMayor);
             this.panel2.Controls.Add(this.paraleloMayor);
@@ -523,17 +583,28 @@
             this.panel2.Controls.Add(this.label13);
             this.panel2.Controls.Add(this.txtID);
             this.panel2.Controls.Add(this.label4);
-            this.panel2.Location = new System.Drawing.Point(54, 168);
+            this.panel2.Location = new System.Drawing.Point(49, 168);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1316, 474);
             this.panel2.TabIndex = 3;
             this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
+            // label24
+            // 
+            this.label24.AutoSize = true;
+            this.label24.Font = new System.Drawing.Font("Arial Rounded MT Bold", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label24.ForeColor = System.Drawing.Color.Red;
+            this.label24.Location = new System.Drawing.Point(666, 149);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(38, 46);
+            this.label24.TabIndex = 15;
+            this.label24.Text = "*";
+            // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Imprint MT Shadow", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(947, 46);
+            this.label3.Location = new System.Drawing.Point(674, 96);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(245, 34);
@@ -544,7 +615,7 @@
             // 
             this.secuencialMayor.AutoSize = true;
             this.secuencialMayor.Font = new System.Drawing.Font("Imprint MT Shadow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.secuencialMayor.Location = new System.Drawing.Point(974, 160);
+            this.secuencialMayor.Location = new System.Drawing.Point(710, 181);
             this.secuencialMayor.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.secuencialMayor.Name = "secuencialMayor";
             this.secuencialMayor.Size = new System.Drawing.Size(148, 32);
@@ -557,7 +628,7 @@
             // 
             this.paraleloMayor.AutoSize = true;
             this.paraleloMayor.Font = new System.Drawing.Font("Imprint MT Shadow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.paraleloMayor.Location = new System.Drawing.Point(974, 109);
+            this.paraleloMayor.Location = new System.Drawing.Point(710, 139);
             this.paraleloMayor.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.paraleloMayor.Name = "paraleloMayor";
             this.paraleloMayor.Size = new System.Drawing.Size(122, 32);
@@ -565,12 +636,13 @@
             this.paraleloMayor.TabStop = true;
             this.paraleloMayor.Text = "Paralelo";
             this.paraleloMayor.UseVisualStyleBackColor = true;
+            this.paraleloMayor.CheckedChanged += new System.EventHandler(this.paraleloMayor_CheckedChanged);
             // 
             // Tiempo
             // 
             this.Tiempo.AutoSize = true;
             this.Tiempo.Font = new System.Drawing.Font("Imprint MT Shadow", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Tiempo.Location = new System.Drawing.Point(472, 164);
+            this.Tiempo.Location = new System.Drawing.Point(449, 230);
             this.Tiempo.Name = "Tiempo";
             this.Tiempo.Size = new System.Drawing.Size(65, 28);
             this.Tiempo.TabIndex = 11;
@@ -581,7 +653,7 @@
             this.AvisoTiempo.AutoSize = true;
             this.AvisoTiempo.Font = new System.Drawing.Font("Imprint MT Shadow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.AvisoTiempo.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.AvisoTiempo.Location = new System.Drawing.Point(468, 128);
+            this.AvisoTiempo.Location = new System.Drawing.Point(445, 194);
             this.AvisoTiempo.Name = "AvisoTiempo";
             this.AvisoTiempo.Size = new System.Drawing.Size(234, 28);
             this.AvisoTiempo.TabIndex = 10;
@@ -590,7 +662,7 @@
             // btnBuscar
             // 
             this.btnBuscar.Font = new System.Drawing.Font("Imprint MT Shadow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBuscar.Location = new System.Drawing.Point(452, 22);
+            this.btnBuscar.Location = new System.Drawing.Point(450, 88);
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Size = new System.Drawing.Size(99, 38);
             this.btnBuscar.TabIndex = 8;
@@ -603,7 +675,7 @@
             this.txtNormal.AutoSize = true;
             this.txtNormal.Font = new System.Drawing.Font("Imprint MT Shadow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNormal.ForeColor = System.Drawing.Color.ForestGreen;
-            this.txtNormal.Location = new System.Drawing.Point(472, 282);
+            this.txtNormal.Location = new System.Drawing.Point(470, 307);
             this.txtNormal.Name = "txtNormal";
             this.txtNormal.Size = new System.Drawing.Size(91, 28);
             this.txtNormal.TabIndex = 9;
@@ -615,7 +687,7 @@
             this.txtChoriso.AutoSize = true;
             this.txtChoriso.Font = new System.Drawing.Font("Imprint MT Shadow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtChoriso.ForeColor = System.Drawing.Color.Red;
-            this.txtChoriso.Location = new System.Drawing.Point(472, 222);
+            this.txtChoriso.Location = new System.Drawing.Point(470, 288);
             this.txtChoriso.Name = "txtChoriso";
             this.txtChoriso.Size = new System.Drawing.Size(174, 28);
             this.txtChoriso.TabIndex = 8;
@@ -625,7 +697,7 @@
             // 
             this.txtCompra.Enabled = false;
             this.txtCompra.Font = new System.Drawing.Font("Imprint MT Shadow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCompra.Location = new System.Drawing.Point(226, 241);
+            this.txtCompra.Location = new System.Drawing.Point(224, 307);
             this.txtCompra.Name = "txtCompra";
             this.txtCompra.Size = new System.Drawing.Size(210, 36);
             this.txtCompra.TabIndex = 7;
@@ -634,7 +706,7 @@
             // 
             this.label15.AutoSize = true;
             this.label15.Font = new System.Drawing.Font("Imprint MT Shadow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.Location = new System.Drawing.Point(16, 238);
+            this.label15.Location = new System.Drawing.Point(14, 304);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(167, 28);
             this.label15.TabIndex = 6;
@@ -644,7 +716,7 @@
             // 
             this.txtLimite.Enabled = false;
             this.txtLimite.Font = new System.Drawing.Font("Imprint MT Shadow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtLimite.Location = new System.Drawing.Point(226, 183);
+            this.txtLimite.Location = new System.Drawing.Point(224, 249);
             this.txtLimite.Name = "txtLimite";
             this.txtLimite.Size = new System.Drawing.Size(210, 36);
             this.txtLimite.TabIndex = 5;
@@ -653,7 +725,7 @@
             // 
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Imprint MT Shadow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(16, 180);
+            this.label14.Location = new System.Drawing.Point(14, 246);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(83, 28);
             this.label14.TabIndex = 4;
@@ -663,7 +735,7 @@
             // 
             this.txtName.Enabled = false;
             this.txtName.Font = new System.Drawing.Font("Imprint MT Shadow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtName.Location = new System.Drawing.Point(226, 128);
+            this.txtName.Location = new System.Drawing.Point(224, 194);
             this.txtName.Name = "txtName";
             this.txtName.Size = new System.Drawing.Size(210, 36);
             this.txtName.TabIndex = 3;
@@ -672,7 +744,7 @@
             // 
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Imprint MT Shadow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(16, 124);
+            this.label13.Location = new System.Drawing.Point(14, 190);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(97, 28);
             this.label13.TabIndex = 2;
@@ -681,7 +753,7 @@
             // txtID
             // 
             this.txtID.Font = new System.Drawing.Font("Imprint MT Shadow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtID.Location = new System.Drawing.Point(154, 22);
+            this.txtID.Location = new System.Drawing.Point(152, 88);
             this.txtID.Name = "txtID";
             this.txtID.Size = new System.Drawing.Size(210, 36);
             this.txtID.TabIndex = 1;
@@ -690,7 +762,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Imprint MT Shadow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(2, 30);
+            this.label4.Location = new System.Drawing.Point(14, 94);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(85, 28);
             this.label4.TabIndex = 0;
@@ -699,35 +771,412 @@
             // panelMostrar
             // 
             this.panelMostrar.BackColor = System.Drawing.Color.Transparent;
-            this.panelMostrar.Controls.Add(this.panel2);
+            this.panelMostrar.Controls.Add(this.button1);
+            this.panelMostrar.Controls.Add(this.panel3);
             this.panelMostrar.Controls.Add(this.panel1);
             this.panelMostrar.Controls.Add(this.panel0);
             this.panelMostrar.Controls.Add(this.btnCPU);
             this.panelMostrar.Controls.Add(this.btnAtras);
             this.panelMostrar.Controls.Add(this.cmbOps);
-            this.panelMostrar.Location = new System.Drawing.Point(70, 45);
+            this.panelMostrar.Controls.Add(this.panel2);
+            this.panelMostrar.Location = new System.Drawing.Point(33, 45);
             this.panelMostrar.Name = "panelMostrar";
-            this.panelMostrar.Size = new System.Drawing.Size(1400, 780);
+            this.panelMostrar.Size = new System.Drawing.Size(1913, 868);
             this.panelMostrar.TabIndex = 4;
             this.panelMostrar.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
             // 
+            // button1
+            // 
+            this.button1.Font = new System.Drawing.Font("Imprint MT Shadow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(1406, 22);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(178, 40);
+            this.button1.TabIndex = 10;
+            this.button1.Text = "Ver uso CPU";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click_1);
+            // 
+            // panel3
+            // 
+            this.panel3.Controls.Add(this.button2);
+            this.panel3.Controls.Add(this.nucleo8);
+            this.panel3.Controls.Add(this.nucleo7);
+            this.panel3.Controls.Add(this.lbl7);
+            this.panel3.Controls.Add(this.lbl6);
+            this.panel3.Controls.Add(this.core7);
+            this.panel3.Controls.Add(this.core6);
+            this.panel3.Controls.Add(this.nucleo6);
+            this.panel3.Controls.Add(this.nucleo5);
+            this.panel3.Controls.Add(this.nucleo4);
+            this.panel3.Controls.Add(this.nucleo3);
+            this.panel3.Controls.Add(this.nucleo2);
+            this.panel3.Controls.Add(this.nucleo1);
+            this.panel3.Controls.Add(this.lbl5);
+            this.panel3.Controls.Add(this.lbl4);
+            this.panel3.Controls.Add(this.lbl3);
+            this.panel3.Controls.Add(this.core5);
+            this.panel3.Controls.Add(this.core4);
+            this.panel3.Controls.Add(this.core3);
+            this.panel3.Controls.Add(this.lbl2);
+            this.panel3.Controls.Add(this.lbl1);
+            this.panel3.Controls.Add(this.lbl0);
+            this.panel3.Controls.Add(this.core2);
+            this.panel3.Controls.Add(this.core1);
+            this.panel3.Controls.Add(this.core0);
+            this.panel3.Controls.Add(this.cbEnable3D);
+            this.panel3.Controls.Add(this.cpuUsageChart);
+            this.panel3.Controls.Add(this.proVal);
+            this.panel3.Controls.Add(this.label25);
+            this.panel3.Location = new System.Drawing.Point(1026, 87);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(900, 790);
+            this.panel3.TabIndex = 9;
+            this.panel3.VisibleChanged += new System.EventHandler(this.panel3_VisibleChanged);
+            this.panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint_1);
+            // 
+            // button2
+            // 
+            this.button2.Font = new System.Drawing.Font("Imprint MT Shadow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.Location = new System.Drawing.Point(354, 5);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(118, 40);
+            this.button2.TabIndex = 11;
+            this.button2.Text = "Ocultar";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click_1);
+            // 
+            // nucleo8
+            // 
+            this.nucleo8.AutoSize = true;
+            this.nucleo8.BackColor = System.Drawing.Color.Transparent;
+            this.nucleo8.Font = new System.Drawing.Font("Imprint MT Shadow", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nucleo8.Location = new System.Drawing.Point(51, 669);
+            this.nucleo8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.nucleo8.Name = "nucleo8";
+            this.nucleo8.Size = new System.Drawing.Size(122, 33);
+            this.nucleo8.TabIndex = 63;
+            this.nucleo8.Text = "Nucleo 8";
+            // 
+            // nucleo7
+            // 
+            this.nucleo7.AutoSize = true;
+            this.nucleo7.BackColor = System.Drawing.Color.Transparent;
+            this.nucleo7.Font = new System.Drawing.Font("Imprint MT Shadow", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nucleo7.Location = new System.Drawing.Point(51, 631);
+            this.nucleo7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.nucleo7.Name = "nucleo7";
+            this.nucleo7.Size = new System.Drawing.Size(122, 33);
+            this.nucleo7.TabIndex = 62;
+            this.nucleo7.Text = "Nucleo 7";
+            // 
+            // lbl7
+            // 
+            this.lbl7.AutoSize = true;
+            this.lbl7.BackColor = System.Drawing.Color.Transparent;
+            this.lbl7.Font = new System.Drawing.Font("Imprint MT Shadow", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl7.Location = new System.Drawing.Point(416, 669);
+            this.lbl7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbl7.Name = "lbl7";
+            this.lbl7.Size = new System.Drawing.Size(56, 33);
+            this.lbl7.TabIndex = 61;
+            this.lbl7.Text = "0%";
+            // 
+            // lbl6
+            // 
+            this.lbl6.AutoSize = true;
+            this.lbl6.BackColor = System.Drawing.Color.Transparent;
+            this.lbl6.Font = new System.Drawing.Font("Imprint MT Shadow", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl6.Location = new System.Drawing.Point(416, 632);
+            this.lbl6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbl6.Name = "lbl6";
+            this.lbl6.Size = new System.Drawing.Size(56, 33);
+            this.lbl6.TabIndex = 60;
+            this.lbl6.Text = "0%";
+            // 
+            // core7
+            // 
+            this.core7.Location = new System.Drawing.Point(180, 670);
+            this.core7.Name = "core7";
+            this.core7.Size = new System.Drawing.Size(209, 32);
+            this.core7.TabIndex = 59;
+            // 
+            // core6
+            // 
+            this.core6.Location = new System.Drawing.Point(180, 632);
+            this.core6.Name = "core6";
+            this.core6.Size = new System.Drawing.Size(209, 32);
+            this.core6.TabIndex = 58;
+            // 
+            // nucleo6
+            // 
+            this.nucleo6.AutoSize = true;
+            this.nucleo6.BackColor = System.Drawing.Color.Transparent;
+            this.nucleo6.Font = new System.Drawing.Font("Imprint MT Shadow", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nucleo6.Location = new System.Drawing.Point(51, 593);
+            this.nucleo6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.nucleo6.Name = "nucleo6";
+            this.nucleo6.Size = new System.Drawing.Size(122, 33);
+            this.nucleo6.TabIndex = 57;
+            this.nucleo6.Text = "Nucleo 6";
+            // 
+            // nucleo5
+            // 
+            this.nucleo5.AutoSize = true;
+            this.nucleo5.BackColor = System.Drawing.Color.Transparent;
+            this.nucleo5.Font = new System.Drawing.Font("Imprint MT Shadow", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nucleo5.Location = new System.Drawing.Point(51, 555);
+            this.nucleo5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.nucleo5.Name = "nucleo5";
+            this.nucleo5.Size = new System.Drawing.Size(122, 33);
+            this.nucleo5.TabIndex = 56;
+            this.nucleo5.Text = "Nucleo 5";
+            // 
+            // nucleo4
+            // 
+            this.nucleo4.AutoSize = true;
+            this.nucleo4.BackColor = System.Drawing.Color.Transparent;
+            this.nucleo4.Font = new System.Drawing.Font("Imprint MT Shadow", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nucleo4.Location = new System.Drawing.Point(51, 518);
+            this.nucleo4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.nucleo4.Name = "nucleo4";
+            this.nucleo4.Size = new System.Drawing.Size(122, 33);
+            this.nucleo4.TabIndex = 55;
+            this.nucleo4.Text = "Nucleo 4";
+            // 
+            // nucleo3
+            // 
+            this.nucleo3.AutoSize = true;
+            this.nucleo3.BackColor = System.Drawing.Color.Transparent;
+            this.nucleo3.Font = new System.Drawing.Font("Imprint MT Shadow", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nucleo3.Location = new System.Drawing.Point(51, 480);
+            this.nucleo3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.nucleo3.Name = "nucleo3";
+            this.nucleo3.Size = new System.Drawing.Size(122, 33);
+            this.nucleo3.TabIndex = 54;
+            this.nucleo3.Text = "Nucleo 3";
+            // 
+            // nucleo2
+            // 
+            this.nucleo2.AutoSize = true;
+            this.nucleo2.BackColor = System.Drawing.Color.Transparent;
+            this.nucleo2.Font = new System.Drawing.Font("Imprint MT Shadow", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nucleo2.Location = new System.Drawing.Point(51, 442);
+            this.nucleo2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.nucleo2.Name = "nucleo2";
+            this.nucleo2.Size = new System.Drawing.Size(122, 33);
+            this.nucleo2.TabIndex = 53;
+            this.nucleo2.Text = "Nucleo 2";
+            // 
+            // nucleo1
+            // 
+            this.nucleo1.AutoSize = true;
+            this.nucleo1.BackColor = System.Drawing.Color.Transparent;
+            this.nucleo1.Font = new System.Drawing.Font("Imprint MT Shadow", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nucleo1.Location = new System.Drawing.Point(51, 404);
+            this.nucleo1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.nucleo1.Name = "nucleo1";
+            this.nucleo1.Size = new System.Drawing.Size(120, 33);
+            this.nucleo1.TabIndex = 52;
+            this.nucleo1.Text = "Nucleo 1";
+            // 
+            // lbl5
+            // 
+            this.lbl5.AutoSize = true;
+            this.lbl5.BackColor = System.Drawing.Color.Transparent;
+            this.lbl5.Font = new System.Drawing.Font("Imprint MT Shadow", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl5.Location = new System.Drawing.Point(416, 593);
+            this.lbl5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbl5.Name = "lbl5";
+            this.lbl5.Size = new System.Drawing.Size(56, 33);
+            this.lbl5.TabIndex = 51;
+            this.lbl5.Text = "0%";
+            // 
+            // lbl4
+            // 
+            this.lbl4.AutoSize = true;
+            this.lbl4.BackColor = System.Drawing.Color.Transparent;
+            this.lbl4.Font = new System.Drawing.Font("Imprint MT Shadow", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl4.Location = new System.Drawing.Point(416, 556);
+            this.lbl4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbl4.Name = "lbl4";
+            this.lbl4.Size = new System.Drawing.Size(56, 33);
+            this.lbl4.TabIndex = 50;
+            this.lbl4.Text = "0%";
+            // 
+            // lbl3
+            // 
+            this.lbl3.AutoSize = true;
+            this.lbl3.BackColor = System.Drawing.Color.Transparent;
+            this.lbl3.Font = new System.Drawing.Font("Imprint MT Shadow", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl3.Location = new System.Drawing.Point(416, 517);
+            this.lbl3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbl3.Name = "lbl3";
+            this.lbl3.Size = new System.Drawing.Size(56, 33);
+            this.lbl3.TabIndex = 49;
+            this.lbl3.Text = "0%";
+            // 
+            // core5
+            // 
+            this.core5.Location = new System.Drawing.Point(180, 594);
+            this.core5.Name = "core5";
+            this.core5.Size = new System.Drawing.Size(209, 32);
+            this.core5.TabIndex = 48;
+            // 
+            // core4
+            // 
+            this.core4.Location = new System.Drawing.Point(180, 556);
+            this.core4.Name = "core4";
+            this.core4.Size = new System.Drawing.Size(209, 32);
+            this.core4.TabIndex = 47;
+            // 
+            // core3
+            // 
+            this.core3.Location = new System.Drawing.Point(180, 518);
+            this.core3.Name = "core3";
+            this.core3.Size = new System.Drawing.Size(209, 32);
+            this.core3.TabIndex = 46;
+            // 
+            // lbl2
+            // 
+            this.lbl2.AutoSize = true;
+            this.lbl2.BackColor = System.Drawing.Color.Transparent;
+            this.lbl2.Font = new System.Drawing.Font("Imprint MT Shadow", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl2.Location = new System.Drawing.Point(416, 479);
+            this.lbl2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbl2.Name = "lbl2";
+            this.lbl2.Size = new System.Drawing.Size(56, 33);
+            this.lbl2.TabIndex = 45;
+            this.lbl2.Text = "0%";
+            // 
+            // lbl1
+            // 
+            this.lbl1.AutoSize = true;
+            this.lbl1.BackColor = System.Drawing.Color.Transparent;
+            this.lbl1.Font = new System.Drawing.Font("Imprint MT Shadow", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl1.Location = new System.Drawing.Point(416, 442);
+            this.lbl1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbl1.Name = "lbl1";
+            this.lbl1.Size = new System.Drawing.Size(56, 33);
+            this.lbl1.TabIndex = 44;
+            this.lbl1.Text = "0%";
+            // 
+            // lbl0
+            // 
+            this.lbl0.AutoSize = true;
+            this.lbl0.BackColor = System.Drawing.Color.Transparent;
+            this.lbl0.Font = new System.Drawing.Font("Imprint MT Shadow", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl0.Location = new System.Drawing.Point(416, 403);
+            this.lbl0.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbl0.Name = "lbl0";
+            this.lbl0.Size = new System.Drawing.Size(56, 33);
+            this.lbl0.TabIndex = 43;
+            this.lbl0.Text = "0%";
+            // 
+            // core2
+            // 
+            this.core2.Location = new System.Drawing.Point(180, 480);
+            this.core2.Name = "core2";
+            this.core2.Size = new System.Drawing.Size(209, 32);
+            this.core2.TabIndex = 42;
+            // 
+            // core1
+            // 
+            this.core1.Location = new System.Drawing.Point(180, 442);
+            this.core1.Name = "core1";
+            this.core1.Size = new System.Drawing.Size(209, 32);
+            this.core1.TabIndex = 41;
+            // 
+            // core0
+            // 
+            this.core0.Location = new System.Drawing.Point(180, 404);
+            this.core0.Name = "core0";
+            this.core0.Size = new System.Drawing.Size(209, 32);
+            this.core0.TabIndex = 40;
+            // 
+            // cbEnable3D
+            // 
+            this.cbEnable3D.AutoSize = true;
+            this.cbEnable3D.BackColor = System.Drawing.Color.Transparent;
+            this.cbEnable3D.Font = new System.Drawing.Font("Imprint MT Shadow", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbEnable3D.Location = new System.Drawing.Point(51, 4);
+            this.cbEnable3D.Name = "cbEnable3D";
+            this.cbEnable3D.Size = new System.Drawing.Size(236, 37);
+            this.cbEnable3D.TabIndex = 39;
+            this.cbEnable3D.Text = "Activar vista 3D";
+            this.cbEnable3D.UseVisualStyleBackColor = false;
+            this.cbEnable3D.CheckedChanged += new System.EventHandler(this.cbEnable3D_CheckedChanged);
+            // 
+            // cpuUsageChart
+            // 
+            this.cpuUsageChart.BackColor = System.Drawing.Color.Transparent;
+            chartArea9.AxisX.TitleFont = new System.Drawing.Font("Imprint MT Shadow", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            chartArea9.AxisX2.TitleFont = new System.Drawing.Font("Imprint MT Shadow", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            chartArea9.AxisY.TitleFont = new System.Drawing.Font("Imprint MT Shadow", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            chartArea9.AxisY2.TitleFont = new System.Drawing.Font("Imprint MT Shadow", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            chartArea9.Name = "ChartArea1";
+            this.cpuUsageChart.ChartAreas.Add(chartArea9);
+            legend9.BackColor = System.Drawing.Color.Transparent;
+            legend9.Font = new System.Drawing.Font("Imprint MT Shadow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            legend9.IsTextAutoFit = false;
+            legend9.Name = "Legend1";
+            this.cpuUsageChart.Legends.Add(legend9);
+            this.cpuUsageChart.Location = new System.Drawing.Point(-16, 3);
+            this.cpuUsageChart.Name = "cpuUsageChart";
+            this.cpuUsageChart.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.SeaGreen;
+            series9.ChartArea = "ChartArea1";
+            series9.Font = new System.Drawing.Font("Imprint MT Shadow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            series9.Legend = "Legend1";
+            series9.Name = "Series1";
+            this.cpuUsageChart.Series.Add(series9);
+            this.cpuUsageChart.Size = new System.Drawing.Size(889, 332);
+            this.cpuUsageChart.TabIndex = 38;
+            this.cpuUsageChart.Text = "cpuChart";
+            title9.Font = new System.Drawing.Font("Imprint MT Shadow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            title9.Name = "Title1";
+            this.cpuUsageChart.Titles.Add(title9);
+            this.cpuUsageChart.Click += new System.EventHandler(this.cpuUsageChart_Click);
+            // 
+            // proVal
+            // 
+            this.proVal.AutoSize = true;
+            this.proVal.BackColor = System.Drawing.Color.Transparent;
+            this.proVal.Font = new System.Drawing.Font("Imprint MT Shadow", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.proVal.Location = new System.Drawing.Point(296, 338);
+            this.proVal.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.proVal.Name = "proVal";
+            this.proVal.Size = new System.Drawing.Size(56, 33);
+            this.proVal.TabIndex = 37;
+            this.proVal.Text = "0%";
+            // 
+            // label25
+            // 
+            this.label25.AutoSize = true;
+            this.label25.BackColor = System.Drawing.Color.Transparent;
+            this.label25.Font = new System.Drawing.Font("Imprint MT Shadow", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label25.Location = new System.Drawing.Point(43, 338);
+            this.label25.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label25.Name = "label25";
+            this.label25.Size = new System.Drawing.Size(235, 33);
+            this.label25.TabIndex = 36;
+            this.label25.Text = "Uso total del CPU";
+            // 
             // btnCPU
             // 
-            this.btnCPU.Font = new System.Drawing.Font("Constantia", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCPU.Location = new System.Drawing.Point(1060, 22);
+            this.btnCPU.Font = new System.Drawing.Font("Imprint MT Shadow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCPU.Location = new System.Drawing.Point(1060, 24);
             this.btnCPU.Name = "btnCPU";
-            this.btnCPU.Size = new System.Drawing.Size(178, 42);
+            this.btnCPU.Size = new System.Drawing.Size(178, 40);
             this.btnCPU.TabIndex = 8;
-            this.btnCPU.Text = "Monitorear CPU";
+            this.btnCPU.Text = "Ventana CPU";
             this.btnCPU.UseVisualStyleBackColor = true;
             this.btnCPU.Click += new System.EventHandler(this.btnCPU_Click);
             // 
             // btnAtras
             // 
-            this.btnAtras.Font = new System.Drawing.Font("Constantia", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAtras.Location = new System.Drawing.Point(1268, 22);
+            this.btnAtras.Font = new System.Drawing.Font("Imprint MT Shadow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAtras.Location = new System.Drawing.Point(1266, 22);
             this.btnAtras.Name = "btnAtras";
-            this.btnAtras.Size = new System.Drawing.Size(112, 42);
+            this.btnAtras.Size = new System.Drawing.Size(112, 40);
             this.btnAtras.TabIndex = 7;
             this.btnAtras.Text = "Atras";
             this.btnAtras.UseVisualStyleBackColor = true;
@@ -749,9 +1198,9 @@
             this.panel4.Controls.Add(this.label7);
             this.panel4.Controls.Add(this.label6);
             this.panel4.Controls.Add(this.label5);
-            this.panel4.Location = new System.Drawing.Point(56, 66);
+            this.panel4.Location = new System.Drawing.Point(1, 66);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(1742, 640);
+            this.panel4.Size = new System.Drawing.Size(1797, 640);
             this.panel4.TabIndex = 5;
             this.panel4.Paint += new System.Windows.Forms.PaintEventHandler(this.panel4_Paint);
             // 
@@ -770,10 +1219,10 @@
             // lblClientes
             // 
             this.lblClientes.AutoSize = true;
-            this.lblClientes.Font = new System.Drawing.Font("Imprint MT Shadow", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblClientes.Font = new System.Drawing.Font("Imprint MT Shadow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblClientes.Location = new System.Drawing.Point(472, 202);
             this.lblClientes.Name = "lblClientes";
-            this.lblClientes.Size = new System.Drawing.Size(150, 38);
+            this.lblClientes.Size = new System.Drawing.Size(114, 28);
             this.lblClientes.TabIndex = 11;
             this.lblClientes.Text = "Direccion";
             this.lblClientes.Click += new System.EventHandler(this.lblClientes_Click);
@@ -781,10 +1230,10 @@
             // lblCompras
             // 
             this.lblCompras.AutoSize = true;
-            this.lblCompras.Font = new System.Drawing.Font("Imprint MT Shadow", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCompras.Font = new System.Drawing.Font("Imprint MT Shadow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCompras.Location = new System.Drawing.Point(472, 294);
             this.lblCompras.Name = "lblCompras";
-            this.lblCompras.Size = new System.Drawing.Size(150, 38);
+            this.lblCompras.Size = new System.Drawing.Size(114, 28);
             this.lblCompras.TabIndex = 10;
             this.lblCompras.Text = "Direccion";
             this.lblCompras.Click += new System.EventHandler(this.lblCompras_Click);
@@ -792,10 +1241,10 @@
             // lblPerfiles
             // 
             this.lblPerfiles.AutoSize = true;
-            this.lblPerfiles.Font = new System.Drawing.Font("Imprint MT Shadow", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPerfiles.Font = new System.Drawing.Font("Imprint MT Shadow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPerfiles.Location = new System.Drawing.Point(471, 388);
             this.lblPerfiles.Name = "lblPerfiles";
-            this.lblPerfiles.Size = new System.Drawing.Size(150, 38);
+            this.lblPerfiles.Size = new System.Drawing.Size(114, 28);
             this.lblPerfiles.TabIndex = 9;
             this.lblPerfiles.Text = "Direccion";
             this.lblPerfiles.Click += new System.EventHandler(this.lblPerfiles_Click);
@@ -900,18 +1349,79 @@
             this.label5.TabIndex = 0;
             this.label5.Text = "Cargar archivos";
             // 
+            // timer1
+            // 
+            this.timer1.Enabled = true;
+            this.timer1.Interval = 500;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
+            // perfCount0
+            // 
+            this.perfCount0.CategoryName = "Processor";
+            this.perfCount0.CounterName = "% Processor Time";
+            this.perfCount0.InstanceName = "0";
+            // 
+            // perfCount1
+            // 
+            this.perfCount1.CategoryName = "Processor";
+            this.perfCount1.CounterName = "% Processor Time";
+            this.perfCount1.InstanceName = "1";
+            // 
+            // perfCount2
+            // 
+            this.perfCount2.CategoryName = "Processor";
+            this.perfCount2.CounterName = "% Processor Time";
+            this.perfCount2.InstanceName = "2";
+            // 
+            // perfCount3
+            // 
+            this.perfCount3.CategoryName = "Processor";
+            this.perfCount3.CounterName = "% Processor Time";
+            this.perfCount3.InstanceName = "3";
+            // 
+            // perfCount4
+            // 
+            this.perfCount4.CategoryName = "Processor";
+            this.perfCount4.CounterName = "% Processor Time";
+            this.perfCount4.InstanceName = "4";
+            // 
+            // perfCount5
+            // 
+            this.perfCount5.CategoryName = "Processor";
+            this.perfCount5.CounterName = "% Processor Time";
+            this.perfCount5.InstanceName = "5";
+            // 
+            // perfCount6
+            // 
+            this.perfCount6.CategoryName = "Processor";
+            this.perfCount6.CounterName = "% Processor Time";
+            this.perfCount6.InstanceName = "6";
+            // 
+            // perfCount7
+            // 
+            this.perfCount7.CategoryName = "Processor";
+            this.perfCount7.CounterName = "% Processor Time";
+            this.perfCount7.InstanceName = "7";
+            // 
+            // perfCount8
+            // 
+            this.perfCount8.CategoryName = "Processor";
+            this.perfCount8.CounterName = "% Processor Time";
+            this.perfCount8.InstanceName = "8";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.ClientSize = new System.Drawing.Size(1362, 964);
+            this.ClientSize = new System.Drawing.Size(1910, 964);
             this.Controls.Add(this.panelMostrar);
             this.Controls.Add(this.panel4);
             this.Name = "Form1";
             this.Text = "Carga de Arhivos";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Form1_FormClosed);
             this.Load += new System.EventHandler(this.Form1_Load);
             this.panel0.ResumeLayout(false);
             this.panel0.PerformLayout();
@@ -921,8 +1431,20 @@
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.panelMostrar.ResumeLayout(false);
+            this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.cpuUsageChart)).EndInit();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.perfCount0)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.perfCount1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.perfCount2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.perfCount3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.perfCount4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.perfCount5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.perfCount6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.perfCount7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.perfCount8)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1001,6 +1523,48 @@
         private System.Windows.Forms.Label label23;
         private System.Windows.Forms.RadioButton secuencialLista;
         private System.Windows.Forms.RadioButton paraleloLista;
+        private System.Windows.Forms.Label label24;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.CheckBox cbEnable3D;
+        private System.Windows.Forms.DataVisualization.Charting.Chart cpuUsageChart;
+        private System.Windows.Forms.Label proVal;
+        private System.Windows.Forms.Label label25;
+        private System.Windows.Forms.Label nucleo8;
+        private System.Windows.Forms.Label nucleo7;
+        private System.Windows.Forms.Label lbl7;
+        private System.Windows.Forms.Label lbl6;
+        private System.Windows.Forms.ProgressBar core7;
+        private System.Windows.Forms.ProgressBar core6;
+        private System.Windows.Forms.Label nucleo6;
+        private System.Windows.Forms.Label nucleo5;
+        private System.Windows.Forms.Label nucleo4;
+        private System.Windows.Forms.Label nucleo3;
+        private System.Windows.Forms.Label nucleo2;
+        private System.Windows.Forms.Label nucleo1;
+        private System.Windows.Forms.Label lbl5;
+        private System.Windows.Forms.Label lbl4;
+        private System.Windows.Forms.Label lbl3;
+        private System.Windows.Forms.ProgressBar core5;
+        private System.Windows.Forms.ProgressBar core4;
+        private System.Windows.Forms.ProgressBar core3;
+        private System.Windows.Forms.Label lbl2;
+        private System.Windows.Forms.Label lbl1;
+        private System.Windows.Forms.Label lbl0;
+        private System.Windows.Forms.ProgressBar core2;
+        private System.Windows.Forms.ProgressBar core1;
+        private System.Windows.Forms.ProgressBar core0;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Timer timer1;
+        private System.Diagnostics.PerformanceCounter perfCount0;
+        private System.Diagnostics.PerformanceCounter perfCount1;
+        private System.Diagnostics.PerformanceCounter perfCount2;
+        private System.Diagnostics.PerformanceCounter perfCount3;
+        private System.Diagnostics.PerformanceCounter perfCount4;
+        private System.Diagnostics.PerformanceCounter perfCount5;
+        private System.Diagnostics.PerformanceCounter perfCount6;
+        private System.Diagnostics.PerformanceCounter perfCount7;
+        private System.Diagnostics.PerformanceCounter perfCount8;
     }
 }
 

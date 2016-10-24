@@ -41,6 +41,10 @@ namespace Paralelismo
             core3.Visible = false;
             nucleo4.Visible = false;
 
+            lbl4.Visible = false;
+            core4.Visible = false;
+            nucleo5.Visible = false;
+
             lbl5.Visible = false;
             core5.Visible = false;
             nucleo6.Visible = false;
@@ -314,36 +318,7 @@ namespace Paralelismo
 
         private void button1_Click(object sender, EventArgs e)
         {
-            PerformanceCounter cpuCounter = new PerformanceCounter();
-            cpuCounter.CategoryName = "Processor";
-            cpuCounter.CounterName = "% Processor Time";
-            cpuCounter.InstanceName = "0";
-
-            PerformanceCounter cpuCounter1 = new PerformanceCounter();
-            cpuCounter1.CategoryName = "Processor";
-            cpuCounter1.CounterName = "% Processor Time";
-            cpuCounter1.InstanceName = "1";
-
-            PerformanceCounter cpuCounter2 = new PerformanceCounter();
-            cpuCounter2.CategoryName = "Processor";
-            cpuCounter2.CounterName = "% Processor Time";
-            cpuCounter2.InstanceName = "2";
-
-            PerformanceCounter cpuCounter3 = new PerformanceCounter();
-            cpuCounter3.CategoryName = "Processor";
-            cpuCounter3.CounterName = "% Processor Time";
-            cpuCounter3.InstanceName = "3";
-
-            while (true)
-            {            //Console.Clear();
-                lbl0.Text = cpuCounter.NextValue().ToString() + "%";
-                //Console.WriteLine("Nucleo 0: " + cpuCounter.NextValue() + "%");
-                Console.WriteLine(cpuCounter1.NextValue() + "%");
-                Console.WriteLine("Nucleo 2: " + cpuCounter2.NextValue() + "%");
-                Console.WriteLine("Nucleo 3: " + cpuCounter3.NextValue() + "%");
-                Thread.Sleep(1000);
-            }
-            
+                        
         }
 
         private void cbEnable3D_CheckedChanged(object sender, EventArgs e)
