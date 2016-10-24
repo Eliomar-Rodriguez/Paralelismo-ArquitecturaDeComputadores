@@ -10,6 +10,9 @@ namespace Paralelismo
     public partial class CPU_Ventana : Form
     {
         bool iscontinue = true;
+        /// <summary>
+		/// Variable que almacena la cantidad de nucleos
+		/// </summary>
         public static int cantNucleos;
         private static CpuUsage cpu;
 
@@ -341,6 +344,18 @@ namespace Paralelismo
                 Thread.Sleep(1000);
             }
             
+        }
+
+        private void cbEnable3D_CheckedChanged(object sender, EventArgs e)
+        {
+            if (cbEnable3D.Checked)
+            {
+                cpuUsageChart.ChartAreas[0].Area3DStyle.Enable3D = true;
+            }
+            else
+            {
+                cpuUsageChart.ChartAreas[0].Area3DStyle.Enable3D = false;
+            }
         }
     }
 }

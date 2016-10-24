@@ -16,10 +16,5 @@ C:\Users\USUARIO\Desktop\ProyectoParalelismo\Progra-paralelismo-Arqui\Paralelism
 C:\Users\USUARIO\Desktop\ProyectoParalelismo\Progra-paralelismo-Arqui\Paralelismo\Paralelismo\obj\Debug\Paralelismo.Form1.resources
 C:\Users\USUARIO\Desktop\ProyectoParalelismo\Progra-paralelismo-Arqui\Paralelismo\Paralelismo\obj\Debug\Paralelismo.Properties.Resources.resources
 C:\Users\USUARIO\Desktop\ProyectoParalelismo\Progra-paralelismo-Arqui\Paralelismo\Paralelismo\obj\Debug\Paralelismo.csproj.GenerateResource.Cache
-<<<<<<< HEAD
 C:\Users\USUARIO\Desktop\ProyectoParalelismo\Progra-paralelismo-Arqui\Paralelismo\Paralelismo\obj\Debug\Paralelismo.exe
 C:\Users\USUARIO\Desktop\ProyectoParalelismo\Progra-paralelismo-Arqui\Paralelismo\Paralelismo\obj\Debug\Paralelismo.pdb
-=======
-C:\Users\USUARIO\Desktop\ProyectoParalelismo\Progra-paralelismo-Arqui\Paralelismo\Paralelismo\obj\Debug\Paralelismo.Rendimiento.resources
-C:\Users\Steven\Desktop\TEC\Progras\Progra-paralelismo-Arqui\Paralelismo\Paralelismo\obj\Debug\Paralelismo.CPU_Ventana.resources
->>>>>>> d780230ae4082c99079c77aef02fca1c3a1e399f
