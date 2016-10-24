@@ -120,6 +120,7 @@ namespace Paralelismo
 
         private void button5_Click(object sender, EventArgs e)
         {
+            Text = "Ventana Principal";
             if (lblClientes.Text=="Direccion"||lblCompras.Text=="Direccion"||lblPerfiles.Text=="Direccion")
             {
                 label9.Visible = true;
@@ -141,6 +142,7 @@ namespace Paralelismo
 
         private void button1_Click(object sender, EventArgs e)
         {
+            Text = "Carga de Archivos";
             panelMostrar.Visible = false;
             panel4.Visible = true;
 
